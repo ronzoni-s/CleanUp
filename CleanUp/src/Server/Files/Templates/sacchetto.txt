@@ -1,0 +1,6 @@
+﻿   ERBERT
+   
+   Nome: {0}
+   Telefono: {1}
+   
+   Sacchetto {2} di {3}

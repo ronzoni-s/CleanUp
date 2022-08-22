@@ -1,0 +1,32 @@
+﻿<MudDialog>
+    <DialogContent>
+        Quanti sacchetti sono stati utilizzati?
+        <MudTextField T="int" @bind-Value="@UsedBags" 
+                      Immediate="true"
+                      Validation="@(new Func<int, IEnumerable<string>>(MaxCharacters))"
+                      Adornment="Adornment.End" AdornmentText="sacchetti"></MudTextField>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Annulla</MudButton>
+        <MudButton Color="Color.Primary" OnClick="Submit" Disabled="!Valid">Procedi</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+
+    private bool Valid => UsedBags > 0;
+
+    private IEnumerable<string> MaxCharacters(int ch)
+    {
+        if (ch < 0)
+            yield return "Inserire un numero non negativo";
+    }
+
+    [Parameter] public int UsedBags { get; set; }
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(UsedBags));
+    void Cancel() => MudDialog.Cancel();
+
+}
