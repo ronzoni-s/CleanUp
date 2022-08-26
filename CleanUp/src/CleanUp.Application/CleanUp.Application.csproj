@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fbognini.Application" Version="6.4.0" />
+    <PackageReference Include="fbognini.Notifications" Version="1.1.2" />
+    <PackageReference Include="fbognini.Notifications.MTarget" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanUp.Domain\CleanUp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,391 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Infrastructure\\Erbert.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Application\\Erbert.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Application\\Erbert.Application.csproj",
+        "projectName": "Erbert.Application",
+        "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Application\\Erbert.Application.csproj",
+        "packagesPath": "C:\\Users\\Simone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Simone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.amilon.net/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Domain\\Erbert.Domain.csproj": {
+                "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Domain\\Erbert.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "fbognini.Application": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
+            "fbognini.Notifications": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "fbognini.Notifications.MTarget": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Domain\\Erbert.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Domain\\Erbert.Domain.csproj",
+        "projectName": "Erbert.Domain",
+        "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Domain\\Erbert.Domain.csproj",
+        "packagesPath": "C:\\Users\\Simone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Simone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.amilon.net/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "fbognini.Core": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
+            "fbognini.Core.Identity": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "fbognini.i18n": {
+              "target": "Package",
+              "version": "[6.1.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Infrastructure\\Erbert.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Infrastructure\\Erbert.Infrastructure.csproj",
+        "projectName": "Erbert.Infrastructure",
+        "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Infrastructure\\Erbert.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Simone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Simone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.amilon.net/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Application\\Erbert.Application.csproj": {
+                "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Erbert.Application\\Erbert.Application.csproj"
+              },
+              "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Edenred.Sdk\\Edenred.Sdk.csproj": {
+                "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Edenred.Sdk\\Edenred.Sdk.csproj"
+              },
+              "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Magento.Sdk\\Magento.Sdk.csproj": {
+                "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Magento.Sdk\\Magento.Sdk.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "HtmlRenderer.PdfSharp": {
+              "target": "Package",
+              "version": "[1.5.1-beta1, )"
+            },
+            "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Otp.NET": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            },
+            "RawPrint": {
+              "target": "Package",
+              "version": "[0.5.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.89.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "fbognini.Infrastructure": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
+            "fbognini.Infrastructure.Identity": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
+            "itext7.pdfhtml": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Edenred.Sdk\\Edenred.Sdk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Edenred.Sdk\\Edenred.Sdk.csproj",
+        "projectName": "Edenred.Sdk",
+        "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Edenred.Sdk\\Edenred.Sdk.csproj",
+        "packagesPath": "C:\\Users\\Simone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Edenred.Sdk\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Simone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.amilon.net/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "fbognini.Core": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Magento.Sdk\\Magento.Sdk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Magento.Sdk\\Magento.Sdk.csproj",
+        "projectName": "Magento.Sdk",
+        "projectPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Magento.Sdk\\Magento.Sdk.csproj",
+        "packagesPath": "C:\\Users\\Simone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simone\\source\\repos\\CleanUp\\CleanUp\\src\\Sdk\\Magento.Sdk\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Simone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.amilon.net/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

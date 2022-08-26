@@ -1,0 +1,12 @@
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\bin\Debug\net6.0\Erbert.Domain.deps.json
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\bin\Debug\net6.0\Erbert.Domain.dll
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\bin\Debug\net6.0\ref\Erbert.Domain.dll
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\bin\Debug\net6.0\Erbert.Domain.pdb
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\obj\Debug\net6.0\Erbert.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\obj\Debug\net6.0\Erbert.Domain.AssemblyInfoInputs.cache
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\obj\Debug\net6.0\Erbert.Domain.AssemblyInfo.cs
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\obj\Debug\net6.0\Erbert.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\obj\Debug\net6.0\Erbert.Domain.dll
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\obj\Debug\net6.0\ref\Erbert.Domain.dll
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\obj\Debug\net6.0\Erbert.Domain.pdb
+C:\Users\Simone\source\repos\Erbert\src\Erbert.Domain\obj\Debug\net6.0\Erbert.Domain.csproj.AssemblyReference.cache

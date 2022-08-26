@@ -1,0 +1,16 @@
+2022-06-23 18:29:29.043 +02:00 [INF] Now listening on: https://localhost:7209
+2022-06-23 18:29:29.083 +02:00 [INF] Now listening on: http://localhost:5209
+2022-06-23 18:29:29.087 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-23 18:29:29.088 +02:00 [INF] Hosting environment: Development
+2022-06-23 18:29:29.090 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Hangfire\CleanUp.Hangfire\
+2022-06-23 18:29:30.421 +02:00 [INF] HTTP GET / responded 200 in 248.0546 ms
+2022-06-23 18:29:30.498 +02:00 [INF] HTTP GET /css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c responded 200 in 14.8386 ms
+2022-06-23 18:29:30.499 +02:00 [INF] HTTP GET /js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 responded 200 in 18.3167 ms
+2022-06-23 18:29:30.569 +02:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 88.6821 ms
+2022-06-23 18:29:30.569 +02:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 81.6002 ms
+2022-06-23 18:29:30.498 +02:00 [INF] HTTP GET /CleanUp.Hangfire.styles.css?v=oYLSeriZYsOB3frferXh-BiUXqHoD-ChNWS8S-Vt2pQ responded 200 in 19.0976 ms
+2022-06-23 18:29:30.569 +02:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 85.8281 ms
+2022-06-23 18:29:30.680 +02:00 [INF] HTTP GET /favicon.ico responded 200 in 7.2527 ms
+2022-06-23 18:29:34.300 +02:00 [INF] HTTP GET / responded 200 in 14.3370 ms
+2022-06-23 18:29:37.438 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 11.3641 ms
+2022-06-23 18:29:37.939 +02:00 [INF] HTTP GET / responded 200 in 5.2097 ms

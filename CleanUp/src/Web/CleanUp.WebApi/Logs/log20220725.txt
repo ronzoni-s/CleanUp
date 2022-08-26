@@ -1,0 +1,261 @@
+2022-07-25 10:04:40.455 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 10:04:40.489 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 10:04:40.494 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 10:04:40.496 +02:00 [INF] Hosting environment: Development
+2022-07-25 10:04:40.499 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 10:04:42.481 +02:00 [INF] HTTP GET /swagger responded 302 in 902.6889 ms
+2022-07-25 10:04:42.808 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 305.9081 ms
+2022-07-25 10:04:44.071 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 914.1437 ms
+2022-07-25 10:12:26.400 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 10:12:26.428 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 10:12:26.445 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 10:12:26.448 +02:00 [INF] Hosting environment: Development
+2022-07-25 10:12:26.451 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 10:12:27.206 +02:00 [INF] HTTP GET /swagger responded 302 in 334.1721 ms
+2022-07-25 10:12:27.458 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 225.1245 ms
+2022-07-25 10:12:28.314 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 723.6242 ms
+2022-07-25 10:15:10.345 +02:00 [INF] HTTP GET /v1/order responded 200 in 900.8700 ms
+2022-07-25 10:15:19.297 +02:00 [INF] HTTP GET /v1/order responded 200 in 221.0676 ms
+2022-07-25 11:11:37.556 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 11:11:37.600 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 11:11:37.604 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 11:11:37.606 +02:00 [INF] Hosting environment: Development
+2022-07-25 11:11:37.608 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 11:11:39.356 +02:00 [INF] HTTP GET /swagger responded 302 in 421.6600 ms
+2022-07-25 11:11:39.653 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 274.9014 ms
+2022-07-25 11:11:40.807 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 985.2073 ms
+2022-07-25 11:14:11.853 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 11:14:11.891 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 11:14:11.896 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 11:14:11.898 +02:00 [INF] Hosting environment: Development
+2022-07-25 11:14:11.899 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 11:14:13.293 +02:00 [INF] HTTP GET /swagger responded 302 in 441.3661 ms
+2022-07-25 11:14:13.570 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 259.1326 ms
+2022-07-25 11:14:14.617 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 884.9040 ms
+2022-07-25 11:20:01.984 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 11:20:02.013 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 11:20:02.020 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 11:20:02.022 +02:00 [INF] Hosting environment: Development
+2022-07-25 11:20:02.024 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 11:20:03.298 +02:00 [INF] HTTP GET /swagger responded 302 in 405.0118 ms
+2022-07-25 11:20:03.569 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 246.5140 ms
+2022-07-25 11:20:04.609 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 856.1977 ms
+2022-07-25 11:27:58.782 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 11:27:58.808 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 11:27:58.816 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 11:27:58.817 +02:00 [INF] Hosting environment: Development
+2022-07-25 11:27:58.820 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 11:27:59.894 +02:00 [INF] HTTP GET /swagger responded 302 in 59.7407 ms
+2022-07-25 11:28:00.167 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 250.4076 ms
+2022-07-25 11:28:00.845 +02:00 [INF] HTTP GET /v1/order responded 200 in 1525.3184 ms
+2022-07-25 16:34:38.987 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 16:34:39.017 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 16:34:39.021 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 16:34:39.023 +02:00 [INF] Hosting environment: Development
+2022-07-25 16:34:39.025 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 16:34:40.384 +02:00 [INF] HTTP GET /swagger responded 302 in 711.4864 ms
+2022-07-25 16:34:40.741 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 328.5238 ms
+2022-07-25 16:34:41.873 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 947.5121 ms
+2022-07-25 16:35:56.493 +02:00 [INF] HTTP GET /v1/order responded 200 in 1124.6308 ms
+2022-07-25 16:36:14.146 +02:00 [INF] HTTP GET /v1/order responded 200 in 145.3782 ms
+2022-07-25 18:10:25.106 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 18:10:25.138 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 18:10:25.143 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 18:10:25.146 +02:00 [INF] Hosting environment: Development
+2022-07-25 18:10:25.148 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 18:10:26.164 +02:00 [INF] HTTP GET /swagger responded 302 in 404.9689 ms
+2022-07-25 18:10:26.477 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 288.3892 ms
+2022-07-25 18:10:27.536 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 891.5502 ms
+2022-07-25 18:11:22.762 +02:00 [INF] HTTP POST /v1/payment/refund/fasda responded 400 in 144.7926 ms
+2022-07-25 18:12:04.827 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 18:12:04.868 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 18:12:04.874 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 18:12:04.877 +02:00 [INF] Hosting environment: Development
+2022-07-25 18:12:04.879 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 18:12:06.001 +02:00 [INF] HTTP GET /swagger responded 302 in 652.6246 ms
+2022-07-25 18:12:06.296 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 257.0251 ms
+2022-07-25 18:12:07.372 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 898.3809 ms
+2022-07-25 18:12:43.335 +02:00 [ERR] Error refunding transaction asdadas for paymentMethod 3 with amount 200
+fbognini.Core.Exceptions.NotFoundException: PaymentMethod
+   at CleanUp.Application.Common.Services.Orders.OrderService.RefundTransaction(Int32 paymentMethodId, Int32 amount, String transactionId, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\src\CleanUp.Infrastructure\Services\OrderService.cs:line 53
+2022-07-25 18:12:44.125 +02:00 [INF] HTTP POST /v1/payment/refund/asdadas responded 404 in 19514.3747 ms
+2022-07-25 18:15:08.024 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 18:15:08.058 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 18:15:08.064 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 18:15:08.065 +02:00 [INF] Hosting environment: Development
+2022-07-25 18:15:08.067 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 18:15:09.511 +02:00 [INF] HTTP GET /swagger responded 302 in 474.7952 ms
+2022-07-25 18:15:09.785 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 246.5407 ms
+2022-07-25 18:15:10.757 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 793.5305 ms
+2022-07-25 18:17:50.676 +02:00 [ERR] Error refunding transaction sdfsfds for paymentMethod 6 with amount 10
+Stripe.StripeException: No such payment_intent: 'sdfsfds'
+   at Stripe.StripeClient.ProcessResponse[T](StripeResponse response)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.Request[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions)
+   at Stripe.Service`1.Request(HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions)
+   at Stripe.Service`1.CreateEntity(BaseOptions options, RequestOptions requestOptions)
+   at Stripe.RefundService.Create(RefundCreateOptions options, RequestOptions requestOptions)
+   at CleanUp.Infrastructure.Services.StripeService.Refund(String paymentIntent, Nullable`1 amount) in C:\Users\Simone\source\repos\CleanUp\src\CleanUp.Infrastructure\Services\StripeService.cs:line 146
+   at CleanUp.Application.Common.Services.Orders.OrderService.RefundTransaction(Int32 paymentMethodId, Int32 amount, String transactionId, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\src\CleanUp.Infrastructure\Services\OrderService.cs:line 61
+2022-07-25 18:17:51.323 +02:00 [ERR] HTTP POST /v1/payment/refund/sdfsfds responded 500 in 13463.5380 ms
+2022-07-25 21:00:51.111 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:00:51.137 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:00:51.143 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:00:51.145 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:00:51.148 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:00:52.116 +02:00 [INF] HTTP GET /swagger responded 302 in 57.7264 ms
+2022-07-25 21:00:52.388 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 248.7953 ms
+2022-07-25 21:00:53.167 +02:00 [INF] HTTP GET /v1/order responded 200 in 1814.6244 ms
+2022-07-25 21:00:53.451 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 887.5035 ms
+2022-07-25 21:00:53.641 +02:00 [INF] HTTP GET /v1/order responded 200 in 393.7261 ms
+2022-07-25 21:07:40.182 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:07:40.208 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:07:40.215 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:07:40.216 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:07:40.218 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:07:40.963 +02:00 [INF] HTTP GET /swagger responded 302 in 193.6262 ms
+2022-07-25 21:07:41.210 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 229.4006 ms
+2022-07-25 21:09:32.718 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:09:32.743 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:09:32.748 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:09:32.750 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:09:32.752 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:09:33.889 +02:00 [INF] HTTP GET /swagger responded 302 in 222.4981 ms
+2022-07-25 21:09:34.153 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 247.1397 ms
+2022-07-25 21:35:55.588 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:35:55.616 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:35:55.623 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:35:55.625 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:35:55.627 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:35:56.733 +02:00 [INF] HTTP GET /swagger responded 302 in 56.1603 ms
+2022-07-25 21:35:57.561 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 812.8122 ms
+2022-07-25 21:36:07.625 +02:00 [INF] HTTP GET /v1/order responded 200 in 11850.1438 ms
+2022-07-25 21:36:08.024 +02:00 [INF] HTTP GET /v1/order responded 200 in 298.3548 ms
+2022-07-25 21:37:06.353 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:37:06.392 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:37:06.398 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:37:06.401 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:37:06.403 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:37:07.127 +02:00 [INF] HTTP GET /swagger responded 302 in 55.3539 ms
+2022-07-25 21:37:07.428 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 283.7196 ms
+2022-07-25 21:37:08.369 +02:00 [INF] HTTP GET /v1/order responded 200 in 1838.6314 ms
+2022-07-25 21:37:08.498 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 925.9970 ms
+2022-07-25 21:37:08.637 +02:00 [INF] HTTP GET /v1/order responded 200 in 165.5781 ms
+2022-07-25 21:38:52.582 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:38:52.616 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:38:52.622 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:38:52.626 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:38:52.630 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:38:53.644 +02:00 [INF] HTTP GET /swagger responded 302 in 89.8240 ms
+2022-07-25 21:38:54.066 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 407.3283 ms
+2022-07-25 21:38:54.575 +02:00 [INF] HTTP GET /v1/order responded 200 in 1719.1753 ms
+2022-07-25 21:38:54.930 +02:00 [INF] HTTP GET /v1/order responded 200 in 245.1616 ms
+2022-07-25 21:38:55.004 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 784.3635 ms
+2022-07-25 21:40:29.206 +02:00 [INF] HTTP POST /v1/payment/refund/pi_3LOReIABf26t6kRR1dT0vPaP responded 308 in 0.7085 ms
+2022-07-25 21:41:09.285 +02:00 [ERR] Error refunding transaction pi_3loreiabf26t6krr1dt0vpap for paymentMethod 6 with amount 217
+Stripe.StripeException: No such payment_intent: 'pi_3loreiabf26t6krr1dt0vpap'
+   at Stripe.StripeClient.ProcessResponse[T](StripeResponse response)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.Request[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions)
+   at Stripe.Service`1.Request(HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions)
+   at Stripe.Service`1.CreateEntity(BaseOptions options, RequestOptions requestOptions)
+   at Stripe.RefundService.Create(RefundCreateOptions options, RequestOptions requestOptions)
+   at CleanUp.Infrastructure.Services.StripeService.Refund(String paymentIntent, Nullable`1 amount) in C:\Users\Simone\source\repos\CleanUp\src\CleanUp.Infrastructure\Services\StripeService.cs:line 146
+   at CleanUp.Application.Common.Services.Orders.OrderService.RefundTransaction(Int32 paymentMethodId, Int32 amount, String transactionId, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\src\CleanUp.Infrastructure\Services\OrderService.cs:line 61
+2022-07-25 21:41:12.935 +02:00 [ERR] HTTP POST /v1/payment/refund/pi_3loreiabf26t6krr1dt0vpap responded 500 in 43721.9544 ms
+2022-07-25 21:41:26.803 +02:00 [INF] HTTP GET /v1/order responded 200 in 150.9842 ms
+2022-07-25 21:41:26.966 +02:00 [INF] HTTP GET /v1/order responded 200 in 123.3963 ms
+2022-07-25 21:41:38.777 +02:00 [INF] HTTP POST /v1/payment/refund/pi_3LOReIABf26t6kRR1dT0vPaP responded 308 in 0.5475 ms
+2022-07-25 21:43:07.972 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:43:08.010 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:43:08.018 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:43:08.019 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:43:08.021 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:43:08.789 +02:00 [INF] HTTP GET /swagger responded 302 in 251.2394 ms
+2022-07-25 21:43:09.057 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 248.8056 ms
+2022-07-25 21:43:09.827 +02:00 [INF] HTTP GET /v1/order responded 200 in 1709.3684 ms
+2022-07-25 21:43:09.991 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 786.6922 ms
+2022-07-25 21:43:10.131 +02:00 [INF] HTTP GET /v1/order responded 200 in 196.6545 ms
+2022-07-25 21:43:22.882 +02:00 [INF] HTTP POST /v1/payment/refund/pi_3LOReIABf26t6kRR1dT0vPaP responded 308 in 0.8083 ms
+2022-07-25 21:44:13.507 +02:00 [ERR] Error refunding transaction pi_3loreiabf26t6krr1dt0vpap for paymentMethod 6 with amount 217
+Stripe.StripeException: No such payment_intent: 'pi_3loreiabf26t6krr1dt0vpap'
+   at Stripe.StripeClient.ProcessResponse[T](StripeResponse response)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.Request[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions)
+   at Stripe.Service`1.Request(HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions)
+   at Stripe.Service`1.CreateEntity(BaseOptions options, RequestOptions requestOptions)
+   at Stripe.RefundService.Create(RefundCreateOptions options, RequestOptions requestOptions)
+   at CleanUp.Infrastructure.Services.StripeService.Refund(String paymentIntent, Nullable`1 amount) in C:\Users\Simone\source\repos\CleanUp\src\CleanUp.Infrastructure\Services\StripeService.cs:line 146
+   at CleanUp.Application.Common.Services.Orders.OrderService.RefundTransaction(Int32 paymentMethodId, Int32 amount, String transactionId, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\src\CleanUp.Infrastructure\Services\OrderService.cs:line 61
+2022-07-25 21:44:14.878 +02:00 [ERR] HTTP POST /v1/payment/refund/pi_3loreiabf26t6krr1dt0vpap responded 500 in 51961.8746 ms
+2022-07-25 21:44:30.093 +02:00 [INF] HTTP GET /v1/order responded 200 in 176.0942 ms
+2022-07-25 21:45:32.314 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:45:32.342 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:45:32.349 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:45:32.351 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:45:32.353 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:45:33.113 +02:00 [INF] HTTP GET /swagger responded 302 in 225.7111 ms
+2022-07-25 21:45:33.383 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 250.1402 ms
+2022-07-25 21:45:34.171 +02:00 [INF] HTTP GET /v1/order responded 200 in 1595.4490 ms
+2022-07-25 21:45:34.319 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 790.6958 ms
+2022-07-25 21:45:34.533 +02:00 [INF] HTTP GET /v1/order responded 200 in 265.0582 ms
+2022-07-25 21:45:41.956 +02:00 [INF] HTTP POST /v1/payment/refund/pi_3LOReIABf26t6kRR1dT0vPaP responded 308 in 0.5545 ms
+2022-07-25 21:47:54.946 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:47:54.974 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:47:54.980 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:47:54.982 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:47:54.984 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:47:56.151 +02:00 [INF] HTTP GET /swagger responded 302 in 240.5020 ms
+2022-07-25 21:47:56.409 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 239.8356 ms
+2022-07-25 21:47:57.133 +02:00 [INF] HTTP GET /v1/order responded 200 in 1639.5672 ms
+2022-07-25 21:47:57.339 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 775.4438 ms
+2022-07-25 21:47:57.413 +02:00 [INF] HTTP GET /v1/order responded 200 in 186.9047 ms
+2022-07-25 21:52:01.476 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:52:01.505 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:52:01.511 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:52:01.514 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:52:01.517 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:52:02.634 +02:00 [INF] HTTP GET /swagger responded 302 in 283.0941 ms
+2022-07-25 21:52:02.892 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 240.6069 ms
+2022-07-25 21:52:03.729 +02:00 [INF] HTTP GET /v1/order responded 200 in 1646.3257 ms
+2022-07-25 21:52:03.870 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 833.6773 ms
+2022-07-25 21:52:04.068 +02:00 [INF] HTTP GET /v1/order responded 200 in 222.5273 ms
+2022-07-25 21:52:39.492 +02:00 [INF] CC transaction pi_3LOReIABf26t6kRR1dT0vPaP refunded successfully, amount 217
+2022-07-25 21:52:46.469 +02:00 [INF] HTTP POST /v1/payment/refund responded 200 in 30987.9337 ms
+2022-07-25 21:55:56.715 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:55:56.771 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:55:56.776 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:55:56.777 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:55:56.779 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:55:57.991 +02:00 [INF] HTTP GET /swagger responded 302 in 459.5799 ms
+2022-07-25 21:55:58.282 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 272.7764 ms
+2022-07-25 21:55:59.360 +02:00 [INF] HTTP GET /v1/order responded 200 in 1999.6535 ms
+2022-07-25 21:55:59.528 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 1044.1786 ms
+2022-07-25 21:55:59.698 +02:00 [INF] HTTP GET /v1/order responded 200 in 204.9184 ms
+2022-07-25 21:56:18.362 +02:00 [INF] HTTP POST /v1/user/b19252ce-87fe-4878-85a0-fd43e6dd638d/credits responded 400 in 99.1964 ms
+2022-07-25 21:57:32.004 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:57:32.038 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:57:32.045 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:57:32.047 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:57:32.049 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:57:33.085 +02:00 [INF] HTTP GET /swagger responded 302 in 238.9052 ms
+2022-07-25 21:57:33.353 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 243.9081 ms
+2022-07-25 21:57:34.269 +02:00 [INF] HTTP GET /v1/order responded 200 in 1754.4287 ms
+2022-07-25 21:57:34.408 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 905.2631 ms
+2022-07-25 21:57:34.552 +02:00 [INF] HTTP GET /v1/order responded 200 in 176.0410 ms
+2022-07-25 21:58:02.301 +02:00 [INF] HTTP POST /v1/user/b19252ce-87fe-4878-85a0-fd43e6dd638d/credits responded 400 in 137.3126 ms
+2022-07-25 21:59:43.395 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-25 21:59:43.427 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-25 21:59:43.435 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-25 21:59:43.437 +02:00 [INF] Hosting environment: Development
+2022-07-25 21:59:43.440 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-25 21:59:44.315 +02:00 [INF] HTTP GET /swagger responded 302 in 392.7213 ms
+2022-07-25 21:59:44.575 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 242.7560 ms
+2022-07-25 21:59:45.456 +02:00 [INF] HTTP GET /v1/order responded 200 in 1618.8469 ms
+2022-07-25 21:59:45.607 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 871.7653 ms
+2022-07-25 21:59:45.760 +02:00 [INF] HTTP GET /v1/order responded 200 in 187.5611 ms
+2022-07-25 22:00:50.816 +02:00 [INF] HTTP POST /v1/user/b19252ce-87fe-4878-85a0-fd43e6dd638d/credits responded 200 in 52922.1293 ms
+2022-07-25 22:02:10.239 +02:00 [INF] HTTP PUT /v1/order/280 responded 200 in 50311.9255 ms

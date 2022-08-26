@@ -1,0 +1,12 @@
+2022-08-11 15:51:21.517 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-11 15:51:21.565 +02:00 [INF] For documentations and guides, visit https://www.fullstackhero.net
+2022-08-11 15:51:21.567 +02:00 [INF] To Sponsor this project, visit https://opencollective.com/fullstackhero
+2022-08-11 15:51:22.415 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-11 15:51:22.418 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-11 15:51:22.421 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-11 15:51:22.423 +02:00 [INF] Hosting environment: Development
+2022-08-11 15:51:22.426 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-11 15:51:24.011 +02:00 [INF] HTTP GET /swagger responded 302 in 591.7700 ms
+2022-08-11 15:51:24.379 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 345.1770 ms
+2022-08-11 15:51:25.448 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 820.5349 ms
+2022-08-11 15:52:39.760 +02:00 [INF] HTTP GET /v1/store responded 200 in 313.2864 ms

@@ -1,0 +1,100 @@
+﻿@using CleanUp.WebApi.Sdk.Models
+
+@if (!showModal || product == null)
+{
+    return;
+}
+
+<div id="product-info-box" class="d-flex align-items-center justify-content-center">
+    <div class="card p-5">
+        <div class="row">
+            @if (loading)
+            {
+                <p>Loading...</p>
+            }
+            else
+            {
+                <div class="col-3">
+                    <img src="@(product.PicturePath)" />
+                </div>
+                <div class="col-9">
+                    <p><b>SKU:</b> @product.Code</p>
+                    <p>
+                        <b>Nome prodotto</b> <br>
+                        @product.Name <br/>
+                        <i>@product.Subtitle</i>
+                    </p>
+
+                    <p>
+                        <span class="highlighted">Ingredienti:</span> @(string.IsNullOrEmpty(product.IngredientsDescription) ? "-" : product.IngredientsDescription)
+                    </p>
+                    <p>
+                        <span class="highlighted">Allergeni:</span> @string.Join(", ", product.ProductAllergens.Select(x => x.Allergen.Name))
+                    </p>
+
+                    <div class="row">
+                        <div class="col">
+                            <b>Energia (kj)</b><br/>@product.EnergyJoule
+                        </div>
+                        <div class="col">
+                            <b>Energia (kcal)</b><br/>@product.EnergyKCal
+                        </div>
+                        <div class="col">
+                            <b>Grassi (g)</b><br/>@product.Fat
+                        </div>
+                        <div class="col">
+                            <b>di cui saturi (g)</b><br/>@product.SaturatedFat
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <b>Proteine (g)</b><br/>@product.Protein
+                        </div>
+                        <div class="col">
+                            <b>Sale (g)</b><br/>@product.Salt
+                        </div>
+                        <div class="col">
+                            <b>Carboidrati (g)</b><br/>@product.Carbo
+                        </div>
+                        <div class="col">
+                            <b>di cui zuccheri (g)</b><br/>@product.SugarCarbo
+                        </div>
+                    </div>
+                </div>    
+            }
+            
+        </div>
+        <div class="close pointer" @onclick="Close"><img src="/icons/close.svg" /></div>
+    </div>
+</div>
+
+
+@code {
+    // State
+    private bool showModal = false;
+    private bool loading = false;
+
+    // Date
+    private Product product;
+
+    public async Task Open(int catalogId, int productId)
+    {
+        showModal = true;
+        loading = true;
+        StateHasChanged();
+
+        var response = await productManager.GetByIdAsync(productId, catalogId);
+        if (!response.IsSuccess)
+            throw new Exception();
+
+        this.product = response.Response;
+        loading = false;
+        StateHasChanged();
+    }
+
+    public void Close()
+    {
+        showModal = false;
+        StateHasChanged();
+    }
+}

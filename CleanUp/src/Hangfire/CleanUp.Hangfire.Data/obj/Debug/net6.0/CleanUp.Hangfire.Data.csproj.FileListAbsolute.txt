@@ -1,0 +1,15 @@
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\bin\Debug\net6.0\CleanUp.Hangfire.Data.deps.json
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\bin\Debug\net6.0\CleanUp.Hangfire.Data.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\bin\Debug\net6.0\ref\CleanUp.Hangfire.Data.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\bin\Debug\net6.0\CleanUp.Hangfire.Data.pdb
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\bin\Debug\net6.0\CleanUp.WebApi.Sdk.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\bin\Debug\net6.0\CleanUp.WebApi.Sdk.pdb
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\CleanUp.Hangfire.Data.csproj.AssemblyReference.cache
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\CleanUp.Hangfire.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\CleanUp.Hangfire.Data.AssemblyInfoInputs.cache
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\CleanUp.Hangfire.Data.AssemblyInfo.cs
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\CleanUp.Hangfire.Data.csproj.CoreCompileInputs.cache
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\CleanUp.Hangfire.Data.csproj.CopyComplete
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\CleanUp.Hangfire.Data.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\ref\CleanUp.Hangfire.Data.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Hangfire\CleanUp.Hangfire.Data\obj\Debug\net6.0\CleanUp.Hangfire.Data.pdb

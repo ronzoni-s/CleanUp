@@ -1,0 +1,10 @@
+{
+  "MultitenancySettings": {
+    "IncludeAll": true,
+    "IncludePaths": [],
+    "ExcludePaths": [
+      "/signin-oidc",
+      "/uuurca"
+    ]
+  }
+}

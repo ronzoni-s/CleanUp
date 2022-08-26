@@ -1,0 +1,63 @@
+.do-btn {
+  @include borderRadius(333.271616rem);
+  padding: 175.893353rem 259.211257rem;
+  font-weight: $bold;
+  font-size: 148.120718rem;
+  text-transform: uppercase;
+  border: 1px solid;
+
+  &-brown {
+    background: $brown;
+    border-color: $brown;
+  }
+  &-green {
+    background: $green;
+    border-color: $green;
+  }
+  &-orange {
+    background: $orange;
+    border-color: $orange;
+  }
+  &-lime {
+    background: $lime;
+    border-color: $lime;
+  }
+  &:hover {
+    color: inherit;
+    box-shadow: 0px 67.641rem 202.922999rem rgba(0, 0, 0, 0.22);
+  }
+  &.text-lblue {
+    color: $lblue;
+    &:hover {
+      color: $lblue;
+    }
+  }
+  &.text-lime {
+    color: $lime;
+    &:hover {
+      color: $lime;
+    }
+  }
+}
+@media (min-width: 769px) {
+  .do-btn {
+    &-green {
+      &:hover {
+        border-color: $lime;
+        background: $lime;
+      }
+    }
+    &-lime {
+      &:hover {
+        border-color: $green;
+        background: $green;
+      }
+    }
+    &-brown {
+      &:hover {
+        border-color: $lime;
+        background: $green;
+      }
+    }
+  }
+}

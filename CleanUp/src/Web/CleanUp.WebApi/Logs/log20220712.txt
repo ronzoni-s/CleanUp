@@ -1,0 +1,29 @@
+2022-07-12 14:18:54.577 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-12 14:18:54.613 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-12 14:18:54.619 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-12 14:18:54.621 +02:00 [INF] Hosting environment: Development
+2022-07-12 14:18:54.623 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-12 14:18:56.645 +02:00 [INF] HTTP GET /swagger responded 302 in 774.7341 ms
+2022-07-12 14:18:56.954 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 291.2509 ms
+2022-07-12 14:18:57.018 +02:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 57.2425 ms
+2022-07-12 14:18:57.223 +02:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 262.1054 ms
+2022-07-12 14:18:57.231 +02:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 270.6655 ms
+2022-07-12 14:18:58.225 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 807.2725 ms
+2022-07-12 14:20:53.546 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-12 14:20:53.575 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-12 14:20:53.579 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-12 14:20:53.580 +02:00 [INF] Hosting environment: Development
+2022-07-12 14:20:53.582 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-12 14:20:54.502 +02:00 [INF] HTTP GET /swagger responded 302 in 252.0010 ms
+2022-07-12 14:20:54.793 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 266.4185 ms
+2022-07-12 14:20:55.708 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 692.9032 ms
+2022-07-12 14:20:56.372 +02:00 [INF] HTTP GET /v1/order/242 responded 200 in 2480.8754 ms
+2022-07-12 14:23:15.712 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-12 14:23:15.738 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-12 14:23:15.744 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-12 14:23:15.746 +02:00 [INF] Hosting environment: Development
+2022-07-12 14:23:15.749 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-12 14:23:16.698 +02:00 [INF] HTTP GET /swagger responded 302 in 56.8439 ms
+2022-07-12 14:23:16.959 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 242.2201 ms
+2022-07-12 14:23:17.860 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 764.9428 ms
+2022-07-12 14:23:18.375 +02:00 [INF] HTTP GET /v1/order/242 responded 200 in 2356.8927 ms

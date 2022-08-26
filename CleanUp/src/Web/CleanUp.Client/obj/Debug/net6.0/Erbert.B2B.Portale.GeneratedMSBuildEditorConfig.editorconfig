@@ -1,0 +1,63 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = Erbert.B2B.Portale
+build_property.RootNamespace = Erbert.B2B.Portale
+build_property.ProjectDir = C:\Users\Simone\source\repos\Erbert\src\Web\Erbert.B2B.Portale\Erbert.B2B.Portale\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Simone\source\repos\Erbert\src\Web\Erbert.B2B.Portale\Erbert.B2B.Portale
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Pages/Authenticate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Pages/Order.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Shared/LoginLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luTGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-jwlaxg7j25
+
+[C:/Users/Simone/source/repos/Erbert/src/Web/Erbert.B2B.Portale/Erbert.B2B.Portale/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-revcdz0nk6

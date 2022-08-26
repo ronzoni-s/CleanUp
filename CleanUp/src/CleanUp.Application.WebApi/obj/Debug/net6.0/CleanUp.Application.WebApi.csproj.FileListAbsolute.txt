@@ -1,0 +1,17 @@
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\bin\Debug\net6.0\CleanUp.Application.WebApi.deps.json
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\bin\Debug\net6.0\CleanUp.Application.WebApi.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\bin\Debug\net6.0\ref\CleanUp.Application.WebApi.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\bin\Debug\net6.0\CleanUp.Application.WebApi.pdb
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\bin\Debug\net6.0\CleanUp.Application.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\bin\Debug\net6.0\CleanUp.Domain.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\bin\Debug\net6.0\CleanUp.Application.pdb
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\bin\Debug\net6.0\CleanUp.Domain.pdb
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\CleanUp.Application.WebApi.csproj.AssemblyReference.cache
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\CleanUp.Application.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\CleanUp.Application.WebApi.AssemblyInfoInputs.cache
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\CleanUp.Application.WebApi.AssemblyInfo.cs
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\CleanUp.Application.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\CleanUp.Application.WebApi.csproj.CopyComplete
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\CleanUp.Application.WebApi.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\ref\CleanUp.Application.WebApi.dll
+C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\obj\Debug\net6.0\CleanUp.Application.WebApi.pdb

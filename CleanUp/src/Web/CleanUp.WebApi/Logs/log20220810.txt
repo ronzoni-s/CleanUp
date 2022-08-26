@@ -1,0 +1,55 @@
+2022-08-10 16:30:46.789 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-10 16:30:46.828 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-10 16:30:46.833 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-10 16:30:46.835 +02:00 [INF] Hosting environment: Development
+2022-08-10 16:30:46.836 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-10 16:30:48.994 +02:00 [INF] HTTP GET /swagger responded 302 in 907.2094 ms
+2022-08-10 16:30:49.281 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 267.1833 ms
+2022-08-10 16:30:49.349 +02:00 [INF] HTTP GET /swagger/swagger-ui.css responded 304 in 62.5324 ms
+2022-08-10 16:30:49.524 +02:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 304 in 237.4989 ms
+2022-08-10 16:30:49.525 +02:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 304 in 238.5566 ms
+2022-08-10 16:30:49.834 +02:00 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 42.2708 ms
+2022-08-10 16:30:50.724 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 957.5886 ms
+2022-08-10 16:31:07.051 +02:00 [INF] HTTP GET /v1/order responded 200 in 1135.3065 ms
+2022-08-10 16:31:15.527 +02:00 [INF] HTTP GET /v1/order responded 200 in 415.5853 ms
+2022-08-10 16:31:32.267 +02:00 [INF] HTTP GET /v1/order responded 200 in 184.5333 ms
+2022-08-10 16:34:46.274 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-10 16:34:46.301 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-10 16:34:46.306 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-10 16:34:46.307 +02:00 [INF] Hosting environment: Development
+2022-08-10 16:34:46.309 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-10 16:34:47.371 +02:00 [INF] HTTP GET /swagger responded 302 in 374.4688 ms
+2022-08-10 16:34:47.648 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 258.1365 ms
+2022-08-10 16:34:48.475 +02:00 [INF] HTTP GET /v1/order responded 200 in 1687.1587 ms
+2022-08-10 16:34:48.770 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 850.8268 ms
+2022-08-10 16:34:48.830 +02:00 [INF] HTTP GET /v1/order responded 200 in 258.1605 ms
+2022-08-10 16:55:19.429 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-10 16:55:19.463 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-10 16:55:19.467 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-10 16:55:19.468 +02:00 [INF] Hosting environment: Development
+2022-08-10 16:55:19.470 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-10 16:55:20.965 +02:00 [INF] HTTP GET /swagger responded 302 in 415.2658 ms
+2022-08-10 16:55:21.285 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 298.8614 ms
+2022-08-10 16:55:22.552 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 1072.4684 ms
+2022-08-10 16:58:09.754 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-10 16:58:09.798 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-10 16:58:09.803 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-10 16:58:09.805 +02:00 [INF] Hosting environment: Development
+2022-08-10 16:58:09.809 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-10 16:58:10.935 +02:00 [INF] HTTP GET /swagger responded 302 in 351.2652 ms
+2022-08-10 16:58:11.190 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 234.0492 ms
+2022-08-10 16:58:12.147 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 811.4358 ms
+2022-08-10 17:00:23.773 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-10 17:00:23.801 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-10 17:00:23.807 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-10 17:00:23.809 +02:00 [INF] Hosting environment: Development
+2022-08-10 17:00:23.810 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-10 17:00:24.863 +02:00 [INF] HTTP GET /swagger responded 302 in 344.2801 ms
+2022-08-10 17:00:25.135 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 256.5618 ms
+2022-08-10 17:00:25.847 +02:00 [INF] HTTP GET /v1/order responded 200 in 1462.9816 ms
+2022-08-10 17:00:28.019 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 2739.8180 ms
+2022-08-10 17:00:28.194 +02:00 [INF] HTTP GET /v1/order responded 200 in 176.6476 ms
+2022-08-10 17:01:12.865 +02:00 [INF] HTTP PUT /v1/order/281 responded 200 in 4058.3713 ms
+2022-08-10 17:01:20.444 +02:00 [INF] HTTP PUT /v1/order/282 responded 200 in 1136.0200 ms
+2022-08-10 17:01:22.309 +02:00 [INF] HTTP GET /v1/order responded 200 in 133.9711 ms
+2022-08-10 17:01:23.460 +02:00 [INF] HTTP GET /v1/order responded 200 in 125.7145 ms

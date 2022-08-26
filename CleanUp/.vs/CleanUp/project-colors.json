@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "227d8b73-e310-4bcf-a7ff-6bd1af041181": {
+      "ProjectGuid": "227d8b73-e310-4bcf-a7ff-6bd1af041181",
+      "DisplayName": "CleanUp.Infrastructure",
+      "ColorIndex": 0
+    },
+    "ecd1c9a8-04e4-4b18-8e2c-b84cffc9f8cc": {
+      "ProjectGuid": "ecd1c9a8-04e4-4b18-8e2c-b84cffc9f8cc",
+      "DisplayName": "CleanUp.Domain",
+      "ColorIndex": 1
+    },
+    "aefe058f-77d5-420b-a954-60a2d27cb14a": {
+      "ProjectGuid": "aefe058f-77d5-420b-a954-60a2d27cb14a",
+      "DisplayName": "CleanUp.Application.InternalApi",
+      "ColorIndex": 2
+    },
+    "5b869f90-507a-4e6d-8600-7e230afc9f5e": {
+      "ProjectGuid": "5b869f90-507a-4e6d-8600-7e230afc9f5e",
+      "DisplayName": "Erbert.Loyalty.Sdk",
+      "ColorIndex": 3
+    },
+    "2a59050c-7be6-4510-aaad-081c9f9e8228": {
+      "ProjectGuid": "2a59050c-7be6-4510-aaad-081c9f9e8228",
+      "DisplayName": "Erbert.ImportCompanys",
+      "ColorIndex": 4
+    },
+    "6e728c29-6890-498e-b77b-16f35be6fb52": {
+      "ProjectGuid": "6e728c29-6890-498e-b77b-16f35be6fb52",
+      "DisplayName": "CleanUp.Hangfire.Data",
+      "ColorIndex": 5
+    },
+    "2254aeb8-745d-4d10-9ea2-4f8f1dab65a9": {
+      "ProjectGuid": "2254aeb8-745d-4d10-9ea2-4f8f1dab65a9",
+      "DisplayName": "CleanUp.Hangfire",
+      "ColorIndex": 6
+    },
+    "18a84f93-1af9-49fc-9993-126a262e3507": {
+      "ProjectGuid": "18a84f93-1af9-49fc-9993-126a262e3507",
+      "DisplayName": "CleanUp.Client",
+      "ColorIndex": 7
+    },
+    "4200bf54-97ca-4aec-b340-61a8772e2897": {
+      "ProjectGuid": "4200bf54-97ca-4aec-b340-61a8772e2897",
+      "DisplayName": "CleanUp.WebApi.Sdk",
+      "ColorIndex": 8
+    },
+    "b72a5552-454d-40c6-9b40-3c72b7ddc5f9": {
+      "ProjectGuid": "b72a5552-454d-40c6-9b40-3c72b7ddc5f9",
+      "DisplayName": "CleanUp.InternalApi",
+      "ColorIndex": 9
+    },
+    "bf268677-98ec-4f7e-a6aa-d98bd92c188f": {
+      "ProjectGuid": "bf268677-98ec-4f7e-a6aa-d98bd92c188f",
+      "DisplayName": "CleanUp.Application",
+      "ColorIndex": 10
+    },
+    "f6c4baac-b6e3-49b8-a656-82a57867d8d4": {
+      "ProjectGuid": "f6c4baac-b6e3-49b8-a656-82a57867d8d4",
+      "DisplayName": "Erbert.B2B.Portale.Host",
+      "ColorIndex": 11
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "File esterni",
+      "ColorIndex": -1
+    },
+    "96b2cc92-9334-4667-bd04-de052504d767": {
+      "ProjectGuid": "96b2cc92-9334-4667-bd04-de052504d767",
+      "DisplayName": "CleanUp.Application.WebApi",
+      "ColorIndex": 12
+    },
+    "48ad9b47-5f05-4cb7-9081-33f415861528": {
+      "ProjectGuid": "48ad9b47-5f05-4cb7-9081-33f415861528",
+      "DisplayName": "CleanUp.Application",
+      "ColorIndex": 13
+    },
+    "2898e638-fcba-4a78-8cee-800f79331dfb": {
+      "ProjectGuid": "2898e638-fcba-4a78-8cee-800f79331dfb",
+      "DisplayName": "CleanUp.Infrastructure",
+      "ColorIndex": 14
+    },
+    "9364fef2-71fe-4adc-abdb-ca5f6ca8eea8": {
+      "ProjectGuid": "9364fef2-71fe-4adc-abdb-ca5f6ca8eea8",
+      "DisplayName": "CleanUp.WebApi",
+      "ColorIndex": 15
+    },
+    "51bd5b75-7a45-4bab-b683-6108018f2685": {
+      "ProjectGuid": "51bd5b75-7a45-4bab-b683-6108018f2685",
+      "DisplayName": "CleanUp.WebApi.Sdk",
+      "ColorIndex": 0
+    },
+    "67bf1b60-f4a5-4a58-b9c8-c3796b0b2e2b": {
+      "ProjectGuid": "67bf1b60-f4a5-4a58-b9c8-c3796b0b2e2b",
+      "DisplayName": "CleanUp.Hangfire",
+      "ColorIndex": 1
+    },
+    "94268e8d-2c7b-4fb1-9939-6e51e5c86859": {
+      "ProjectGuid": "94268e8d-2c7b-4fb1-9939-6e51e5c86859",
+      "DisplayName": "CleanUp.Hangfire.Data",
+      "ColorIndex": 2
+    },
+    "0e498f2b-8615-48eb-9d6c-2634faa2bec7": {
+      "ProjectGuid": "0e498f2b-8615-48eb-9d6c-2634faa2bec7",
+      "DisplayName": "CleanUp.Client",
+      "ColorIndex": 3
+    },
+    "062aae40-3e85-482e-975b-4ef7cd2facc1": {
+      "ProjectGuid": "062aae40-3e85-482e-975b-4ef7cd2facc1",
+      "DisplayName": "CleanUp.Domain",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

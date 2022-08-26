@@ -1,0 +1,1295 @@
+2022-07-08 09:13:39.916 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:13:39.973 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:13:39.985 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:13:39.987 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:13:39.989 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:13:41.817 +02:00 [INF] HTTP GET /swagger responded 302 in 610.1111 ms
+2022-07-08 09:13:42.242 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 399.9500 ms
+2022-07-08 09:13:43.668 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 1061.1790 ms
+2022-07-08 09:14:34.622 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:14:34.668 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:14:34.674 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:14:34.676 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:14:34.678 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:14:35.738 +02:00 [INF] HTTP GET /swagger responded 302 in 446.5525 ms
+2022-07-08 09:14:35.999 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 238.0299 ms
+2022-07-08 09:14:36.457 +02:00 [INF] HTTP GET /v1/order responded 200 in 1162.2394 ms
+2022-07-08 09:16:12.803 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:16:12.836 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:16:12.841 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:16:12.842 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:16:12.844 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:16:13.953 +02:00 [INF] HTTP GET /swagger responded 302 in 397.4410 ms
+2022-07-08 09:16:14.202 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 230.8406 ms
+2022-07-08 09:21:45.910 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:21:45.943 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:21:45.949 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:21:45.951 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:21:45.953 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:21:47.098 +02:00 [INF] HTTP GET /swagger responded 302 in 73.6102 ms
+2022-07-08 09:23:29.396 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:23:29.426 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:23:29.431 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:23:29.433 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:23:29.435 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:23:30.431 +02:00 [INF] HTTP GET /swagger responded 302 in 354.2174 ms
+2022-07-08 09:23:30.695 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 246.6924 ms
+2022-07-08 09:24:05.533 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:24:05.574 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:24:05.584 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:24:05.588 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:24:05.590 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:24:08.730 +02:00 [INF] HTTP GET /swagger responded 302 in 2167.7190 ms
+2022-07-08 09:24:09.005 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 255.5494 ms
+2022-07-08 09:24:09.109 +02:00 [INF] HTTP GET /v1/order responded 200 in 3163.5716 ms
+2022-07-08 09:24:52.119 +02:00 [ERR] Failed executing DbCommand (42,902ms) [Parameters=[@__identifier_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[AdminEmail], [t].[ConnectionString], [t].[Identifier], [t].[IsActive], [t].[Issuer], [t].[Name], [t].[OpenIdConnectAuthority], [t].[OpenIdConnectClientId], [t].[OpenIdConnectClientSecret], [t].[ValidUpto]
+FROM [multitenancy].[Tenants] AS [t]
+WHERE [t].[Identifier] = @__identifier_0
+2022-07-08 09:24:52.161 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'fbognini.Infrastructure.Multitenancy.TenantDbContext`1[CleanUp.Infrastructure.Persistance.CleanUpTenant]'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tempo di attesa scaduto.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:7d40ee7a-71ba-4cef-b300-1a467e64b96a
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tempo di attesa scaduto.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:7d40ee7a-71ba-4cef-b300-1a467e64b96a
+Error Number:-2,State:0,Class:11
+2022-07-08 09:24:52.184 +02:00 [ERR] Exception in TryGetByIdentifierAsync
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tempo di attesa scaduto.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Finbuckle.MultiTenant.Stores.EFCoreStore`2.TryGetByIdentifierAsync(String identifier)
+   at Finbuckle.MultiTenant.Stores.MultiTenantStoreWrapper`1.TryGetByIdentifierAsync(String identifier)
+ClientConnectionId:7d40ee7a-71ba-4cef-b300-1a467e64b96a
+Error Number:-2,State:0,Class:11
+2022-07-08 09:24:52.344 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 401 in 43138.4588 ms
+2022-07-08 09:25:10.365 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:25:10.395 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:25:10.401 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:25:10.403 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:25:10.405 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:25:11.485 +02:00 [INF] HTTP GET /swagger responded 302 in 395.2872 ms
+2022-07-08 09:25:11.736 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 227.4701 ms
+2022-07-08 09:25:12.678 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 781.5677 ms
+2022-07-08 09:25:39.769 +02:00 [INF] HTTP GET /v1/order responded 200 in 8021.4788 ms
+2022-07-08 09:26:54.147 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:26:54.174 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:26:54.179 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:26:54.180 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:26:54.182 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:26:55.279 +02:00 [INF] HTTP GET /swagger responded 302 in 464.1501 ms
+2022-07-08 09:26:55.588 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 279.1958 ms
+2022-07-08 09:26:56.642 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 891.1210 ms
+2022-07-08 09:27:28.149 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:27:28.176 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:27:28.181 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:27:28.183 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:27:28.184 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:27:29.263 +02:00 [INF] HTTP GET /swagger responded 302 in 318.5212 ms
+2022-07-08 09:27:35.770 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 6488.5498 ms
+2022-07-08 09:27:36.215 +02:00 [INF] HTTP GET /v1/order responded 200 in 7614.3273 ms
+2022-07-08 09:33:35.432 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:33:35.474 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:33:35.478 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:33:35.480 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:33:35.481 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:33:36.327 +02:00 [INF] HTTP GET /swagger responded 302 in 356.3066 ms
+2022-07-08 09:33:43.157 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 6811.4612 ms
+2022-07-08 09:33:43.563 +02:00 [INF] HTTP GET /v1/order responded 200 in 7834.7398 ms
+2022-07-08 09:33:43.702 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8268 ms
+2022-07-08 09:33:43.789 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.2781 ms
+2022-07-08 09:33:43.876 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.2136 ms
+2022-07-08 09:33:43.961 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.5373 ms
+2022-07-08 09:33:44.051 +02:00 [INF] HTTP GET /v1/order responded 200 in 86.0656 ms
+2022-07-08 09:33:44.118 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 787.3124 ms
+2022-07-08 09:33:44.144 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.8229 ms
+2022-07-08 09:33:44.240 +02:00 [INF] HTTP GET /v1/order responded 200 in 90.1116 ms
+2022-07-08 09:33:44.324 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.8961 ms
+2022-07-08 09:33:44.412 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.7759 ms
+2022-07-08 09:33:44.625 +02:00 [INF] HTTP GET /v1/order responded 200 in 207.2379 ms
+2022-07-08 09:33:44.711 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.2917 ms
+2022-07-08 09:33:44.797 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.9862 ms
+2022-07-08 09:33:44.883 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.5645 ms
+2022-07-08 09:33:44.969 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.5217 ms
+2022-07-08 09:33:45.053 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.8198 ms
+2022-07-08 09:33:45.175 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.6467 ms
+2022-07-08 09:33:45.260 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.7012 ms
+2022-07-08 09:33:45.346 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.7952 ms
+2022-07-08 09:33:45.430 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.7482 ms
+2022-07-08 09:33:45.515 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.5905 ms
+2022-07-08 09:33:45.600 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.4844 ms
+2022-07-08 09:33:45.685 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.1477 ms
+2022-07-08 09:33:45.769 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.8396 ms
+2022-07-08 09:33:45.854 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.0013 ms
+2022-07-08 09:33:45.940 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.2297 ms
+2022-07-08 09:33:46.024 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.9935 ms
+2022-07-08 09:33:46.109 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.5573 ms
+2022-07-08 09:33:46.193 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.9919 ms
+2022-07-08 09:33:46.277 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.6607 ms
+2022-07-08 09:33:46.362 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.5542 ms
+2022-07-08 09:33:46.449 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.4819 ms
+2022-07-08 09:33:46.533 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.0309 ms
+2022-07-08 09:33:46.619 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.8830 ms
+2022-07-08 09:33:46.808 +02:00 [INF] HTTP GET /v1/order responded 200 in 183.4975 ms
+2022-07-08 09:33:46.892 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.2282 ms
+2022-07-08 09:33:46.977 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.9817 ms
+2022-07-08 09:33:47.064 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.9943 ms
+2022-07-08 09:33:47.148 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.8572 ms
+2022-07-08 09:33:47.234 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.6183 ms
+2022-07-08 09:33:47.321 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6178 ms
+2022-07-08 09:33:47.411 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.7342 ms
+2022-07-08 09:33:47.501 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8498 ms
+2022-07-08 09:33:47.595 +02:00 [INF] HTTP GET /v1/order responded 200 in 88.3606 ms
+2022-07-08 09:33:47.687 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.8237 ms
+2022-07-08 09:33:47.796 +02:00 [INF] HTTP GET /v1/order responded 200 in 101.7708 ms
+2022-07-08 09:33:47.894 +02:00 [INF] HTTP GET /v1/order responded 200 in 91.1088 ms
+2022-07-08 09:33:47.982 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.0197 ms
+2022-07-08 09:33:48.072 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.3019 ms
+2022-07-08 09:33:48.159 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6580 ms
+2022-07-08 09:33:48.253 +02:00 [INF] HTTP GET /v1/order responded 200 in 89.9144 ms
+2022-07-08 09:33:48.345 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.8228 ms
+2022-07-08 09:33:48.436 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5784 ms
+2022-07-08 09:33:48.526 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3734 ms
+2022-07-08 09:33:48.612 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1667 ms
+2022-07-08 09:33:48.699 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6567 ms
+2022-07-08 09:33:48.917 +02:00 [INF] HTTP GET /v1/order responded 200 in 212.1817 ms
+2022-07-08 09:33:49.010 +02:00 [INF] HTTP GET /v1/order responded 200 in 88.2561 ms
+2022-07-08 09:33:49.098 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.7614 ms
+2022-07-08 09:33:49.187 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.5102 ms
+2022-07-08 09:33:49.276 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.3961 ms
+2022-07-08 09:33:49.366 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8241 ms
+2022-07-08 09:33:49.454 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5677 ms
+2022-07-08 09:33:49.543 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6484 ms
+2022-07-08 09:33:49.630 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2209 ms
+2022-07-08 09:33:49.718 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4257 ms
+2022-07-08 09:33:49.806 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.7176 ms
+2022-07-08 09:33:49.894 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4176 ms
+2022-07-08 09:33:49.984 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5473 ms
+2022-07-08 09:33:50.072 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.2727 ms
+2022-07-08 09:33:50.161 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.0201 ms
+2022-07-08 09:33:50.247 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2097 ms
+2022-07-08 09:33:50.335 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4390 ms
+2022-07-08 09:33:50.422 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2687 ms
+2022-07-08 09:33:50.508 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.5159 ms
+2022-07-08 09:33:50.596 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5695 ms
+2022-07-08 09:33:50.683 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2618 ms
+2022-07-08 09:33:50.772 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8148 ms
+2022-07-08 09:33:50.859 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3029 ms
+2022-07-08 09:33:51.061 +02:00 [INF] HTTP GET /v1/order responded 200 in 194.8484 ms
+2022-07-08 09:33:51.149 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.7827 ms
+2022-07-08 09:33:51.238 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.9516 ms
+2022-07-08 09:33:51.325 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.7426 ms
+2022-07-08 09:33:51.413 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8928 ms
+2022-07-08 09:33:51.501 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4877 ms
+2022-07-08 09:33:51.588 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5681 ms
+2022-07-08 09:33:51.675 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0691 ms
+2022-07-08 09:33:51.764 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3997 ms
+2022-07-08 09:33:51.852 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3116 ms
+2022-07-08 09:33:51.941 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.5275 ms
+2022-07-08 09:33:52.028 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3858 ms
+2022-07-08 09:33:52.115 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0200 ms
+2022-07-08 09:33:52.204 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4387 ms
+2022-07-08 09:33:52.294 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.7401 ms
+2022-07-08 09:33:52.380 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2383 ms
+2022-07-08 09:33:52.469 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1775 ms
+2022-07-08 09:33:52.557 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3048 ms
+2022-07-08 09:33:52.644 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6984 ms
+2022-07-08 09:33:52.732 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2217 ms
+2022-07-08 09:33:52.820 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5757 ms
+2022-07-08 09:33:52.908 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8635 ms
+2022-07-08 09:33:52.995 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5968 ms
+2022-07-08 09:33:53.205 +02:00 [INF] HTTP GET /v1/order responded 200 in 205.5208 ms
+2022-07-08 09:33:53.292 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.8621 ms
+2022-07-08 09:33:53.379 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.8842 ms
+2022-07-08 09:33:53.467 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.3521 ms
+2022-07-08 09:33:53.556 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1269 ms
+2022-07-08 09:33:53.643 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0749 ms
+2022-07-08 09:33:53.731 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6848 ms
+2022-07-08 09:33:53.819 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1072 ms
+2022-07-08 09:33:53.906 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3797 ms
+2022-07-08 09:33:53.994 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3996 ms
+2022-07-08 09:33:54.081 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4048 ms
+2022-07-08 09:33:54.170 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3291 ms
+2022-07-08 09:33:54.258 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.8559 ms
+2022-07-08 09:33:54.344 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.7028 ms
+2022-07-08 09:33:54.431 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2953 ms
+2022-07-08 09:33:54.521 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.2435 ms
+2022-07-08 09:33:54.609 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.6171 ms
+2022-07-08 09:33:54.695 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.9774 ms
+2022-07-08 09:33:54.783 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4144 ms
+2022-07-08 09:33:54.871 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0234 ms
+2022-07-08 09:33:54.959 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.0524 ms
+2022-07-08 09:33:55.046 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.5875 ms
+2022-07-08 09:33:55.134 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8813 ms
+2022-07-08 09:33:55.350 +02:00 [INF] HTTP GET /v1/order responded 200 in 209.3871 ms
+2022-07-08 09:33:55.440 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6406 ms
+2022-07-08 09:33:55.528 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0688 ms
+2022-07-08 09:33:55.615 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3143 ms
+2022-07-08 09:33:55.702 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2705 ms
+2022-07-08 09:33:55.791 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.8939 ms
+2022-07-08 09:33:55.878 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.9201 ms
+2022-07-08 09:33:55.966 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4848 ms
+2022-07-08 09:33:56.054 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.9625 ms
+2022-07-08 09:33:56.141 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4150 ms
+2022-07-08 09:33:56.228 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2158 ms
+2022-07-08 09:33:56.315 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.7159 ms
+2022-07-08 09:33:56.406 +02:00 [INF] HTTP GET /v1/order responded 200 in 85.4368 ms
+2022-07-08 09:33:56.493 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3832 ms
+2022-07-08 09:33:56.580 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0359 ms
+2022-07-08 09:33:56.668 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.7444 ms
+2022-07-08 09:33:56.756 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1928 ms
+2022-07-08 09:33:56.845 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8863 ms
+2022-07-08 09:33:56.933 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.9041 ms
+2022-07-08 09:33:57.021 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8494 ms
+2022-07-08 09:33:57.113 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4178 ms
+2022-07-08 09:33:57.200 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2674 ms
+2022-07-08 09:33:57.287 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.7896 ms
+2022-07-08 09:33:57.497 +02:00 [INF] HTTP GET /v1/order responded 200 in 204.3769 ms
+2022-07-08 09:33:57.584 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.7513 ms
+2022-07-08 09:33:57.671 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3190 ms
+2022-07-08 09:33:57.759 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4152 ms
+2022-07-08 09:33:57.846 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5587 ms
+2022-07-08 09:33:57.935 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1334 ms
+2022-07-08 09:33:58.023 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3403 ms
+2022-07-08 09:33:58.111 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.2113 ms
+2022-07-08 09:33:58.197 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.7659 ms
+2022-07-08 09:33:58.284 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.9870 ms
+2022-07-08 09:33:58.372 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5237 ms
+2022-07-08 09:33:58.459 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1869 ms
+2022-07-08 09:33:58.547 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8491 ms
+2022-07-08 09:33:58.635 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2586 ms
+2022-07-08 09:33:58.741 +02:00 [INF] HTTP GET /v1/order responded 200 in 102.1405 ms
+2022-07-08 09:33:58.829 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6972 ms
+2022-07-08 09:33:58.917 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5270 ms
+2022-07-08 09:33:59.005 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8214 ms
+2022-07-08 09:33:59.093 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.8006 ms
+2022-07-08 09:33:59.180 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2544 ms
+2022-07-08 09:33:59.342 +02:00 [INF] HTTP GET /v1/order responded 200 in 156.3444 ms
+2022-07-08 09:33:59.431 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6370 ms
+2022-07-08 09:33:59.649 +02:00 [INF] HTTP GET /v1/order responded 200 in 212.4914 ms
+2022-07-08 09:33:59.736 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.9561 ms
+2022-07-08 09:33:59.825 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3293 ms
+2022-07-08 09:33:59.911 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.6975 ms
+2022-07-08 09:34:00.000 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.4517 ms
+2022-07-08 09:34:00.093 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.0757 ms
+2022-07-08 09:34:00.179 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0143 ms
+2022-07-08 09:34:00.266 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4774 ms
+2022-07-08 09:34:00.353 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0233 ms
+2022-07-08 09:34:00.440 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5473 ms
+2022-07-08 09:34:00.528 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2476 ms
+2022-07-08 09:34:00.616 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.0376 ms
+2022-07-08 09:34:00.704 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.9917 ms
+2022-07-08 09:34:00.794 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.8827 ms
+2022-07-08 09:34:00.886 +02:00 [INF] HTTP GET /v1/order responded 200 in 85.9910 ms
+2022-07-08 09:34:00.976 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.5530 ms
+2022-07-08 09:34:01.073 +02:00 [INF] HTTP GET /v1/order responded 200 in 85.3263 ms
+2022-07-08 09:34:01.165 +02:00 [INF] HTTP GET /v1/order responded 200 in 87.5274 ms
+2022-07-08 09:34:01.257 +02:00 [INF] HTTP GET /v1/order responded 200 in 87.3597 ms
+2022-07-08 09:34:01.363 +02:00 [INF] HTTP GET /v1/order responded 200 in 101.4072 ms
+2022-07-08 09:34:01.456 +02:00 [INF] HTTP GET /v1/order responded 200 in 87.1596 ms
+2022-07-08 09:34:01.545 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6268 ms
+2022-07-08 09:34:01.634 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.7773 ms
+2022-07-08 09:34:01.970 +02:00 [INF] HTTP GET /v1/order responded 200 in 330.9309 ms
+2022-07-08 09:34:02.065 +02:00 [INF] HTTP GET /v1/order responded 200 in 88.6553 ms
+2022-07-08 09:34:02.153 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.3649 ms
+2022-07-08 09:34:02.242 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.4579 ms
+2022-07-08 09:34:02.329 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5962 ms
+2022-07-08 09:34:02.417 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.8666 ms
+2022-07-08 09:34:02.505 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.9286 ms
+2022-07-08 09:34:02.595 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.7083 ms
+2022-07-08 09:34:02.684 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.1106 ms
+2022-07-08 09:34:02.772 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.9674 ms
+2022-07-08 09:34:02.861 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.0415 ms
+2022-07-08 09:34:02.951 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.7096 ms
+2022-07-08 09:34:03.038 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6538 ms
+2022-07-08 09:34:03.126 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.4835 ms
+2022-07-08 09:34:03.213 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.9985 ms
+2022-07-08 09:34:03.300 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.2172 ms
+2022-07-08 09:34:03.389 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3562 ms
+2022-07-08 09:34:03.479 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.2448 ms
+2022-07-08 09:34:03.569 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1298 ms
+2022-07-08 09:34:03.656 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0244 ms
+2022-07-08 09:34:03.753 +02:00 [INF] HTTP GET /v1/order responded 200 in 92.3891 ms
+2022-07-08 09:34:03.841 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1464 ms
+2022-07-08 09:34:04.075 +02:00 [INF] HTTP GET /v1/order responded 200 in 229.2468 ms
+2022-07-08 09:34:04.163 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.4306 ms
+2022-07-08 09:34:05.030 +02:00 [INF] HTTP GET /v1/order responded 200 in 863.0276 ms
+2022-07-08 09:34:05.118 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.1664 ms
+2022-07-08 09:34:05.207 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.5349 ms
+2022-07-08 09:34:05.295 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1857 ms
+2022-07-08 09:34:05.384 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3284 ms
+2022-07-08 09:34:05.471 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.9982 ms
+2022-07-08 09:34:05.559 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.7437 ms
+2022-07-08 09:34:05.650 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.2950 ms
+2022-07-08 09:34:05.739 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.0140 ms
+2022-07-08 09:34:05.826 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.3393 ms
+2022-07-08 09:34:05.915 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.5865 ms
+2022-07-08 09:34:06.002 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.0938 ms
+2022-07-08 09:34:06.231 +02:00 [INF] HTTP GET /v1/order responded 200 in 224.7639 ms
+2022-07-08 09:34:06.319 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.1044 ms
+2022-07-08 09:34:06.408 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.2057 ms
+2022-07-08 09:34:06.498 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.4274 ms
+2022-07-08 09:34:06.586 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.3115 ms
+2022-07-08 09:34:23.995 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:34:24.021 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:34:24.026 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:34:24.028 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:34:24.030 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:34:25.310 +02:00 [INF] HTTP GET /swagger responded 302 in 468.3572 ms
+2022-07-08 09:34:25.615 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 281.0102 ms
+2022-07-08 09:34:25.999 +02:00 [INF] HTTP GET /v1/order responded 200 in 1380.5314 ms
+2022-07-08 09:34:26.153 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.2961 ms
+2022-07-08 09:34:26.241 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.1561 ms
+2022-07-08 09:34:26.328 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.9480 ms
+2022-07-08 09:34:26.413 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.0697 ms
+2022-07-08 09:34:26.497 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.6814 ms
+2022-07-08 09:34:26.580 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.6519 ms
+2022-07-08 09:34:26.659 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 846.3581 ms
+2022-07-08 09:34:26.662 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.0133 ms
+2022-07-08 09:34:26.747 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.2585 ms
+2022-07-08 09:34:26.829 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.7830 ms
+2022-07-08 09:34:26.911 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.6219 ms
+2022-07-08 09:34:26.994 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.9062 ms
+2022-07-08 09:34:27.077 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.3887 ms
+2022-07-08 09:34:27.175 +02:00 [INF] HTTP GET /v1/order responded 200 in 91.6549 ms
+2022-07-08 09:34:27.257 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.1876 ms
+2022-07-08 09:34:27.445 +02:00 [INF] HTTP GET /v1/order responded 200 in 183.4601 ms
+2022-07-08 09:34:27.528 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.5985 ms
+2022-07-08 09:34:27.611 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.3004 ms
+2022-07-08 09:34:27.693 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.6561 ms
+2022-07-08 09:34:27.778 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5511 ms
+2022-07-08 09:34:27.859 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.0254 ms
+2022-07-08 09:34:27.944 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.2153 ms
+2022-07-08 09:34:28.030 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.1488 ms
+2022-07-08 09:34:28.115 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.6187 ms
+2022-07-08 09:34:28.200 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5702 ms
+2022-07-08 09:34:28.281 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.8754 ms
+2022-07-08 09:34:28.365 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.6554 ms
+2022-07-08 09:34:28.447 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.0740 ms
+2022-07-08 09:34:28.530 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.0093 ms
+2022-07-08 09:34:28.614 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.5526 ms
+2022-07-08 09:34:28.700 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.5129 ms
+2022-07-08 09:34:28.782 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6725 ms
+2022-07-08 09:34:28.867 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.6551 ms
+2022-07-08 09:34:28.950 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.2371 ms
+2022-07-08 09:34:29.034 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.2444 ms
+2022-07-08 09:34:29.118 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7002 ms
+2022-07-08 09:34:29.201 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.5162 ms
+2022-07-08 09:34:29.284 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.3053 ms
+2022-07-08 09:34:29.367 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.6418 ms
+2022-07-08 09:34:29.579 +02:00 [INF] HTTP GET /v1/order responded 200 in 206.1897 ms
+2022-07-08 09:34:29.664 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.1778 ms
+2022-07-08 09:34:29.745 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7259 ms
+2022-07-08 09:34:29.827 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.1305 ms
+2022-07-08 09:34:29.909 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7821 ms
+2022-07-08 09:34:29.990 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.4699 ms
+2022-07-08 09:34:30.070 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4028 ms
+2022-07-08 09:34:30.150 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7646 ms
+2022-07-08 09:34:30.230 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9150 ms
+2022-07-08 09:34:30.310 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7262 ms
+2022-07-08 09:34:30.394 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.7913 ms
+2022-07-08 09:34:30.475 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.9989 ms
+2022-07-08 09:34:30.556 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3823 ms
+2022-07-08 09:34:30.638 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.7240 ms
+2022-07-08 09:34:30.721 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.2271 ms
+2022-07-08 09:34:30.801 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4621 ms
+2022-07-08 09:34:30.882 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2969 ms
+2022-07-08 09:34:30.963 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8308 ms
+2022-07-08 09:34:31.054 +02:00 [INF] HTTP GET /v1/order responded 200 in 85.5776 ms
+2022-07-08 09:34:31.140 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4063 ms
+2022-07-08 09:34:31.223 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.9002 ms
+2022-07-08 09:34:31.303 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6669 ms
+2022-07-08 09:34:31.384 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8766 ms
+2022-07-08 09:34:31.464 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3523 ms
+2022-07-08 09:34:31.546 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5195 ms
+2022-07-08 09:34:31.752 +02:00 [INF] HTTP GET /v1/order responded 200 in 200.5032 ms
+2022-07-08 09:34:31.833 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8605 ms
+2022-07-08 09:34:31.914 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9373 ms
+2022-07-08 09:34:31.995 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8452 ms
+2022-07-08 09:34:32.085 +02:00 [INF] HTTP GET /v1/order responded 200 in 85.9835 ms
+2022-07-08 09:34:32.168 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5661 ms
+2022-07-08 09:34:32.248 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0049 ms
+2022-07-08 09:34:32.329 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6248 ms
+2022-07-08 09:34:32.410 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8633 ms
+2022-07-08 09:34:32.492 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0768 ms
+2022-07-08 09:34:32.576 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9044 ms
+2022-07-08 09:34:32.659 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5867 ms
+2022-07-08 09:34:32.740 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5169 ms
+2022-07-08 09:34:32.820 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0801 ms
+2022-07-08 09:34:32.901 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9740 ms
+2022-07-08 09:34:32.982 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0531 ms
+2022-07-08 09:34:33.062 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5511 ms
+2022-07-08 09:34:33.143 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6882 ms
+2022-07-08 09:34:33.234 +02:00 [INF] HTTP GET /v1/order responded 200 in 85.4745 ms
+2022-07-08 09:34:33.315 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2520 ms
+2022-07-08 09:34:33.396 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7771 ms
+2022-07-08 09:34:33.476 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6536 ms
+2022-07-08 09:34:33.556 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4911 ms
+2022-07-08 09:34:33.636 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4520 ms
+2022-07-08 09:34:33.855 +02:00 [INF] HTTP GET /v1/order responded 200 in 214.4922 ms
+2022-07-08 09:34:33.936 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3318 ms
+2022-07-08 09:34:34.019 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6893 ms
+2022-07-08 09:34:34.100 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6044 ms
+2022-07-08 09:34:34.182 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5925 ms
+2022-07-08 09:34:34.262 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4855 ms
+2022-07-08 09:34:34.343 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7705 ms
+2022-07-08 09:34:34.424 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5181 ms
+2022-07-08 09:34:34.505 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1016 ms
+2022-07-08 09:34:34.586 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2594 ms
+2022-07-08 09:34:34.668 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1572 ms
+2022-07-08 09:34:34.749 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3380 ms
+2022-07-08 09:34:34.830 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2823 ms
+2022-07-08 09:34:34.910 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4646 ms
+2022-07-08 09:34:34.993 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5027 ms
+2022-07-08 09:34:35.076 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1597 ms
+2022-07-08 09:34:35.157 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5311 ms
+2022-07-08 09:34:35.238 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1347 ms
+2022-07-08 09:34:35.321 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0753 ms
+2022-07-08 09:34:35.405 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.6567 ms
+2022-07-08 09:34:35.487 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2421 ms
+2022-07-08 09:34:35.567 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6890 ms
+2022-07-08 09:34:35.648 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2697 ms
+2022-07-08 09:34:35.730 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1537 ms
+2022-07-08 09:34:35.810 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6271 ms
+2022-07-08 09:34:36.028 +02:00 [INF] HTTP GET /v1/order responded 200 in 212.7706 ms
+2022-07-08 09:34:36.110 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.4727 ms
+2022-07-08 09:34:36.191 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8302 ms
+2022-07-08 09:34:36.272 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7613 ms
+2022-07-08 09:34:36.353 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9270 ms
+2022-07-08 09:34:36.434 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1452 ms
+2022-07-08 09:34:36.516 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7329 ms
+2022-07-08 09:34:36.602 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.3653 ms
+2022-07-08 09:34:36.689 +02:00 [INF] HTTP GET /v1/order responded 200 in 81.1579 ms
+2022-07-08 09:34:36.772 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4898 ms
+2022-07-08 09:34:36.854 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3531 ms
+2022-07-08 09:34:36.936 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.9445 ms
+2022-07-08 09:34:37.016 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4336 ms
+2022-07-08 09:34:37.099 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1779 ms
+2022-07-08 09:34:37.182 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4866 ms
+2022-07-08 09:34:37.269 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8979 ms
+2022-07-08 09:34:37.350 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5182 ms
+2022-07-08 09:34:37.432 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8699 ms
+2022-07-08 09:34:37.512 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7788 ms
+2022-07-08 09:34:37.594 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8108 ms
+2022-07-08 09:34:37.677 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1444 ms
+2022-07-08 09:34:37.757 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7641 ms
+2022-07-08 09:34:37.838 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8058 ms
+2022-07-08 09:34:37.929 +02:00 [INF] HTTP GET /v1/order responded 200 in 86.3102 ms
+2022-07-08 09:34:38.140 +02:00 [INF] HTTP GET /v1/order responded 200 in 204.2531 ms
+2022-07-08 09:34:38.222 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3489 ms
+2022-07-08 09:34:38.303 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4112 ms
+2022-07-08 09:34:38.383 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1365 ms
+2022-07-08 09:34:38.463 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1589 ms
+2022-07-08 09:34:38.545 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9480 ms
+2022-07-08 09:34:38.626 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2602 ms
+2022-07-08 09:34:38.708 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7319 ms
+2022-07-08 09:34:38.788 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1899 ms
+2022-07-08 09:34:38.869 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8844 ms
+2022-07-08 09:34:38.950 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4931 ms
+2022-07-08 09:34:39.030 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4613 ms
+2022-07-08 09:34:39.110 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3139 ms
+2022-07-08 09:34:39.375 +02:00 [INF] HTTP GET /v1/order responded 200 in 256.8515 ms
+2022-07-08 09:34:39.696 +02:00 [INF] HTTP GET /v1/order responded 200 in 317.0428 ms
+2022-07-08 09:34:39.778 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8685 ms
+2022-07-08 09:34:39.859 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5269 ms
+2022-07-08 09:34:39.939 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3530 ms
+2022-07-08 09:34:40.020 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0976 ms
+2022-07-08 09:34:40.102 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5890 ms
+2022-07-08 09:34:40.338 +02:00 [INF] HTTP GET /v1/order responded 200 in 231.1589 ms
+2022-07-08 09:34:40.419 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2835 ms
+2022-07-08 09:34:40.501 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.9379 ms
+2022-07-08 09:34:40.584 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.0811 ms
+2022-07-08 09:34:40.668 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.8592 ms
+2022-07-08 09:34:40.748 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8484 ms
+2022-07-08 09:34:40.828 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4885 ms
+2022-07-08 09:34:40.909 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0090 ms
+2022-07-08 09:34:41.029 +02:00 [INF] HTTP GET /v1/order responded 200 in 113.9389 ms
+2022-07-08 09:34:41.110 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3781 ms
+2022-07-08 09:34:41.190 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7027 ms
+2022-07-08 09:34:41.272 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8016 ms
+2022-07-08 09:34:41.355 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7003 ms
+2022-07-08 09:34:41.434 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4466 ms
+2022-07-08 09:34:41.514 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6238 ms
+2022-07-08 09:34:41.594 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1686 ms
+2022-07-08 09:34:41.674 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.2756 ms
+2022-07-08 09:34:41.753 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1051 ms
+2022-07-08 09:34:41.832 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8861 ms
+2022-07-08 09:34:41.913 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2149 ms
+2022-07-08 09:34:41.993 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.6842 ms
+2022-07-08 09:34:42.074 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6333 ms
+2022-07-08 09:34:42.154 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7037 ms
+2022-07-08 09:34:42.233 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7011 ms
+2022-07-08 09:34:42.434 +02:00 [INF] HTTP GET /v1/order responded 200 in 196.6026 ms
+2022-07-08 09:34:42.514 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9716 ms
+2022-07-08 09:34:42.596 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5313 ms
+2022-07-08 09:34:42.675 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2193 ms
+2022-07-08 09:34:42.758 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8400 ms
+2022-07-08 09:34:42.838 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3692 ms
+2022-07-08 09:34:42.918 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1025 ms
+2022-07-08 09:34:42.998 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3890 ms
+2022-07-08 09:34:43.104 +02:00 [INF] HTTP GET /v1/order responded 200 in 100.1995 ms
+2022-07-08 09:34:43.186 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7843 ms
+2022-07-08 09:34:43.266 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7383 ms
+2022-07-08 09:34:43.348 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8805 ms
+2022-07-08 09:34:43.429 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5773 ms
+2022-07-08 09:34:43.511 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.4229 ms
+2022-07-08 09:34:43.591 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1063 ms
+2022-07-08 09:34:43.698 +02:00 [INF] HTTP GET /v1/order responded 200 in 101.7881 ms
+2022-07-08 09:34:43.780 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.4822 ms
+2022-07-08 09:34:43.860 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9233 ms
+2022-07-08 09:34:43.940 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2124 ms
+2022-07-08 09:34:44.021 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2420 ms
+2022-07-08 09:34:44.100 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0716 ms
+2022-07-08 09:34:44.181 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2469 ms
+2022-07-08 09:34:44.263 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4165 ms
+2022-07-08 09:34:44.343 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4829 ms
+2022-07-08 09:34:44.423 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2413 ms
+2022-07-08 09:34:44.609 +02:00 [INF] HTTP GET /v1/order responded 200 in 180.5702 ms
+2022-07-08 09:34:44.693 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8166 ms
+2022-07-08 09:34:44.773 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1325 ms
+2022-07-08 09:34:44.854 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6979 ms
+2022-07-08 09:34:44.935 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8740 ms
+2022-07-08 09:34:45.016 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6037 ms
+2022-07-08 09:34:45.098 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2986 ms
+2022-07-08 09:34:45.183 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.0056 ms
+2022-07-08 09:34:45.264 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5608 ms
+2022-07-08 09:34:45.344 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4337 ms
+2022-07-08 09:34:45.426 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1321 ms
+2022-07-08 09:34:45.509 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4386 ms
+2022-07-08 09:34:45.590 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.0815 ms
+2022-07-08 09:34:45.675 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9101 ms
+2022-07-08 09:34:45.758 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2935 ms
+2022-07-08 09:34:45.838 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4938 ms
+2022-07-08 09:34:45.919 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7832 ms
+2022-07-08 09:34:45.999 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0023 ms
+2022-07-08 09:34:46.079 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3032 ms
+2022-07-08 09:34:46.162 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5118 ms
+2022-07-08 09:34:46.243 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8108 ms
+2022-07-08 09:34:46.324 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2606 ms
+2022-07-08 09:34:46.404 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1689 ms
+2022-07-08 09:34:46.484 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5605 ms
+2022-07-08 09:34:46.567 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.5117 ms
+2022-07-08 09:34:46.758 +02:00 [INF] HTTP GET /v1/order responded 200 in 186.6807 ms
+2022-07-08 09:34:46.838 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8779 ms
+2022-07-08 09:34:46.918 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5770 ms
+2022-07-08 09:34:46.999 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2030 ms
+2022-07-08 09:34:47.078 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1192 ms
+2022-07-08 09:34:47.158 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3185 ms
+2022-07-08 09:34:47.238 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9396 ms
+2022-07-08 09:34:47.319 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4587 ms
+2022-07-08 09:34:47.399 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4210 ms
+2022-07-08 09:34:47.479 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9418 ms
+2022-07-08 09:34:47.559 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0843 ms
+2022-07-08 09:34:47.640 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0156 ms
+2022-07-08 09:34:47.720 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8557 ms
+2022-07-08 09:34:47.800 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1054 ms
+2022-07-08 09:34:47.880 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9780 ms
+2022-07-08 09:34:47.960 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3227 ms
+2022-07-08 09:34:48.040 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2866 ms
+2022-07-08 09:34:48.122 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3638 ms
+2022-07-08 09:34:48.202 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4368 ms
+2022-07-08 09:34:48.282 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2438 ms
+2022-07-08 09:34:48.363 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2248 ms
+2022-07-08 09:34:48.443 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3138 ms
+2022-07-08 09:34:48.524 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4604 ms
+2022-07-08 09:34:48.607 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2335 ms
+2022-07-08 09:34:48.687 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1169 ms
+2022-07-08 09:34:48.881 +02:00 [INF] HTTP GET /v1/order responded 200 in 189.2824 ms
+2022-07-08 09:34:48.962 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9355 ms
+2022-07-08 09:34:49.043 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1921 ms
+2022-07-08 09:34:49.124 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5244 ms
+2022-07-08 09:34:49.204 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5550 ms
+2022-07-08 09:34:49.284 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8528 ms
+2022-07-08 09:34:49.365 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5081 ms
+2022-07-08 09:34:49.446 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9955 ms
+2022-07-08 09:34:49.526 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1266 ms
+2022-07-08 09:34:49.607 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0715 ms
+2022-07-08 09:34:49.689 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7356 ms
+2022-07-08 09:34:49.769 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0478 ms
+2022-07-08 09:34:49.850 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0467 ms
+2022-07-08 09:34:49.930 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1341 ms
+2022-07-08 09:34:50.011 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9226 ms
+2022-07-08 09:34:50.092 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4839 ms
+2022-07-08 09:34:50.173 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0753 ms
+2022-07-08 09:34:50.255 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7488 ms
+2022-07-08 09:34:50.335 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2986 ms
+2022-07-08 09:34:50.415 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9734 ms
+2022-07-08 09:34:50.496 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4987 ms
+2022-07-08 09:34:50.575 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8356 ms
+2022-07-08 09:34:50.656 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1367 ms
+2022-07-08 09:34:50.737 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6189 ms
+2022-07-08 09:34:50.817 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2619 ms
+2022-07-08 09:34:51.030 +02:00 [INF] HTTP GET /v1/order responded 200 in 207.3236 ms
+2022-07-08 09:34:51.111 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1343 ms
+2022-07-08 09:34:51.190 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3579 ms
+2022-07-08 09:34:51.271 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7851 ms
+2022-07-08 09:34:51.356 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.9432 ms
+2022-07-08 09:34:51.440 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.7185 ms
+2022-07-08 09:34:51.520 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.6439 ms
+2022-07-08 09:34:51.600 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7939 ms
+2022-07-08 09:34:51.680 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5721 ms
+2022-07-08 09:34:51.760 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4284 ms
+2022-07-08 09:34:51.841 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4792 ms
+2022-07-08 09:34:51.923 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4837 ms
+2022-07-08 09:34:52.004 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3546 ms
+2022-07-08 09:34:52.085 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7891 ms
+2022-07-08 09:34:52.165 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1103 ms
+2022-07-08 09:34:52.245 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8671 ms
+2022-07-08 09:34:52.325 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3164 ms
+2022-07-08 09:34:52.419 +02:00 [INF] HTTP GET /v1/order responded 200 in 89.1940 ms
+2022-07-08 09:34:52.499 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3225 ms
+2022-07-08 09:34:52.579 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8425 ms
+2022-07-08 09:34:52.659 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1408 ms
+2022-07-08 09:34:52.739 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0816 ms
+2022-07-08 09:34:52.820 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7787 ms
+2022-07-08 09:34:52.900 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6025 ms
+2022-07-08 09:34:52.982 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4428 ms
+2022-07-08 09:34:53.171 +02:00 [INF] HTTP GET /v1/order responded 200 in 184.6962 ms
+2022-07-08 09:34:53.251 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2548 ms
+2022-07-08 09:34:53.331 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5569 ms
+2022-07-08 09:34:53.413 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5203 ms
+2022-07-08 09:34:53.493 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5941 ms
+2022-07-08 09:34:53.574 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8249 ms
+2022-07-08 09:34:53.654 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2627 ms
+2022-07-08 09:34:53.735 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9513 ms
+2022-07-08 09:34:53.815 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8975 ms
+2022-07-08 09:34:53.895 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1325 ms
+2022-07-08 09:34:53.977 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5819 ms
+2022-07-08 09:34:54.058 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0534 ms
+2022-07-08 09:34:54.140 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2286 ms
+2022-07-08 09:34:54.221 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2227 ms
+2022-07-08 09:34:54.301 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8338 ms
+2022-07-08 09:34:54.382 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8687 ms
+2022-07-08 09:34:54.461 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.6920 ms
+2022-07-08 09:34:54.542 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3018 ms
+2022-07-08 09:34:54.622 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.6894 ms
+2022-07-08 09:34:54.702 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6001 ms
+2022-07-08 09:34:54.782 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0224 ms
+2022-07-08 09:34:54.863 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5525 ms
+2022-07-08 09:34:54.943 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6289 ms
+2022-07-08 09:34:55.023 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7192 ms
+2022-07-08 09:34:55.103 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0136 ms
+2022-07-08 09:34:55.315 +02:00 [INF] HTTP GET /v1/order responded 200 in 207.3250 ms
+2022-07-08 09:34:55.395 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9441 ms
+2022-07-08 09:34:55.484 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.3959 ms
+2022-07-08 09:34:55.563 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7029 ms
+2022-07-08 09:34:55.644 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5735 ms
+2022-07-08 09:34:55.725 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6060 ms
+2022-07-08 09:34:55.806 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7606 ms
+2022-07-08 09:34:55.885 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8331 ms
+2022-07-08 09:34:55.966 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4209 ms
+2022-07-08 09:34:56.047 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3722 ms
+2022-07-08 09:34:56.127 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3050 ms
+2022-07-08 09:34:56.208 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7544 ms
+2022-07-08 09:34:56.290 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6697 ms
+2022-07-08 09:34:56.370 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6332 ms
+2022-07-08 09:34:56.452 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3453 ms
+2022-07-08 09:34:56.533 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7950 ms
+2022-07-08 09:34:56.613 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1033 ms
+2022-07-08 09:34:56.693 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4303 ms
+2022-07-08 09:34:56.775 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1664 ms
+2022-07-08 09:34:56.855 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4613 ms
+2022-07-08 09:34:56.937 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9017 ms
+2022-07-08 09:34:57.018 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2757 ms
+2022-07-08 09:34:57.097 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8132 ms
+2022-07-08 09:34:57.177 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3744 ms
+2022-07-08 09:34:57.257 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0416 ms
+2022-07-08 09:34:57.465 +02:00 [INF] HTTP GET /v1/order responded 200 in 203.0105 ms
+2022-07-08 09:34:57.547 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1733 ms
+2022-07-08 09:34:57.628 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2663 ms
+2022-07-08 09:34:57.708 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0601 ms
+2022-07-08 09:34:57.788 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2915 ms
+2022-07-08 09:34:57.869 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3918 ms
+2022-07-08 09:34:57.948 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0217 ms
+2022-07-08 09:34:58.029 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4891 ms
+2022-07-08 09:34:58.110 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3790 ms
+2022-07-08 09:34:58.192 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8714 ms
+2022-07-08 09:34:58.276 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.2886 ms
+2022-07-08 09:34:58.357 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5890 ms
+2022-07-08 09:34:58.438 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3266 ms
+2022-07-08 09:34:58.519 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6676 ms
+2022-07-08 09:34:58.599 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7805 ms
+2022-07-08 09:34:58.697 +02:00 [INF] HTTP GET /v1/order responded 200 in 94.1502 ms
+2022-07-08 09:34:58.780 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.1942 ms
+2022-07-08 09:34:58.862 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5528 ms
+2022-07-08 09:34:58.942 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4537 ms
+2022-07-08 09:34:59.025 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6641 ms
+2022-07-08 09:34:59.107 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7034 ms
+2022-07-08 09:34:59.189 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5529 ms
+2022-07-08 09:34:59.320 +02:00 [INF] HTTP GET /v1/order responded 200 in 125.8472 ms
+2022-07-08 09:34:59.409 +02:00 [INF] HTTP GET /v1/order responded 200 in 84.3263 ms
+2022-07-08 09:34:59.616 +02:00 [INF] HTTP GET /v1/order responded 200 in 201.5656 ms
+2022-07-08 09:34:59.697 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4046 ms
+2022-07-08 09:34:59.777 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8930 ms
+2022-07-08 09:34:59.867 +02:00 [INF] HTTP GET /v1/order responded 200 in 85.5357 ms
+2022-07-08 09:34:59.947 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6146 ms
+2022-07-08 09:35:00.028 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6974 ms
+2022-07-08 09:35:00.110 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.4918 ms
+2022-07-08 09:35:00.190 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3850 ms
+2022-07-08 09:35:00.270 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8742 ms
+2022-07-08 09:35:00.385 +02:00 [INF] HTTP GET /v1/order responded 200 in 109.6921 ms
+2022-07-08 09:35:00.466 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7915 ms
+2022-07-08 09:35:00.547 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.2314 ms
+2022-07-08 09:35:00.629 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.4518 ms
+2022-07-08 09:35:00.712 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6452 ms
+2022-07-08 09:35:00.797 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.6212 ms
+2022-07-08 09:35:00.880 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4497 ms
+2022-07-08 09:35:00.968 +02:00 [INF] HTTP GET /v1/order responded 200 in 82.6061 ms
+2022-07-08 09:35:01.050 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.9792 ms
+2022-07-08 09:35:01.132 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5628 ms
+2022-07-08 09:35:01.237 +02:00 [INF] HTTP GET /v1/order responded 200 in 101.2934 ms
+2022-07-08 09:35:01.324 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.0025 ms
+2022-07-08 09:35:02.350 +02:00 [INF] HTTP GET /v1/order responded 200 in 1019.7770 ms
+2022-07-08 09:35:02.470 +02:00 [INF] HTTP GET /v1/order responded 200 in 114.9674 ms
+2022-07-08 09:35:02.553 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.7247 ms
+2022-07-08 09:35:02.634 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0955 ms
+2022-07-08 09:35:02.715 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6137 ms
+2022-07-08 09:35:02.796 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6178 ms
+2022-07-08 09:35:02.877 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0663 ms
+2022-07-08 09:35:02.961 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.9086 ms
+2022-07-08 09:35:03.042 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9231 ms
+2022-07-08 09:35:03.123 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3209 ms
+2022-07-08 09:35:03.204 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9451 ms
+2022-07-08 09:35:03.285 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3775 ms
+2022-07-08 09:35:03.368 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.0887 ms
+2022-07-08 09:35:03.510 +02:00 [INF] HTTP GET /v1/order responded 200 in 136.0069 ms
+2022-07-08 09:35:03.593 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7175 ms
+2022-07-08 09:35:03.673 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3195 ms
+2022-07-08 09:35:03.754 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0250 ms
+2022-07-08 09:35:03.836 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3912 ms
+2022-07-08 09:35:03.917 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8019 ms
+2022-07-08 09:35:03.998 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3586 ms
+2022-07-08 09:35:04.079 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6493 ms
+2022-07-08 09:35:04.160 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2723 ms
+2022-07-08 09:35:04.991 +02:00 [INF] HTTP GET /v1/order responded 200 in 825.2263 ms
+2022-07-08 09:35:05.073 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2691 ms
+2022-07-08 09:35:05.154 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8880 ms
+2022-07-08 09:35:05.236 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5700 ms
+2022-07-08 09:35:05.316 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7372 ms
+2022-07-08 09:35:05.397 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7364 ms
+2022-07-08 09:35:05.476 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0359 ms
+2022-07-08 09:35:05.556 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7727 ms
+2022-07-08 09:35:05.639 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9642 ms
+2022-07-08 09:35:05.982 +02:00 [INF] HTTP GET /v1/order responded 200 in 338.5671 ms
+2022-07-08 09:35:06.063 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6149 ms
+2022-07-08 09:35:06.143 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5968 ms
+2022-07-08 09:35:06.225 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.8586 ms
+2022-07-08 09:35:06.307 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8009 ms
+2022-07-08 09:35:06.388 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6054 ms
+2022-07-08 09:35:06.623 +02:00 [INF] HTTP GET /v1/order responded 200 in 229.9191 ms
+2022-07-08 09:35:06.703 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6098 ms
+2022-07-08 09:35:06.783 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3402 ms
+2022-07-08 09:35:06.865 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9147 ms
+2022-07-08 09:35:06.945 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6493 ms
+2022-07-08 09:35:07.027 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1866 ms
+2022-07-08 09:35:07.108 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7601 ms
+2022-07-08 09:35:07.191 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7549 ms
+2022-07-08 09:35:07.272 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0782 ms
+2022-07-08 09:35:07.352 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5810 ms
+2022-07-08 09:35:07.431 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4583 ms
+2022-07-08 09:35:07.513 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8664 ms
+2022-07-08 09:35:07.593 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.6102 ms
+2022-07-08 09:35:07.677 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.8424 ms
+2022-07-08 09:35:07.766 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.2878 ms
+2022-07-08 09:35:07.846 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1736 ms
+2022-07-08 09:35:07.926 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1691 ms
+2022-07-08 09:35:08.008 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7661 ms
+2022-07-08 09:35:08.089 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.4390 ms
+2022-07-08 09:35:08.171 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.1089 ms
+2022-07-08 09:35:08.252 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1565 ms
+2022-07-08 09:35:08.335 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7599 ms
+2022-07-08 09:35:08.415 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1971 ms
+2022-07-08 09:35:08.494 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6498 ms
+2022-07-08 09:35:08.575 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1942 ms
+2022-07-08 09:35:08.771 +02:00 [INF] HTTP GET /v1/order responded 200 in 190.6932 ms
+2022-07-08 09:35:08.852 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1110 ms
+2022-07-08 09:35:08.932 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5161 ms
+2022-07-08 09:35:09.012 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.6536 ms
+2022-07-08 09:35:09.094 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1777 ms
+2022-07-08 09:35:09.174 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8788 ms
+2022-07-08 09:35:09.253 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9567 ms
+2022-07-08 09:35:09.332 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7176 ms
+2022-07-08 09:35:09.412 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7918 ms
+2022-07-08 09:35:09.496 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.3718 ms
+2022-07-08 09:35:09.575 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.2515 ms
+2022-07-08 09:35:09.654 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2238 ms
+2022-07-08 09:35:09.736 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7536 ms
+2022-07-08 09:35:09.817 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2833 ms
+2022-07-08 09:35:09.897 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5871 ms
+2022-07-08 09:35:09.989 +02:00 [INF] HTTP GET /v1/order responded 200 in 85.3402 ms
+2022-07-08 09:35:10.088 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.6139 ms
+2022-07-08 09:35:10.172 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8392 ms
+2022-07-08 09:35:10.251 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8694 ms
+2022-07-08 09:35:10.331 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2979 ms
+2022-07-08 09:35:10.413 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8794 ms
+2022-07-08 09:35:10.493 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8937 ms
+2022-07-08 09:35:10.575 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9083 ms
+2022-07-08 09:35:10.655 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.8936 ms
+2022-07-08 09:35:10.887 +02:00 [INF] HTTP GET /v1/order responded 200 in 227.6045 ms
+2022-07-08 09:35:10.969 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.0057 ms
+2022-07-08 09:35:11.051 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0546 ms
+2022-07-08 09:35:11.131 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3165 ms
+2022-07-08 09:35:11.213 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1103 ms
+2022-07-08 09:35:11.292 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7313 ms
+2022-07-08 09:35:11.373 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5377 ms
+2022-07-08 09:35:11.454 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7742 ms
+2022-07-08 09:35:11.535 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1929 ms
+2022-07-08 09:35:11.615 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7154 ms
+2022-07-08 09:35:11.696 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9630 ms
+2022-07-08 09:35:11.777 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2241 ms
+2022-07-08 09:35:11.861 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6874 ms
+2022-07-08 09:35:11.941 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2304 ms
+2022-07-08 09:35:12.022 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.0772 ms
+2022-07-08 09:35:12.103 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6683 ms
+2022-07-08 09:35:12.618 +02:00 [INF] HTTP GET /v1/order responded 200 in 509.6980 ms
+2022-07-08 09:35:12.698 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9939 ms
+2022-07-08 09:35:12.778 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3804 ms
+2022-07-08 09:35:12.860 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7885 ms
+2022-07-08 09:35:12.941 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8961 ms
+2022-07-08 09:35:13.024 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1401 ms
+2022-07-08 09:35:13.107 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2591 ms
+2022-07-08 09:35:13.188 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9364 ms
+2022-07-08 09:35:13.271 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.3087 ms
+2022-07-08 09:35:13.353 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0136 ms
+2022-07-08 09:35:13.432 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9970 ms
+2022-07-08 09:35:13.515 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3299 ms
+2022-07-08 09:35:13.597 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8402 ms
+2022-07-08 09:35:13.698 +02:00 [INF] HTTP GET /v1/order responded 200 in 96.1467 ms
+2022-07-08 09:35:13.779 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1109 ms
+2022-07-08 09:35:13.860 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8450 ms
+2022-07-08 09:35:13.944 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3705 ms
+2022-07-08 09:35:14.025 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7981 ms
+2022-07-08 09:35:14.106 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3416 ms
+2022-07-08 09:35:14.193 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.0331 ms
+2022-07-08 09:35:14.275 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7436 ms
+2022-07-08 09:35:14.357 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.1934 ms
+2022-07-08 09:35:14.440 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.2605 ms
+2022-07-08 09:35:14.625 +02:00 [INF] HTTP GET /v1/order responded 200 in 180.3369 ms
+2022-07-08 09:35:14.706 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6549 ms
+2022-07-08 09:35:14.788 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4003 ms
+2022-07-08 09:35:14.870 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3140 ms
+2022-07-08 09:35:14.953 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.6359 ms
+2022-07-08 09:35:15.033 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2173 ms
+2022-07-08 09:35:15.113 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4880 ms
+2022-07-08 09:35:15.193 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8639 ms
+2022-07-08 09:35:15.273 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.9271 ms
+2022-07-08 09:35:15.355 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0801 ms
+2022-07-08 09:35:15.440 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.3104 ms
+2022-07-08 09:35:15.520 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4109 ms
+2022-07-08 09:35:15.600 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5813 ms
+2022-07-08 09:35:15.681 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4691 ms
+2022-07-08 09:35:15.762 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9872 ms
+2022-07-08 09:35:15.845 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7622 ms
+2022-07-08 09:35:15.926 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2628 ms
+2022-07-08 09:35:16.006 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3145 ms
+2022-07-08 09:35:16.085 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4829 ms
+2022-07-08 09:35:16.165 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7939 ms
+2022-07-08 09:35:16.248 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7466 ms
+2022-07-08 09:35:16.328 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5032 ms
+2022-07-08 09:35:16.410 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9758 ms
+2022-07-08 09:35:16.493 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.4095 ms
+2022-07-08 09:35:16.574 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.0312 ms
+2022-07-08 09:35:16.756 +02:00 [INF] HTTP GET /v1/order responded 200 in 175.5225 ms
+2022-07-08 09:35:16.837 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8036 ms
+2022-07-08 09:35:16.918 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3903 ms
+2022-07-08 09:35:16.998 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5611 ms
+2022-07-08 09:35:17.081 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5939 ms
+2022-07-08 09:35:17.161 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.2569 ms
+2022-07-08 09:35:17.243 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.8688 ms
+2022-07-08 09:35:17.323 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.6383 ms
+2022-07-08 09:35:17.405 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.7284 ms
+2022-07-08 09:35:17.486 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1442 ms
+2022-07-08 09:35:17.567 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5718 ms
+2022-07-08 09:35:17.648 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.6388 ms
+2022-07-08 09:35:17.731 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.0997 ms
+2022-07-08 09:35:17.814 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.2687 ms
+2022-07-08 09:35:17.896 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.4949 ms
+2022-07-08 09:35:17.976 +02:00 [INF] HTTP GET /v1/order responded 200 in 74.7821 ms
+2022-07-08 09:35:18.058 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.8207 ms
+2022-07-08 09:35:18.142 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7099 ms
+2022-07-08 09:35:18.223 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5590 ms
+2022-07-08 09:35:18.305 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.5282 ms
+2022-07-08 09:35:18.387 +02:00 [INF] HTTP GET /v1/order responded 200 in 77.2308 ms
+2022-07-08 09:35:18.471 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7284 ms
+2022-07-08 09:35:18.555 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8432 ms
+2022-07-08 09:35:18.635 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4374 ms
+2022-07-08 09:35:18.717 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5317 ms
+2022-07-08 09:35:18.925 +02:00 [INF] HTTP GET /v1/order responded 200 in 202.8863 ms
+2022-07-08 09:35:19.007 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.3991 ms
+2022-07-08 09:35:19.090 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7818 ms
+2022-07-08 09:35:19.172 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8472 ms
+2022-07-08 09:35:19.253 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.5722 ms
+2022-07-08 09:35:19.334 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.5361 ms
+2022-07-08 09:35:19.415 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7562 ms
+2022-07-08 09:35:19.495 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2753 ms
+2022-07-08 09:35:19.577 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.4691 ms
+2022-07-08 09:35:19.660 +02:00 [INF] HTTP GET /v1/order responded 200 in 78.4370 ms
+2022-07-08 09:35:19.741 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7723 ms
+2022-07-08 09:35:19.824 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.6686 ms
+2022-07-08 09:35:19.905 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.4471 ms
+2022-07-08 09:35:19.988 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.7054 ms
+2022-07-08 09:35:20.070 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7890 ms
+2022-07-08 09:35:20.150 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.2385 ms
+2022-07-08 09:35:20.231 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.8495 ms
+2022-07-08 09:35:20.312 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1601 ms
+2022-07-08 09:35:20.392 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.3527 ms
+2022-07-08 09:35:20.473 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.7312 ms
+2022-07-08 09:35:20.555 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.9032 ms
+2022-07-08 09:35:20.636 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.4133 ms
+2022-07-08 09:35:20.718 +02:00 [INF] HTTP GET /v1/order responded 200 in 76.1150 ms
+2022-07-08 09:35:20.799 +02:00 [INF] HTTP GET /v1/order responded 200 in 75.9926 ms
+2022-07-08 09:35:20.885 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.0419 ms
+2022-07-08 09:36:13.474 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:36:13.515 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:36:13.521 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:36:13.523 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:36:13.528 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:36:14.651 +02:00 [INF] HTTP GET /swagger responded 302 in 434.5232 ms
+2022-07-08 09:36:14.925 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 253.5719 ms
+2022-07-08 09:36:16.115 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 975.5412 ms
+2022-07-08 09:36:37.379 +02:00 [INF] HTTP GET /v1/order responded 200 in 761.0871 ms
+2022-07-08 09:36:54.706 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.1514 ms
+2022-07-08 09:37:02.408 +02:00 [INF] HTTP GET /v1/order responded 200 in 83.4282 ms
+2022-07-08 09:37:06.591 +02:00 [INF] HTTP GET /v1/order responded 200 in 80.7649 ms
+2022-07-08 09:37:15.200 +02:00 [INF] HTTP GET /v1/order responded 200 in 79.3985 ms
+2022-07-08 09:39:04.192 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:39:04.223 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:39:04.229 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:39:04.231 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:39:04.232 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:39:05.265 +02:00 [INF] HTTP GET /swagger responded 302 in 387.5239 ms
+2022-07-08 09:39:05.538 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 251.5675 ms
+2022-07-08 09:39:06.644 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 954.1918 ms
+2022-07-08 09:41:12.992 +02:00 [INF] HTTP GET /v1/order responded 200 in 75503.2312 ms
+2022-07-08 09:43:42.349 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:43:42.389 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:43:42.395 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:43:42.398 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:43:42.400 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:43:43.760 +02:00 [INF] HTTP GET /swagger responded 302 in 433.2902 ms
+2022-07-08 09:43:44.057 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 275.4168 ms
+2022-07-08 09:43:45.360 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 1094.4705 ms
+2022-07-08 09:43:58.663 +02:00 [INF] HTTP GET /v1/order responded 200 in 3409.7466 ms
+2022-07-08 09:44:44.850 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:44:44.893 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:44:44.899 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:44:44.901 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:44:44.903 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:44:45.822 +02:00 [INF] HTTP GET /swagger responded 302 in 403.7160 ms
+2022-07-08 09:44:55.675 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 9833.4144 ms
+2022-07-08 09:44:56.309 +02:00 [INF] HTTP GET /v1/order responded 200 in 11084.0552 ms
+2022-07-08 09:44:56.496 +02:00 [INF] HTTP GET /v1/order responded 200 in 124.6323 ms
+2022-07-08 09:44:56.608 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 750.3209 ms
+2022-07-08 09:44:56.622 +02:00 [INF] HTTP GET /v1/order responded 200 in 122.7966 ms
+2022-07-08 09:44:56.756 +02:00 [INF] HTTP GET /v1/order responded 200 in 120.0700 ms
+2022-07-08 09:44:56.985 +02:00 [INF] HTTP GET /v1/order responded 200 in 224.7947 ms
+2022-07-08 09:44:57.109 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.3865 ms
+2022-07-08 09:44:57.232 +02:00 [INF] HTTP GET /v1/order responded 200 in 119.3354 ms
+2022-07-08 09:44:57.358 +02:00 [INF] HTTP GET /v1/order responded 200 in 121.3418 ms
+2022-07-08 09:44:57.482 +02:00 [INF] HTTP GET /v1/order responded 200 in 119.0466 ms
+2022-07-08 09:44:57.607 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.6914 ms
+2022-07-08 09:44:57.731 +02:00 [INF] HTTP GET /v1/order responded 200 in 119.0283 ms
+2022-07-08 09:44:57.857 +02:00 [INF] HTTP GET /v1/order responded 200 in 119.9521 ms
+2022-07-08 09:44:57.981 +02:00 [INF] HTTP GET /v1/order responded 200 in 119.0252 ms
+2022-07-08 09:44:58.107 +02:00 [INF] HTTP GET /v1/order responded 200 in 121.0058 ms
+2022-07-08 09:44:58.230 +02:00 [INF] HTTP GET /v1/order responded 200 in 119.0515 ms
+2022-07-08 09:44:58.360 +02:00 [INF] HTTP GET /v1/order responded 200 in 122.3340 ms
+2022-07-08 09:44:58.484 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.2058 ms
+2022-07-08 09:44:58.608 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.9597 ms
+2022-07-08 09:44:58.744 +02:00 [INF] HTTP GET /v1/order responded 200 in 131.3452 ms
+2022-07-08 09:44:58.866 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.8955 ms
+2022-07-08 09:44:59.112 +02:00 [INF] HTTP GET /v1/order responded 200 in 240.1853 ms
+2022-07-08 09:44:59.436 +02:00 [INF] HTTP GET /v1/order responded 200 in 319.0221 ms
+2022-07-08 09:44:59.562 +02:00 [INF] HTTP GET /v1/order responded 200 in 122.3479 ms
+2022-07-08 09:44:59.687 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.6232 ms
+2022-07-08 09:44:59.811 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.7084 ms
+2022-07-08 09:44:59.938 +02:00 [INF] HTTP GET /v1/order responded 200 in 122.6096 ms
+2022-07-08 09:45:00.062 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.2947 ms
+2022-07-08 09:45:00.190 +02:00 [INF] HTTP GET /v1/order responded 200 in 121.4724 ms
+2022-07-08 09:45:00.313 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.6751 ms
+2022-07-08 09:45:00.435 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.6399 ms
+2022-07-08 09:45:00.566 +02:00 [INF] HTTP GET /v1/order responded 200 in 126.1923 ms
+2022-07-08 09:45:00.690 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.7962 ms
+2022-07-08 09:45:00.844 +02:00 [INF] HTTP GET /v1/order responded 200 in 150.0134 ms
+2022-07-08 09:45:00.970 +02:00 [INF] HTTP GET /v1/order responded 200 in 121.0872 ms
+2022-07-08 09:45:01.103 +02:00 [INF] HTTP GET /v1/order responded 200 in 127.3555 ms
+2022-07-08 09:45:01.914 +02:00 [INF] HTTP GET /v1/order responded 200 in 804.8480 ms
+2022-07-08 09:45:02.092 +02:00 [INF] HTTP GET /v1/order responded 200 in 171.3696 ms
+2022-07-08 09:45:02.233 +02:00 [INF] HTTP GET /v1/order responded 200 in 123.1003 ms
+2022-07-08 09:45:02.395 +02:00 [INF] HTTP GET /v1/order responded 200 in 152.7574 ms
+2022-07-08 09:45:02.535 +02:00 [INF] HTTP GET /v1/order responded 200 in 124.9942 ms
+2022-07-08 09:45:02.697 +02:00 [INF] HTTP GET /v1/order responded 200 in 148.0844 ms
+2022-07-08 09:45:02.828 +02:00 [INF] HTTP GET /v1/order responded 200 in 125.2786 ms
+2022-07-08 09:45:03.022 +02:00 [INF] HTTP GET /v1/order responded 200 in 179.5415 ms
+2022-07-08 09:45:03.163 +02:00 [INF] HTTP GET /v1/order responded 200 in 120.4733 ms
+2022-07-08 09:45:03.292 +02:00 [INF] HTTP GET /v1/order responded 200 in 123.7565 ms
+2022-07-08 09:45:03.414 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.9744 ms
+2022-07-08 09:45:03.538 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.2078 ms
+2022-07-08 09:45:03.835 +02:00 [INF] HTTP GET /v1/order responded 200 in 291.0794 ms
+2022-07-08 09:45:03.962 +02:00 [INF] HTTP GET /v1/order responded 200 in 123.3287 ms
+2022-07-08 09:45:04.109 +02:00 [INF] HTTP GET /v1/order responded 200 in 142.6304 ms
+2022-07-08 09:45:04.767 +02:00 [INF] HTTP GET /v1/order responded 200 in 653.3894 ms
+2022-07-08 09:45:04.891 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.8679 ms
+2022-07-08 09:45:05.024 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.8052 ms
+2022-07-08 09:45:05.146 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.0068 ms
+2022-07-08 09:45:05.282 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.6970 ms
+2022-07-08 09:45:05.404 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.6134 ms
+2022-07-08 09:45:05.527 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.6767 ms
+2022-07-08 09:45:05.652 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.8955 ms
+2022-07-08 09:45:06.167 +02:00 [INF] HTTP GET /v1/order responded 200 in 509.6006 ms
+2022-07-08 09:45:06.291 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.8053 ms
+2022-07-08 09:45:06.412 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.5686 ms
+2022-07-08 09:45:06.534 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.9805 ms
+2022-07-08 09:45:06.656 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.9530 ms
+2022-07-08 09:45:06.778 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.5227 ms
+2022-07-08 09:45:06.900 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.0500 ms
+2022-07-08 09:45:07.021 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.0863 ms
+2022-07-08 09:45:07.143 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.9576 ms
+2022-07-08 09:45:07.264 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.7552 ms
+2022-07-08 09:45:07.387 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.3439 ms
+2022-07-08 09:45:07.508 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.7845 ms
+2022-07-08 09:45:07.630 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.6972 ms
+2022-07-08 09:45:07.753 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.3507 ms
+2022-07-08 09:45:07.991 +02:00 [INF] HTTP GET /v1/order responded 200 in 232.6493 ms
+2022-07-08 09:45:08.114 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.4167 ms
+2022-07-08 09:45:08.237 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.9098 ms
+2022-07-08 09:45:08.358 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.2819 ms
+2022-07-08 09:45:08.480 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.6482 ms
+2022-07-08 09:45:08.601 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.2244 ms
+2022-07-08 09:45:08.723 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.9988 ms
+2022-07-08 09:45:08.843 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.0974 ms
+2022-07-08 09:45:08.965 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.3459 ms
+2022-07-08 09:45:09.086 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.4251 ms
+2022-07-08 09:45:09.211 +02:00 [INF] HTTP GET /v1/order responded 200 in 120.7888 ms
+2022-07-08 09:45:09.333 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.9846 ms
+2022-07-08 09:45:09.455 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.8505 ms
+2022-07-08 09:45:09.580 +02:00 [INF] HTTP GET /v1/order responded 200 in 118.0873 ms
+2022-07-08 09:45:09.704 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.6093 ms
+2022-07-08 09:45:09.825 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.1415 ms
+2022-07-08 09:45:09.947 +02:00 [INF] HTTP GET /v1/order responded 200 in 116.7191 ms
+2022-07-08 09:45:34.634 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:45:34.675 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:45:34.683 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:45:34.685 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:45:34.688 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:45:35.652 +02:00 [INF] HTTP GET /swagger responded 302 in 415.7608 ms
+2022-07-08 09:45:35.909 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 236.8812 ms
+2022-07-08 09:45:36.817 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 732.9647 ms
+2022-07-08 09:45:56.562 +02:00 [INF] HTTP GET /v1/order responded 200 in 789.2008 ms
+2022-07-08 09:46:05.498 +02:00 [INF] HTTP GET /v1/order responded 200 in 137.0255 ms
+2022-07-08 09:47:09.423 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:47:09.459 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:47:09.464 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:47:09.467 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:47:09.468 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:47:10.790 +02:00 [INF] HTTP GET /swagger responded 302 in 587.2421 ms
+2022-07-08 09:47:11.052 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 239.4181 ms
+2022-07-08 09:47:11.607 +02:00 [INF] HTTP GET /v1/order responded 200 in 1420.6084 ms
+2022-07-08 09:47:11.816 +02:00 [INF] HTTP GET /v1/order responded 200 in 144.9812 ms
+2022-07-08 09:47:21.847 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10627.7896 ms
+2022-07-08 09:49:16.643 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:49:16.673 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:49:16.677 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:49:16.679 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:49:16.680 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:49:17.514 +02:00 [INF] HTTP GET /swagger responded 302 in 228.3805 ms
+2022-07-08 09:49:17.833 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 293.5130 ms
+2022-07-08 09:49:18.514 +02:00 [INF] HTTP GET /v1/order responded 200 in 1603.1232 ms
+2022-07-08 09:49:18.737 +02:00 [INF] HTTP GET /v1/order responded 200 in 148.5729 ms
+2022-07-08 09:50:20.344 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:50:20.386 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:50:20.393 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:50:20.395 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:50:20.398 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:50:21.495 +02:00 [INF] HTTP GET /swagger responded 302 in 358.2218 ms
+2022-07-08 09:50:21.782 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 264.4962 ms
+2022-07-08 09:50:22.477 +02:00 [INF] HTTP GET /v1/order responded 200 in 1523.8102 ms
+2022-07-08 09:50:22.676 +02:00 [INF] HTTP GET /v1/order responded 200 in 138.2334 ms
+2022-07-08 09:50:30.111 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 8123.0326 ms
+2022-07-08 09:54:05.830 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:54:05.863 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:54:05.867 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:54:05.870 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:54:05.873 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:54:07.123 +02:00 [INF] HTTP GET /swagger responded 302 in 301.3710 ms
+2022-07-08 09:54:07.623 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 476.9098 ms
+2022-07-08 09:54:08.347 +02:00 [INF] HTTP GET /v1/order responded 200 in 1875.0537 ms
+2022-07-08 09:54:08.575 +02:00 [INF] HTTP GET /v1/order responded 200 in 146.7662 ms
+2022-07-08 09:54:18.449 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10580.3309 ms
+2022-07-08 09:54:30.213 +02:00 [INF] HTTP GET /v1/order responded 200 in 126.6255 ms
+2022-07-08 09:54:30.336 +02:00 [INF] HTTP GET /v1/order responded 200 in 117.6589 ms
+2022-07-08 09:57:00.858 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:57:00.896 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:57:00.901 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:57:00.905 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:57:00.911 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:57:02.027 +02:00 [INF] HTTP GET /swagger responded 302 in 134.1040 ms
+2022-07-08 09:57:02.365 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 293.6553 ms
+2022-07-08 09:57:03.061 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 1631.1840 ms
+2022-07-08 09:57:03.061 +02:00 [INF] HTTP GET /v1/order responded 200 in 1631.1768 ms
+2022-07-08 09:57:03.310 +02:00 [INF] HTTP GET /v1/order responded 200 in 165.3609 ms
+2022-07-08 09:57:39.396 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:57:39.430 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:57:39.438 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:57:39.440 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:57:39.443 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:57:40.448 +02:00 [INF] HTTP GET /swagger responded 302 in 56.7077 ms
+2022-07-08 09:57:40.803 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 324.7517 ms
+2022-07-08 09:57:41.332 +02:00 [INF] HTTP GET /v1/order responded 200 in 1741.0758 ms
+2022-07-08 09:57:41.678 +02:00 [INF] HTTP GET /v1/order responded 200 in 266.5915 ms
+2022-07-08 09:57:46.098 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5109.3301 ms
+2022-07-08 09:58:12.064 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:58:12.106 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:58:12.114 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:58:12.116 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:58:12.119 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:58:13.234 +02:00 [INF] HTTP GET /swagger responded 302 in 221.2136 ms
+2022-07-08 09:58:13.520 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 264.7012 ms
+2022-07-08 09:58:14.102 +02:00 [INF] HTTP GET /v1/order responded 200 in 1642.6427 ms
+2022-07-08 09:58:14.102 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 1642.6505 ms
+2022-07-08 09:58:14.302 +02:00 [INF] HTTP GET /v1/order responded 200 in 146.2176 ms
+2022-07-08 09:58:29.604 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 09:58:29.634 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 09:58:29.638 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 09:58:29.640 +02:00 [INF] Hosting environment: Development
+2022-07-08 09:58:29.641 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 09:58:30.879 +02:00 [INF] HTTP GET /swagger responded 302 in 595.3575 ms
+2022-07-08 09:58:31.134 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 233.7378 ms
+2022-07-08 09:58:31.549 +02:00 [INF] HTTP GET /v1/order responded 200 in 1364.7559 ms
+2022-07-08 09:58:31.741 +02:00 [INF] HTTP GET /v1/order responded 200 in 138.6530 ms
+2022-07-08 09:58:38.490 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 7150.5934 ms
+2022-07-08 09:58:45.097 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 435.2948 ms
+2022-07-08 10:03:48.148 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 10:03:48.183 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 10:03:48.190 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 10:03:48.192 +02:00 [INF] Hosting environment: Development
+2022-07-08 10:03:48.194 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 10:03:49.009 +02:00 [INF] HTTP GET /swagger responded 302 in 62.0398 ms
+2022-07-08 10:03:49.306 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 280.2652 ms
+2022-07-08 10:03:49.818 +02:00 [INF] HTTP GET /v1/order responded 200 in 1486.5527 ms
+2022-07-08 10:03:49.818 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 1486.5318 ms
+2022-07-08 10:03:51.359 +02:00 [INF] HTTP GET /v1/order responded 200 in 1420.8207 ms
+2022-07-08 10:03:57.980 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 8477.5743 ms
+2022-07-08 10:04:02.409 +02:00 [INF] HTTP GET /v1/order responded 200 in 1722.5781 ms
+2022-07-08 10:04:02.511 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 85.7177 ms
+2022-07-08 10:04:02.552 +02:00 [INF] HTTP GET /v1/order responded 200 in 123.0245 ms
+2022-07-08 10:04:39.879 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 10:04:39.917 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 10:04:39.923 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 10:04:39.925 +02:00 [INF] Hosting environment: Development
+2022-07-08 10:04:39.927 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 10:04:40.935 +02:00 [INF] HTTP GET /swagger responded 302 in 332.1946 ms
+2022-07-08 10:04:41.197 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 246.9529 ms
+2022-07-08 10:04:41.868 +02:00 [INF] HTTP GET /v1/order responded 200 in 1464.8563 ms
+2022-07-08 10:04:42.073 +02:00 [INF] HTTP GET /v1/order responded 200 in 140.8352 ms
+2022-07-08 10:04:44.142 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 2766.4617 ms
+2022-07-08 10:04:47.296 +02:00 [INF] HTTP GET /v1/order responded 200 in 127.7241 ms
+2022-07-08 10:04:47.416 +02:00 [INF] HTTP GET /v1/order responded 200 in 115.8694 ms
+2022-07-08 10:05:58.889 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 10:05:58.931 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 10:05:58.938 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 10:05:58.941 +02:00 [INF] Hosting environment: Development
+2022-07-08 10:05:58.943 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 10:06:00.758 +02:00 [INF] HTTP GET /swagger responded 302 in 444.6458 ms
+2022-07-08 10:06:01.059 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 280.1311 ms
+2022-07-08 10:06:02.138 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 888.1262 ms
+2022-07-08 10:40:55.376 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 10:40:55.438 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 10:40:55.444 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 10:40:55.446 +02:00 [INF] Hosting environment: Development
+2022-07-08 10:40:55.449 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 10:40:56.116 +02:00 [INF] HTTP GET /swagger responded 302 in 166.6416 ms
+2022-07-08 10:40:56.401 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 259.4723 ms
+2022-07-08 10:40:57.022 +02:00 [INF] HTTP GET /v1/order responded 200 in 1468.7347 ms
+2022-07-08 10:40:57.022 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 1468.7595 ms
+2022-07-08 10:41:01.128 +02:00 [INF] HTTP GET /v1/order responded 200 in 4043.1560 ms
+2022-07-08 10:41:04.406 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 7804.5792 ms
+2022-07-08 10:41:05.127 +02:00 [INF] HTTP GET /v1/order responded 200 in 897.4442 ms
+2022-07-08 10:41:05.248 +02:00 [INF] HTTP GET /v1/order responded 200 in 114.3894 ms
+2022-07-08 10:41:07.530 +02:00 [INF] HTTP GET /v1/order responded 200 in 126.1914 ms
+2022-07-08 10:41:07.647 +02:00 [INF] HTTP GET /v1/order responded 200 in 112.5253 ms
+2022-07-08 10:41:08.926 +02:00 [INF] HTTP GET /v1/order responded 200 in 128.6673 ms
+2022-07-08 10:41:09.047 +02:00 [INF] HTTP GET /v1/order responded 200 in 111.6981 ms
+2022-07-08 10:41:10.247 +02:00 [INF] HTTP GET /v1/order responded 200 in 125.1786 ms
+2022-07-08 10:41:10.362 +02:00 [INF] HTTP GET /v1/order responded 200 in 111.5732 ms
+2022-07-08 10:41:32.530 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 10:41:32.601 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 10:41:32.617 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 10:41:32.619 +02:00 [INF] Hosting environment: Development
+2022-07-08 10:41:32.622 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 10:41:33.610 +02:00 [INF] HTTP GET /swagger responded 302 in 419.0333 ms
+2022-07-08 10:41:33.925 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 294.3370 ms
+2022-07-08 10:41:34.557 +02:00 [INF] HTTP GET /v1/order responded 200 in 1363.9218 ms
+2022-07-08 10:41:34.773 +02:00 [INF] HTTP GET /v1/order responded 200 in 151.2665 ms
+2022-07-08 10:41:49.423 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 15300.0933 ms
+2022-07-08 10:44:01.620 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 10:44:01.682 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 10:44:01.689 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 10:44:01.690 +02:00 [INF] Hosting environment: Development
+2022-07-08 10:44:01.692 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 10:44:11.676 +02:00 [INF] HTTP GET /swagger responded 302 in 393.4055 ms
+2022-07-08 10:44:12.088 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 384.8196 ms
+2022-07-08 10:44:12.717 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 1030.2488 ms
+2022-07-08 10:44:12.717 +02:00 [INF] HTTP GET /v1/order responded 200 in 1053.0717 ms
+2022-07-08 10:44:18.102 +02:00 [INF] HTTP GET /v1/order responded 200 in 5282.8656 ms
+2022-07-08 10:44:24.413 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 12108.8459 ms
+2022-07-08 10:44:30.931 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 82.8776 ms
+2022-07-08 10:44:41.056 +02:00 [INF] HTTP GET /v1/order responded 200 in 1202.0230 ms
+2022-07-08 10:44:41.061 +02:00 [INF] HTTP GET /v1/order/244 responded 200 in 80.5492 ms
+2022-07-08 10:44:45.094 +02:00 [INF] HTTP GET /v1/order responded 200 in 4010.3523 ms
+2022-07-08 10:44:56.506 +02:00 [INF] HTTP GET /v1/order/257 responded 200 in 2144.7996 ms
+2022-07-08 10:44:56.540 +02:00 [INF] HTTP GET /v1/order responded 200 in 126.3187 ms
+2022-07-08 10:44:56.657 +02:00 [INF] HTTP GET /v1/order responded 200 in 112.4361 ms
+2022-07-08 10:44:59.227 +02:00 [INF] HTTP GET /v1/order/257 responded 200 in 79.3711 ms
+2022-07-08 10:45:04.581 +02:00 [INF] HTTP GET /v1/order responded 200 in 4436.5011 ms
+2022-07-08 10:45:07.627 +02:00 [INF] HTTP GET /v1/order responded 200 in 3038.5985 ms
+2022-07-08 10:54:56.806 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-08 10:54:56.836 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-08 10:54:56.843 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-08 10:54:56.846 +02:00 [INF] Hosting environment: Development
+2022-07-08 10:54:56.848 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-08 10:54:57.980 +02:00 [INF] HTTP GET /swagger responded 302 in 275.3579 ms
+2022-07-08 10:54:58.233 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 234.8954 ms
+2022-07-08 10:54:59.089 +02:00 [INF] HTTP GET /v1/order/257 responded 200 in 1672.8800 ms
+2022-07-08 10:54:59.254 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 834.0860 ms

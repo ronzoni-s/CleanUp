@@ -1,0 +1,91 @@
+﻿@page "/order/new/schedule"
+@page "/order/edit/{OrderId:int}/schedule"
+
+@attribute [Authorize]
+
+<PageTitle>Ordine</PageTitle>
+
+@if (orderValidationLoading)
+{
+    <CleanUp.Client.Shared.Components.LoadingScreen />
+}
+
+
+<div id="new-order" class="px-5">
+    
+    <div class="d-flex justify-content-between">
+        <div>
+            <h1>@(Action == ACTION.NEW_ORDER ? "Nuovo ordine" : $"Modifica ordine #{OrderId}")</h1>
+        </div>
+        <div>
+            <table class="totals">
+                <tr>
+                    <td class="total">Totale</td>
+                    <td>Pezzi: <label>@(cartService.GetItemsNumber)</label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Euro: <label>@(string.Format("{0:0.00}", orderFinalPrice))</label></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-end">
+        <div class="d-flex">
+            <div class="p-2"><button class="btn btn-primary" @onclick="CancelOrder">ANNULLA</button></div>
+            
+            @if (cartService.SelectedAddress == null)
+            {
+                <div class="p-2"><button class="btn btn-primary" disabled>CONTINUA ORDINE</button></div>
+            }
+            else
+            {
+                <div class="p-2"><button class="btn btn-primary" @onclick="NextPage">CONTINUA ORDINE</button></div>
+            }
+        </div>
+    </div>
+
+    <h4>Indirizzo di consegna</h4>
+    <table class="table my-5">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Via</th>
+                <th>Numero</th>
+                <th>Codice postale</th>
+                <th>Città</th>
+                <th>Costo consegna</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (loading)
+            {
+                <tr>
+                    <td colspan="6" class="text-center">Caricamento...</td>
+                </tr>
+            }
+            else if (!companyAddresss.Any())
+            {
+                <tr>
+                    <td colspan="6" class="text-center">Nessun indirizzo di consegna disponibile</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var address in companyAddresss)
+                {
+                    <tr class="pointer @(address.Id == cartService.SelectedAddress?.Id ? "selected" : string.Empty)" @onclick="() => SetAddress(address.Id, address.DeliveryFee)">
+                        <td></td>
+                        <td>@address.StreetName</td>
+                        <td>@address.StreetNumber</td>
+                        <td>@address.PostalCode</td>
+                        <td>@address.City</td>
+                        <td>€ @address.DeliveryFee</td>
+                    </tr>
+                }
+            }
+            
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,112 @@
+.hero {
+  &-home {
+    margin-bottom: 185rem;
+    .side-img {
+      display: none;
+    }
+    h2 {
+      font-size: 203.665988rem;
+      font-weight: 700;
+      color: $brown;
+      font-family: $distro;
+      max-width: 2870rem;
+      margin: 0 auto 185rem auto;
+      text-align: center;
+      span {
+        color: $lime;
+        font: inherit;
+      }
+    }
+    .content {
+      background: url("../../assets/img/decorations/hero-content-bg.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position-x: -20px;
+      background-position-y: center;
+      position: relative;
+      height: 1437rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      .img-wrapper {
+        position: absolute;
+        img {
+          @include fullSizeImg();
+        }
+        &:first-of-type {
+          width: 1543rem;
+          height: 1397rem;
+          left: -30rem;
+          bottom: 0;
+        }
+        &:last-of-type {
+          width: 954rem;
+          height: 436rem;
+          bottom: 80rem;
+          right: 70rem;
+        }
+      }
+      .text-wrapper {
+        padding-left: 1390rem;
+        padding-right: 620rem;
+        h3 {
+          font-size: 167rem;
+          color: #fff;
+          font-family: $distro;
+          font-weight: $bold;
+          margin-bottom: 20rem;
+          span {
+            font-weight: inherit;
+          }
+        }
+        p {
+          font-size: 111rem;
+          font-family: $distro;
+          font-weight: $bold;
+          color: $brown;
+          line-height: 1.58333333;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 769px) {
+  .hero {
+    &-home {
+      margin-bottom: 1000rem;
+      .side-img {
+        display: block;
+        position: absolute;
+        &:first-of-type {
+          width: 2740.393282rem;
+          height: 3117.728198rem;
+          left: 1240.393282rem;
+        }
+        &:nth-of-type(2) {
+          width: 2740.393282rem;
+          height: 3117.728198rem;
+          right: 1240.393282rem;
+        }
+        img {
+          @include fullSizeImg();
+        }
+      }
+      h2 {
+        max-width: 3357.228975rem;
+      }
+      .content {
+        width: 4400rem;
+        margin-left: auto;
+        margin-right: auto;
+        @include bg-props(contain, center, no-repeat);
+        .text-wrapper {
+          p {
+            font-size: 148.810199rem;
+          }
+        }
+      }
+    }
+  }
+}

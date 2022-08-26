@@ -1,0 +1,29 @@
+2022-07-24 21:26:21.168 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-24 21:26:21.204 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-24 21:26:21.209 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-24 21:26:21.211 +02:00 [INF] Hosting environment: Development
+2022-07-24 21:26:21.213 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-24 21:26:22.900 +02:00 [INF] HTTP GET /swagger responded 302 in 995.8547 ms
+2022-07-24 21:26:23.168 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 248.8084 ms
+2022-07-24 21:26:23.271 +02:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 97.7302 ms
+2022-07-24 21:26:23.407 +02:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 233.7101 ms
+2022-07-24 21:26:23.412 +02:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 238.3595 ms
+2022-07-24 21:26:23.658 +02:00 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 48.1183 ms
+2022-07-24 21:26:24.455 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 876.1617 ms
+2022-07-24 21:28:20.366 +02:00 [INF] HTTP GET /v1/order responded 200 in 653.9788 ms
+2022-07-24 21:28:39.665 +02:00 [INF] HTTP GET /v1/order responded 200 in 113.0897 ms
+2022-07-24 21:28:49.771 +02:00 [INF] HTTP GET /v1/order responded 200 in 101.6893 ms
+2022-07-24 21:36:13.937 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-24 21:36:13.965 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-24 21:36:13.971 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-24 21:36:13.973 +02:00 [INF] Hosting environment: Development
+2022-07-24 21:36:13.974 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-24 21:36:15.268 +02:00 [INF] HTTP GET /swagger responded 302 in 363.8101 ms
+2022-07-24 21:36:15.514 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 224.2948 ms
+2022-07-24 21:36:16.412 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 676.7649 ms
+2022-07-24 21:37:14.371 +02:00 [INF] HTTP GET /v1/order responded 200 in 632.7466 ms
+2022-07-24 21:37:17.744 +02:00 [INF] HTTP GET /v1/order responded 200 in 205.2202 ms
+2022-07-24 21:37:24.027 +02:00 [INF] HTTP GET /v1/order responded 200 in 126.4560 ms
+2022-07-24 21:37:29.957 +02:00 [INF] HTTP GET /v1/order responded 200 in 233.3527 ms
+2022-07-24 21:37:33.074 +02:00 [INF] HTTP GET /v1/order responded 200 in 122.4154 ms
+2022-07-24 21:37:36.762 +02:00 [INF] HTTP GET /v1/order responded 200 in 129.9608 ms

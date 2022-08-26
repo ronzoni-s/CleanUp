@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fbognini.Core" Version="6.3.1" />
+    <PackageReference Include="fbognini.Core.Identity" Version="6.2.0" />
+    <PackageReference Include="fbognini.i18n" Version="6.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Constants\" />
+    <Folder Include="Enums\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+{
+  "DatabaseSettings": {
+    "DBProvider": "mssql",
+    "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=CleanUp;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}

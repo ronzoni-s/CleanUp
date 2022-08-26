@@ -1,0 +1,62 @@
+﻿@inherits LayoutComponentBase
+
+<body>
+    <NavMenu />
+
+    <div id="content">
+        @Body
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <ul class="socials list-inline w-fit-content mx-auto">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/CleanUp.Official" target="_blank" rel="noopener noreferrer">
+                            <img src="/icons/fb-icon-white.svg" />
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/erbert.ufficiale/" target="_blank" rel="noopener noreferrer">
+                            <img src="/icons/instagram-icon-white.svg" />
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/company/erbert/" target="_blank" rel="noopener noreferrer">
+                            <img src="/icons/linkedin-icon-white.svg" />
+                        </a>
+                    </li>
+                </ul>
+
+                &copy; Copyright &copy; 2022 EatRight s.r.l. <br />
+                Via Felice Casati 20, Milano <br />
+                Capitale sociale: € 144.696 <br />
+                Partita IVA: 10343500962
+                <br /><br />
+                <a href="https://www.erbert.it/media/privacy_policy.pdf">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    @*<footer id="footer" class="site-footer"><!--!--><div class="logo-wrapper"><img src="./assets/img/logo-white.svg" alt="CleanUp"></div><!--!--><ul class="socials list-inline w-fit-content mx-auto"><li class="list-inline-item"><a href="https://www.facebook.com/CleanUp.Official" target="_blank" rel="noopener noreferrer"><i class="fb-icon"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/erbert.ufficiale/" target="_blank" rel="noopener noreferrer"><i class="instagram-icon"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/company/erbert/" target="_blank" rel="noopener noreferrer"><i class="linkedin-icon"></i></a></li></ul>
+        <!--!--><p class="copy mx-auto">
+            © Copyright © 2022 EatRight s.r.l <br> Via Felice Casati 20, Milano <br> Capitale sociale: € 144.696 <br> Partita IVA: 10343500962
+        </p>
+        <!--!--><p class="extra-links"><a href="./privacy-policy.php">Privacy Policy</a></p>
+        <p class="extra-links"><!--!--><span class="color-white">Contatto: </span><a href="mailto:support.aziende@erbert.it">support.aziende@erbert.it</a></p>
+    </footer>*@
+</body>
+
+@code {
+    protected override void OnInitialized()
+    {
+        interceptor.RegisterEvent();
+    }
+
+    public void Dispose()
+    {
+        interceptor.DisposeEvent();
+    }
+}

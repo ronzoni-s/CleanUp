@@ -1,0 +1,125 @@
+$primary: #0099ff;
+$secondary: gray;
+$roundness: 33.8205rem;
+
+$sliderHeight: 27.0564rem;
+$handleSize: 135.281999rem;
+$valueWidth: 608.768997rem;
+$labelMarkerHeight: 81.1692rem;
+
+.rangeslider-wrap {
+  margin: 338.204998rem auto 100rem auto;
+  width: 2705.639986rem;
+}
+
+.rangeslider {
+  position: relative;
+  height: 87.9333rem;
+  border-radius: $roundness;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid $green;
+
+  &__handle {
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+    width: $handleSize;
+    height: $handleSize;
+    border-radius: 100%;
+    background-color: #fff;
+    touch-action: pan-y;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    top: -30rem;
+    box-shadow: 0 1px 3px rgba(black, 0.5), inset 0 0 0 33.8205rem $lime;
+
+    &__value {
+      transition: background-color 0.2s, box-shadow 0.1s, transform 0.1s;
+      box-sizing: border-box;
+      width: $valueWidth;
+      text-align: center;
+      padding: 67.641rem;
+      border-radius: $roundness;
+      color: $brown;
+      left: -($valueWidth/2 - $handleSize/2);
+      top: -180rem;
+      position: absolute;
+      white-space: nowrap;
+      font-size: 81.1692rem;
+      font-weight: $bold;
+      &:before {
+        transition: border-top-color 0.2s;
+        position: absolute;
+        bottom: 170rem;
+        @include hor-center();
+        content: "Fino a";
+        font-size: 81.1692rem;
+        color: $brown;
+        font-weight: $regular;
+      }
+
+      &:after {
+        content: " kcal";
+        font-weight: $bold;
+      }
+    }
+  }
+
+  &__fill {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    background-color: $green;
+    border-radius: $roundness;
+  }
+
+  &__labels {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+
+    &__label {
+      font-size: 0.75em;
+      position: relative;
+      padding-top: 101.461499rem;
+      color: $secondary;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        width: 6.7641rem;
+        height: $labelMarkerHeight - 20.2923rem;
+        border-radius: 6.7641rem;
+        background-color: rgba($secondary, 0.5);
+      }
+
+      &:first-child:before,
+      &:last-child:before {
+        height: $labelMarkerHeight;
+        width: 13.5282rem;
+      }
+
+      &:first-child:before {
+        background-color: $primary;
+      }
+      &:last-child:before {
+        background-color: $secondary;
+      }
+
+      &:first-child {
+        transform: translateX(-48%);
+      }
+      &:last-child {
+        transform: translateX(48%);
+      }
+    }
+  }
+}

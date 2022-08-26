@@ -1,0 +1,14 @@
+{
+  "SwaggerSettings": {
+    "Enable": true,
+    "Title": "CleanUp",
+    "Version": "v1",
+    "Description": "",
+    //"ContactName": "Mukesh Murugan",
+    //"ContactEmail": "hello@codewithmukesh.com",
+    //"ContactUrl": "https://linkedin.com/in/iammukeshm",
+    "License": false
+    //"LicenseName": "MIT License",
+    //"LicenseUrl": "https://github.com/fullstackhero/dotnet-WebApi-boilerplate/blob/main/LICENSE"
+  }
+}

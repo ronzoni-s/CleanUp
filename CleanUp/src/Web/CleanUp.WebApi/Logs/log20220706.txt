@@ -1,0 +1,580 @@
+2022-07-06 13:59:03.793 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 13:59:03.829 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 13:59:03.836 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 13:59:03.838 +02:00 [INF] Hosting environment: Development
+2022-07-06 13:59:03.840 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 13:59:05.665 +02:00 [INF] HTTP GET /swagger responded 302 in 822.1301 ms
+2022-07-06 13:59:06.020 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 333.9408 ms
+2022-07-06 13:59:06.971 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 746.0800 ms
+2022-07-06 14:02:52.873 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:02:52.905 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:02:52.911 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:02:52.913 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:02:52.915 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:02:53.771 +02:00 [INF] HTTP GET /api/identity/user responded 404 in 438.9170 ms
+2022-07-06 14:02:53.786 +02:00 [INF] HTTP GET /swagger responded 302 in 79.3503 ms
+2022-07-06 14:03:12.743 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 18931.9816 ms
+2022-07-06 14:03:13.504 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 580.4178 ms
+2022-07-06 14:03:34.274 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:03:34.299 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:03:34.304 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:03:34.306 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:03:34.308 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:03:34.962 +02:00 [INF] HTTP GET /api/identity/user responded 404 in 494.9861 ms
+2022-07-06 14:03:35.006 +02:00 [INF] HTTP GET /swagger responded 302 in 51.0867 ms
+2022-07-06 14:03:52.474 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 17450.5249 ms
+2022-07-06 14:04:56.895 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:04:56.931 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:04:56.936 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:04:56.938 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:04:56.940 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:04:57.986 +02:00 [INF] HTTP GET /swagger responded 302 in 317.9892 ms
+2022-07-06 14:04:58.048 +02:00 [INF] HTTP GET /api/identity/user responded 404 in 648.5667 ms
+2022-07-06 14:05:05.357 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 7353.0805 ms
+2022-07-06 14:06:23.458 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:06:23.486 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:06:23.491 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:06:23.493 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:06:23.494 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:06:24.476 +02:00 [INF] HTTP GET /swagger responded 302 in 88.3003 ms
+2022-07-06 14:06:24.476 +02:00 [INF] HTTP GET /api/store responded 404 in 533.9866 ms
+2022-07-06 14:06:52.321 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 27809.9266 ms
+2022-07-06 14:06:52.321 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 3534.8963 ms
+2022-07-06 14:06:53.363 +02:00 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 43.3744 ms
+2022-07-06 14:06:53.431 +02:00 [INF] HTTP GET /api/store responded 404 in 38.5556 ms
+2022-07-06 14:07:15.380 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:07:15.407 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:07:15.412 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:07:15.413 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:07:15.414 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:07:16.227 +02:00 [INF] HTTP GET /swagger responded 302 in 348.5200 ms
+2022-07-06 14:07:16.602 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 353.6671 ms
+2022-07-06 14:07:17.324 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 573.6591 ms
+2022-07-06 14:07:27.845 +02:00 [ERR] Failed executing DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[City], [s].[Created], [s].[CreatedBy], [s].[Description], [s].[Email], [s].[IsActive], [s].[LabelPrinterName], [s].[LastModified], [s].[LastModifiedBy], [s].[LastUpdated], [s].[LastUpdatedBy], [s].[Name], [s].[PhoneNumber], [s].[PickingPrinterName], [s].[PostalCode], [s].[Province], [s].[ReceiptPrinterApi], [s].[ReceiptPrinterIp], [s].[ReceiptPrinterNumber], [s].[StreetAddress], [s].[UseReceiptPrinterApi]
+FROM [store].[Stores] AS [s]
+2022-07-06 14:07:27.893 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'CleanUp.Infrastructure.Persistance.CleanUpDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ReceiptPrinterIp'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:2c470477-60b1-43d4-9dfe-611bba247e30
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ReceiptPrinterIp'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:2c470477-60b1-43d4-9dfe-611bba247e30
+Error Number:207,State:1,Class:16
+2022-07-06 14:07:28.559 +02:00 [ERR] HTTP GET /v1/store responded 500 in 993.3082 ms
+2022-07-06 14:08:21.737 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:08:21.769 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:08:21.775 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:08:21.777 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:08:21.778 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:08:22.773 +02:00 [INF] HTTP GET /swagger responded 302 in 187.2775 ms
+2022-07-06 14:08:23.001 +02:00 [ERR] Failed executing DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[City], [s].[Created], [s].[CreatedBy], [s].[Description], [s].[Email], [s].[IsActive], [s].[LabelPrinterName], [s].[LastModified], [s].[LastModifiedBy], [s].[LastUpdated], [s].[LastUpdatedBy], [s].[Name], [s].[PhoneNumber], [s].[PickingPrinterName], [s].[PostalCode], [s].[Province], [s].[ReceiptPrinterApi], [s].[ReceiptPrinterIp], [s].[ReceiptPrinterNumber], [s].[StreetAddress], [s].[UseReceiptPrinterApi]
+FROM [store].[Stores] AS [s]
+2022-07-06 14:08:23.050 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'CleanUp.Infrastructure.Persistance.CleanUpDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ReceiptPrinterIp'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:21a9c869-c7ab-4cc1-93d9-4d2f7a64bca9
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ReceiptPrinterIp'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:21a9c869-c7ab-4cc1-93d9-4d2f7a64bca9
+Error Number:207,State:1,Class:16
+2022-07-06 14:08:23.066 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 267.4391 ms
+2022-07-06 14:08:23.868 +02:00 [ERR] HTTP GET /v1/store responded 500 in 1795.9965 ms
+2022-07-06 14:13:07.243 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:13:07.271 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:13:07.276 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:13:07.278 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:13:07.280 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:13:08.377 +02:00 [INF] HTTP GET /swagger responded 302 in 456.8570 ms
+2022-07-06 14:13:08.619 +02:00 [INF] HTTP GET /v1/store responded 200 in 709.8971 ms
+2022-07-06 14:13:08.650 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 254.6361 ms
+2022-07-06 14:18:19.991 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:18:20.022 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:18:20.027 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:18:20.028 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:18:20.031 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:18:20.928 +02:00 [INF] HTTP GET /swagger responded 302 in 384.4369 ms
+2022-07-06 14:18:21.193 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 242.7297 ms
+2022-07-06 14:18:21.276 +02:00 [INF] HTTP GET /v1/store responded 200 in 737.4140 ms
+2022-07-06 14:18:33.032 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 608.5991 ms
+2022-07-06 14:27:39.321 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 14:27:39.348 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 14:27:39.352 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 14:27:39.353 +02:00 [INF] Hosting environment: Development
+2022-07-06 14:27:39.355 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 14:27:40.292 +02:00 [INF] HTTP GET /swagger responded 302 in 257.6934 ms
+2022-07-06 14:27:40.551 +02:00 [INF] HTTP GET /v1/store responded 200 in 888.5937 ms
+2022-07-06 14:27:40.579 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 268.6028 ms
+2022-07-06 14:28:07.418 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 21335.2511 ms
+2022-07-06 15:01:01.133 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 15:01:01.179 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 15:01:01.185 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 15:01:01.189 +02:00 [INF] Hosting environment: Development
+2022-07-06 15:01:01.209 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 15:01:02.438 +02:00 [INF] HTTP GET /swagger responded 302 in 393.2395 ms
+2022-07-06 15:01:02.785 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 324.4389 ms
+2022-07-06 15:01:02.788 +02:00 [INF] HTTP GET /v1/store responded 200 in 941.8842 ms
+2022-07-06 15:01:14.792 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 11832.4397 ms
+2022-07-06 15:20:35.157 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 15:20:35.187 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 15:20:35.192 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 15:20:35.194 +02:00 [INF] Hosting environment: Development
+2022-07-06 15:20:35.196 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 15:20:36.227 +02:00 [INF] HTTP GET /swagger responded 302 in 148.3907 ms
+2022-07-06 15:20:36.513 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 258.6833 ms
+2022-07-06 15:20:36.551 +02:00 [INF] HTTP GET /v1/store responded 200 in 992.3974 ms
+2022-07-06 15:21:40.541 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 63791.1835 ms
+2022-07-06 15:29:14.442 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 15:29:14.482 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 15:29:14.493 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 15:29:14.496 +02:00 [INF] Hosting environment: Development
+2022-07-06 15:29:14.498 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 15:29:15.538 +02:00 [INF] HTTP GET /swagger responded 302 in 312.9717 ms
+2022-07-06 15:29:15.850 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 296.5036 ms
+2022-07-06 15:29:15.891 +02:00 [INF] HTTP GET /v1/store responded 200 in 983.9086 ms
+2022-07-06 15:37:57.027 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 15:37:57.056 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 15:37:57.061 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 15:37:57.062 +02:00 [INF] Hosting environment: Development
+2022-07-06 15:37:57.064 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 15:37:58.190 +02:00 [INF] HTTP GET /swagger responded 302 in 356.7605 ms
+2022-07-06 15:37:58.463 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 255.8948 ms
+2022-07-06 15:37:58.506 +02:00 [INF] HTTP GET /v1/store responded 200 in 925.4620 ms
+2022-07-06 15:39:10.310 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 15:39:10.338 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 15:39:10.342 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 15:39:10.344 +02:00 [INF] Hosting environment: Development
+2022-07-06 15:39:10.345 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 15:39:11.374 +02:00 [INF] HTTP GET /v1/store responded 200 in 843.8691 ms
+2022-07-06 15:39:11.381 +02:00 [INF] HTTP GET /swagger responded 302 in 56.0845 ms
+2022-07-06 15:39:13.573 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 2178.3610 ms
+2022-07-06 15:41:01.163 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 15:41:01.191 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 15:41:01.197 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 15:41:01.199 +02:00 [INF] Hosting environment: Development
+2022-07-06 15:41:01.200 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 15:41:02.359 +02:00 [INF] HTTP GET /swagger responded 302 in 552.4749 ms
+2022-07-06 15:41:02.647 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 269.5293 ms
+2022-07-06 15:41:02.669 +02:00 [INF] HTTP GET /v1/store responded 200 in 1049.5278 ms
+2022-07-06 15:42:57.097 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 114262.1628 ms
+2022-07-06 15:43:32.096 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 15:43:32.144 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 15:43:32.148 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 15:43:32.150 +02:00 [INF] Hosting environment: Development
+2022-07-06 15:43:32.151 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 15:43:33.237 +02:00 [INF] HTTP GET /swagger responded 302 in 243.0278 ms
+2022-07-06 15:43:33.429 +02:00 [INF] HTTP GET /v1/store responded 200 in 766.2480 ms
+2022-07-06 15:43:33.480 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 212.8645 ms
+2022-07-06 16:01:27.202 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 16:01:27.233 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 16:01:27.238 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 16:01:27.239 +02:00 [INF] Hosting environment: Development
+2022-07-06 16:01:27.242 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 16:01:28.281 +02:00 [INF] HTTP GET /swagger responded 302 in 424.9060 ms
+2022-07-06 16:01:28.561 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 262.9906 ms
+2022-07-06 16:01:28.628 +02:00 [INF] HTTP GET /v1/store responded 200 in 783.9310 ms
+2022-07-06 16:02:09.264 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 16:02:09.300 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 16:02:09.306 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 16:02:09.308 +02:00 [INF] Hosting environment: Development
+2022-07-06 16:02:09.309 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 16:02:10.333 +02:00 [INF] HTTP GET /swagger responded 302 in 51.9313 ms
+2022-07-06 16:02:10.388 +02:00 [INF] HTTP GET /v1/store responded 200 in 868.7445 ms
+2022-07-06 16:03:26.295 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 16:03:26.325 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 16:03:26.330 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 16:03:26.331 +02:00 [INF] Hosting environment: Development
+2022-07-06 16:03:26.333 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 16:03:27.550 +02:00 [INF] HTTP GET /swagger responded 302 in 209.3587 ms
+2022-07-06 16:03:27.767 +02:00 [INF] HTTP GET /v1/store responded 200 in 1131.9409 ms
+2022-07-06 16:03:27.827 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 251.2452 ms
+2022-07-06 16:03:38.589 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 8800.6517 ms
+2022-07-06 16:04:40.815 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 8359.8026 ms
+2022-07-06 16:06:32.665 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 10244.7887 ms
+2022-07-06 16:07:10.909 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 3369.5249 ms
+2022-07-06 16:09:20.906 +02:00 [ERR] HTTP POST /v1/receipt-eod responded 500 in 1690.0922 ms
+2022-07-06 16:11:19.413 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 16:11:19.442 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 16:11:19.448 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 16:11:19.450 +02:00 [INF] Hosting environment: Development
+2022-07-06 16:11:19.452 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 16:11:20.584 +02:00 [INF] HTTP GET /swagger responded 302 in 449.3217 ms
+2022-07-06 16:11:20.943 +02:00 [INF] HTTP GET /v1/store responded 200 in 925.2600 ms
+2022-07-06 16:11:20.943 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 332.4287 ms
+2022-07-06 16:12:09.726 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 570.8163 ms
+2022-07-06 16:12:43.928 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 16:12:43.957 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 16:12:43.962 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 16:12:43.963 +02:00 [INF] Hosting environment: Development
+2022-07-06 16:12:43.965 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 16:12:44.875 +02:00 [INF] HTTP GET /swagger responded 302 in 53.8883 ms
+2022-07-06 16:12:45.180 +02:00 [INF] HTTP GET /v1/store responded 200 in 901.4924 ms
+2022-07-06 16:12:45.198 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 306.4668 ms
+2022-07-06 16:12:57.000 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 7498.6959 ms
+2022-07-06 16:16:23.048 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 16:16:23.080 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 16:16:23.086 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 16:16:23.088 +02:00 [INF] Hosting environment: Development
+2022-07-06 16:16:23.090 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 16:16:24.035 +02:00 [INF] HTTP GET /swagger responded 302 in 61.7375 ms
+2022-07-06 16:16:24.302 +02:00 [INF] HTTP GET /v1/store responded 200 in 974.0447 ms
+2022-07-06 16:16:24.391 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 328.5054 ms
+2022-07-06 16:16:47.871 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 630.3431 ms
+2022-07-06 16:16:52.962 +02:00 [ERR] Failed executing DbCommand (165ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (DbType = Double), @p10='?' (DbType = Double), @p11='?' (DbType = Double), @p12='?' (DbType = Double), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?' (DbType = Boolean), @p16='?' (DbType = DateTime2), @p17='?' (Size = 36) (DbType = StringFixedLength), @p18='?' (DbType = Double), @p19='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [finance].[ReceiptEods] ([CancellationAmount], [Created], [CreatedBy], [EodNumber], [FinancialAmount], [LastModified], [LastModifiedBy], [LastUpdated], [LastUpdatedBy], [NetCancellationAmount], [NetFinancialAmount], [NetPartialAmount], [PartialAmount], [ReceiptCashDesk], [ReceiptPrinterNumber], [ReceiptStatus], [ReceiptTime], [Reference], [TaxAmount], [TotalFiscalReceipts])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+SELECT [Id]
+FROM [finance].[ReceiptEods]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-07-06 16:16:53.055 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'CleanUp.Infrastructure.Persistance.CleanUpDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Reference', table 'CleanUp2.finance.ReceiptEods'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d7649e8c-0553-4aaf-9021-5414cefe2c6d
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Reference', table 'CleanUp2.finance.ReceiptEods'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d7649e8c-0553-4aaf-9021-5414cefe2c6d
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-07-06 17:12:29.339 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:12:29.367 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:12:29.371 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:12:29.373 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:12:29.375 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:12:30.331 +02:00 [INF] HTTP GET /swagger responded 302 in 241.1516 ms
+2022-07-06 17:12:30.598 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 250.6579 ms
+2022-07-06 17:12:30.650 +02:00 [INF] HTTP GET /v1/store responded 200 in 855.2067 ms
+2022-07-06 17:12:39.829 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 9064.0125 ms
+2022-07-06 17:12:51.486 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 7531.1025 ms
+2022-07-06 17:13:15.247 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:13:15.288 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:13:15.293 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:13:15.295 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:13:15.297 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:13:15.998 +02:00 [INF] HTTP GET /swagger responded 302 in 51.3153 ms
+2022-07-06 17:13:16.218 +02:00 [INF] HTTP GET /v1/store responded 200 in 833.6929 ms
+2022-07-06 17:13:19.905 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 3889.4245 ms
+2022-07-06 17:23:34.660 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:23:34.693 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:23:34.698 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:23:34.701 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:23:34.704 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:23:35.762 +02:00 [INF] HTTP GET /swagger responded 302 in 80.2992 ms
+2022-07-06 17:23:35.906 +02:00 [INF] HTTP GET /v1/store responded 200 in 1010.6904 ms
+2022-07-06 17:24:44.337 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 68549.8153 ms
+2022-07-06 17:24:45.098 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 581.5007 ms
+2022-07-06 17:25:14.357 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 2264.0289 ms
+2022-07-06 17:26:25.569 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:26:25.595 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:26:25.600 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:26:25.602 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:26:25.604 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:26:26.861 +02:00 [INF] HTTP GET /swagger responded 302 in 445.4037 ms
+2022-07-06 17:26:27.136 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 254.7968 ms
+2022-07-06 17:26:27.981 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 674.8503 ms
+2022-07-06 17:27:12.652 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:27:12.680 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:27:12.689 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:27:12.694 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:27:12.696 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:27:13.664 +02:00 [INF] HTTP GET /swagger responded 302 in 397.4758 ms
+2022-07-06 17:27:13.909 +02:00 [INF] HTTP GET /v1/store responded 200 in 757.3200 ms
+2022-07-06 17:27:13.924 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 242.9626 ms
+2022-07-06 17:27:20.770 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 4966.9245 ms
+2022-07-06 17:27:22.554 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 1879.0854 ms
+2022-07-06 17:27:44.012 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:27:44.049 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:27:44.055 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:27:44.058 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:27:44.059 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:27:44.822 +02:00 [INF] HTTP GET /swagger responded 302 in 65.0614 ms
+2022-07-06 17:27:45.141 +02:00 [INF] HTTP GET /v1/store responded 200 in 880.8016 ms
+2022-07-06 17:27:45.169 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 324.6874 ms
+2022-07-06 17:27:57.530 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10553.6372 ms
+2022-07-06 17:27:59.949 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 2473.3993 ms
+2022-07-06 17:31:20.263 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:31:20.310 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:31:20.316 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:31:20.319 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:31:20.321 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:31:21.438 +02:00 [INF] HTTP GET /swagger responded 302 in 408.9033 ms
+2022-07-06 17:31:21.719 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 262.3083 ms
+2022-07-06 17:31:21.780 +02:00 [INF] HTTP GET /v1/store responded 200 in 784.6071 ms
+2022-07-06 17:32:12.297 +02:00 [ERR] Failed executing DbCommand (50,369ms) [Parameters=[@__identifier_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [t].[Id], [t].[AdminEmail], [t].[ConnectionString], [t].[Identifier], [t].[IsActive], [t].[Issuer], [t].[Name], [t].[OpenIdConnectAuthority], [t].[OpenIdConnectClientId], [t].[OpenIdConnectClientSecret], [t].[ValidUpto]
+FROM [multitenancy].[Tenants] AS [t]
+WHERE [t].[Identifier] = @__identifier_0
+2022-07-06 17:32:12.350 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'fbognini.Infrastructure.Multitenancy.TenantDbContext`1[CleanUp.Infrastructure.Persistance.CleanUpTenant]'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tempo di attesa scaduto.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:dd3f43b8-f6ab-419c-aceb-90f11e5a2124
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tempo di attesa scaduto.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:dd3f43b8-f6ab-419c-aceb-90f11e5a2124
+Error Number:-2,State:0,Class:11
+2022-07-06 17:32:12.387 +02:00 [ERR] Exception in TryGetByIdentifierAsync
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tempo di attesa scaduto.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Finbuckle.MultiTenant.Stores.EFCoreStore`2.TryGetByIdentifierAsync(String identifier)
+   at Finbuckle.MultiTenant.Stores.MultiTenantStoreWrapper`1.TryGetByIdentifierAsync(String identifier)
+ClientConnectionId:dd3f43b8-f6ab-419c-aceb-90f11e5a2124
+Error Number:-2,State:0,Class:11
+2022-07-06 17:32:12.593 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 401 in 50674.2097 ms
+2022-07-06 17:32:19.571 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 2157.0214 ms
+2022-07-06 17:34:56.935 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:34:56.984 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:34:56.991 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:34:56.994 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:34:56.997 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:34:58.019 +02:00 [INF] HTTP GET /swagger responded 302 in 386.2763 ms
+2022-07-06 17:34:58.269 +02:00 [INF] HTTP GET /v1/store responded 200 in 883.2689 ms
+2022-07-06 17:34:58.292 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 253.3597 ms
+2022-07-06 17:35:40.386 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 36325.4158 ms
+2022-07-06 17:38:15.206 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:38:15.235 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:38:15.241 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:38:15.242 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:38:15.246 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:38:16.301 +02:00 [INF] HTTP GET /swagger responded 302 in 53.9212 ms
+2022-07-06 17:38:16.564 +02:00 [INF] HTTP GET /v1/store responded 200 in 806.8581 ms
+2022-07-06 17:38:16.573 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 251.8405 ms
+2022-07-06 17:38:31.336 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 581.3062 ms
+2022-07-06 17:41:11.071 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:41:11.107 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:41:11.113 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:41:11.116 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:41:11.118 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:41:12.055 +02:00 [INF] HTTP GET /swagger responded 302 in 352.3859 ms
+2022-07-06 17:41:12.343 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 260.4778 ms
+2022-07-06 17:41:12.386 +02:00 [INF] HTTP GET /v1/store responded 200 in 1020.9374 ms
+2022-07-06 17:42:00.364 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 594.0530 ms
+2022-07-06 17:42:18.820 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 2187.8731 ms
+2022-07-06 17:46:36.865 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:46:36.895 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:46:36.900 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:46:36.902 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:46:36.903 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:46:37.942 +02:00 [INF] HTTP GET /swagger responded 302 in 321.8400 ms
+2022-07-06 17:46:38.286 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 328.2590 ms
+2022-07-06 17:46:38.415 +02:00 [INF] HTTP GET /v1/store responded 200 in 1185.1470 ms
+2022-07-06 17:46:48.708 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10221.1185 ms
+2022-07-06 17:47:34.920 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:47:34.950 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:47:34.955 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:47:34.956 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:47:34.958 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:47:35.942 +02:00 [INF] HTTP GET /swagger responded 302 in 185.9769 ms
+2022-07-06 17:47:36.190 +02:00 [INF] HTTP GET /v1/store responded 200 in 954.5934 ms
+2022-07-06 17:47:36.296 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 328.8798 ms
+2022-07-06 17:47:48.552 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 3115.0992 ms
+2022-07-06 17:49:19.583 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:49:19.618 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:49:19.625 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:49:19.627 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:49:19.629 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:49:20.871 +02:00 [INF] HTTP GET /swagger responded 302 in 186.3043 ms
+2022-07-06 17:49:21.149 +02:00 [INF] HTTP GET /v1/store responded 200 in 1083.7942 ms
+2022-07-06 17:49:21.268 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 367.0656 ms
+2022-07-06 17:49:39.820 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 1340.1727 ms
+2022-07-06 17:50:07.834 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 2142.1284 ms
+2022-07-06 17:50:35.722 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 1536.6361 ms
+2022-07-06 17:53:40.604 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 17:53:40.636 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 17:53:40.643 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 17:53:40.645 +02:00 [INF] Hosting environment: Development
+2022-07-06 17:53:40.646 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 17:53:41.692 +02:00 [INF] HTTP GET /swagger responded 302 in 53.1125 ms
+2022-07-06 17:53:41.739 +02:00 [INF] HTTP GET /v1/store responded 200 in 981.5548 ms
+2022-07-06 18:02:19.238 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 18:02:19.269 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 18:02:19.274 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 18:02:19.277 +02:00 [INF] Hosting environment: Development
+2022-07-06 18:02:19.278 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 18:02:20.395 +02:00 [INF] HTTP GET /swagger responded 302 in 61.4962 ms
+2022-07-06 18:02:20.466 +02:00 [INF] HTTP GET /v1/store responded 200 in 957.1099 ms
+2022-07-06 18:02:57.625 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 18:02:57.656 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 18:02:57.664 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 18:02:57.666 +02:00 [INF] Hosting environment: Development
+2022-07-06 18:02:57.668 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 18:02:58.725 +02:00 [INF] HTTP GET /swagger responded 302 in 283.2605 ms
+2022-07-06 18:02:58.964 +02:00 [INF] HTTP GET /v1/store responded 200 in 953.8370 ms
+2022-07-06 18:02:59.026 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 265.0807 ms
+2022-07-06 18:05:02.049 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 18:05:02.091 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 18:05:02.098 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 18:05:02.100 +02:00 [INF] Hosting environment: Development
+2022-07-06 18:05:02.102 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 18:05:03.191 +02:00 [INF] HTTP GET /swagger responded 302 in 55.8020 ms
+2022-07-06 18:05:03.228 +02:00 [INF] HTTP GET /v1/store responded 200 in 988.7860 ms
+2022-07-06 18:05:18.809 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 15600.1097 ms
+2022-07-06 18:05:22.431 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 3472.9220 ms
+2022-07-06 18:07:06.622 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 18:07:06.653 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 18:07:06.659 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 18:07:06.661 +02:00 [INF] Hosting environment: Development
+2022-07-06 18:07:06.664 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 18:07:07.537 +02:00 [INF] HTTP GET /swagger responded 302 in 111.7316 ms
+2022-07-06 18:07:07.829 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 272.6069 ms
+2022-07-06 18:07:07.883 +02:00 [INF] HTTP GET /v1/store responded 200 in 1003.6246 ms
+2022-07-06 18:07:34.238 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 2188.2325 ms
+2022-07-06 18:08:40.208 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 2392.0651 ms
+2022-07-06 18:09:03.080 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 821.1470 ms
+2022-07-06 18:09:05.923 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 931.2599 ms
+2022-07-06 18:09:23.108 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 923.0299 ms
+2022-07-06 18:09:27.096 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 847.3233 ms
+2022-07-06 18:09:29.814 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 539.1747 ms
+2022-07-06 18:09:32.055 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 499.1069 ms
+2022-07-06 18:09:34.138 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 484.6326 ms
+2022-07-06 18:09:36.259 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 475.5009 ms
+2022-07-06 18:09:38.515 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 488.7751 ms
+2022-07-06 18:09:47.881 +02:00 [INF] HTTP POST /v1/receipt-eod responded 200 in 1692.4526 ms
+2022-07-06 18:10:17.153 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 18:10:17.182 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 18:10:17.189 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 18:10:17.190 +02:00 [INF] Hosting environment: Development
+2022-07-06 18:10:17.192 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 18:10:18.173 +02:00 [INF] HTTP GET /swagger responded 302 in 52.8891 ms
+2022-07-06 18:10:18.435 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 245.8890 ms
+2022-07-06 18:10:18.468 +02:00 [INF] HTTP GET /v1/store responded 200 in 1010.8050 ms
+2022-07-06 18:11:09.030 +02:00 [INF] Now listening on: https://localhost:7162
+2022-07-06 18:11:09.059 +02:00 [INF] Now listening on: http://localhost:5162
+2022-07-06 18:11:09.066 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 18:11:09.067 +02:00 [INF] Hosting environment: Development
+2022-07-06 18:11:09.069 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\src\Web\CleanUp.WebApi\
+2022-07-06 18:11:10.163 +02:00 [INF] HTTP GET /swagger responded 302 in 354.0129 ms
+2022-07-06 18:11:10.430 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 243.2525 ms
+2022-07-06 18:11:10.515 +02:00 [INF] HTTP GET /v1/store responded 200 in 802.4103 ms

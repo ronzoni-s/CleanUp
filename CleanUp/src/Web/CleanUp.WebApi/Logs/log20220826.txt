@@ -1,0 +1,525 @@
+2022-08-26 14:33:44.324 +02:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [i18n].[Translations] (
+    [LanguageId] nvarchar(5) NOT NULL,
+    [TextId] nvarchar(100) NOT NULL,
+    [ResourceId] nvarchar(50) NOT NULL,
+    [Destination] nvarchar(max) NULL,
+    [Updated] datetime2 NOT NULL DEFAULT '1970-01-01T00:00:00.0000000',
+    CONSTRAINT [PK_Translations] PRIMARY KEY ([LanguageId], [TextId], [ResourceId]),
+    CONSTRAINT [FK_Translations_Languages_LanguageId] FOREIGN KEY ([LanguageId]) REFERENCES [i18n].[Languages] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Translations_Texts_TextId_ResourceId] FOREIGN KEY ([TextId], [ResourceId]) REFERENCES [i18n].[Texts] ([TextId], [ResourceId]) ON DELETE CASCADE
+);
+2022-08-26 14:33:44.458 +02:00 [FTL] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Column 'i18n.Languages.Id' is not the same data type as referencing column 'Translations.LanguageId' in foreign key 'FK_Translations_Languages_LanguageId'.
+Could not create constraint or index. See previous errors.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at fbognini.i18n.Startup.InitializeI18N(IApplicationBuilder app, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 33
+ClientConnectionId:c6813cb1-54f4-437d-b477-3958d4513d69
+Error Number:1778,State:0,Class:16
+2022-08-26 14:33:44.509 +02:00 [INF] Shut down complete
+2022-08-26 14:35:23.023 +02:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [i18n].[Translations] (
+    [LanguageId] nvarchar(5) NOT NULL,
+    [TextId] nvarchar(100) NOT NULL,
+    [ResourceId] nvarchar(50) NOT NULL,
+    [Destination] nvarchar(max) NULL,
+    [Updated] datetime2 NOT NULL DEFAULT '1970-01-01T00:00:00.0000000',
+    CONSTRAINT [PK_Translations] PRIMARY KEY ([LanguageId], [TextId], [ResourceId]),
+    CONSTRAINT [FK_Translations_Languages_LanguageId] FOREIGN KEY ([LanguageId]) REFERENCES [i18n].[Languages] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Translations_Texts_TextId_ResourceId] FOREIGN KEY ([TextId], [ResourceId]) REFERENCES [i18n].[Texts] ([TextId], [ResourceId]) ON DELETE CASCADE
+);
+2022-08-26 14:35:23.131 +02:00 [FTL] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Column 'i18n.Languages.Id' is not the same data type as referencing column 'Translations.LanguageId' in foreign key 'FK_Translations_Languages_LanguageId'.
+Could not create constraint or index. See previous errors.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at fbognini.i18n.Startup.InitializeI18N(IApplicationBuilder app, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 33
+ClientConnectionId:a8665e7c-caa3-4515-8db1-49d607f03172
+Error Number:1778,State:0,Class:16
+2022-08-26 14:35:23.172 +02:00 [INF] Shut down complete
+2022-08-26 14:38:30.464 +02:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[AdminEmail], [t].[ConnectionString], [t].[Identifier], [t].[IsActive], [t].[Issuer], [t].[Name], [t].[OpenIdConnectAuthority], [t].[OpenIdConnectClientId], [t].[OpenIdConnectClientSecret], [t].[ValidUpto]
+FROM [multitenancy].[Tenants] AS [t]
+WHERE [t].[Identifier] = N'root'
+2022-08-26 14:38:30.534 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'fbognini.Infrastructure.Multitenancy.TenantDbContext`1[CleanUp.Infrastructure.Persistance.CleanUpTenant]'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:82aa9878-5bbb-46aa-82d6-2f7a4435292e
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:82aa9878-5bbb-46aa-82d6-2f7a4435292e
+Error Number:208,State:1,Class:16
+2022-08-26 14:38:30.640 +02:00 [FTL] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`2.SeedRootTenantAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`2.InitializeTenantDbAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`2.InitializeDatabasesAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Multitenancy.Startup.UseMultiTenancy(IApplicationBuilder app)
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 50
+ClientConnectionId:82aa9878-5bbb-46aa-82d6-2f7a4435292e
+Error Number:208,State:1,Class:16
+2022-08-26 14:38:30.671 +02:00 [INF] Shut down complete
+2022-08-26 14:44:32.472 +02:00 [ERR] Failed executing DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[AdminEmail], [t].[ConnectionString], [t].[Identifier], [t].[IsActive], [t].[Issuer], [t].[Name], [t].[OpenIdConnectAuthority], [t].[OpenIdConnectClientId], [t].[OpenIdConnectClientSecret], [t].[ValidUpto]
+FROM [multitenancy].[Tenants] AS [t]
+WHERE [t].[Identifier] = N'root'
+2022-08-26 14:44:32.553 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'fbognini.Infrastructure.Multitenancy.TenantDbContext`1[CleanUp.Infrastructure.Persistance.CleanUpTenant]'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:5d45cd42-caef-47a1-94d6-64c291610f20
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:5d45cd42-caef-47a1-94d6-64c291610f20
+Error Number:208,State:1,Class:16
+2022-08-26 14:44:32.609 +02:00 [FTL] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.SeedRootTenantAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.InitializeTenantDbAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.InitializeDatabasesAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Multitenancy.Startup.UseMultiTenancy(IApplicationBuilder app)
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 50
+ClientConnectionId:5d45cd42-caef-47a1-94d6-64c291610f20
+Error Number:208,State:1,Class:16
+2022-08-26 14:44:32.634 +02:00 [INF] Shut down complete
+2022-08-26 16:11:36.715 +02:00 [ERR] Failed executing DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[AdminEmail], [t].[ConnectionString], [t].[Identifier], [t].[IsActive], [t].[Issuer], [t].[Name], [t].[OpenIdConnectAuthority], [t].[OpenIdConnectClientId], [t].[OpenIdConnectClientSecret], [t].[ValidUpto]
+FROM [multitenancy].[Tenants] AS [t]
+WHERE [t].[Identifier] = N'root'
+2022-08-26 16:11:36.808 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'fbognini.Infrastructure.Multitenancy.TenantDbContext`1[CleanUp.Infrastructure.Persistance.CleanUpTenant]'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:5bc65acf-f3e4-441d-acda-757ec4582de6
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:5bc65acf-f3e4-441d-acda-757ec4582de6
+Error Number:208,State:1,Class:16
+2022-08-26 16:11:36.868 +02:00 [FTL] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.SeedRootTenantAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.InitializeTenantDbAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.InitializeDatabasesAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Multitenancy.Startup.UseMultiTenancy(IApplicationBuilder app)
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 50
+ClientConnectionId:5bc65acf-f3e4-441d-acda-757ec4582de6
+Error Number:208,State:1,Class:16
+2022-08-26 16:11:36.906 +02:00 [INF] Shut down complete
+2022-08-26 16:19:49.619 +02:00 [FTL] Unhandled exception
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 31
+2022-08-26 16:19:49.667 +02:00 [INF] Shut down complete
+2022-08-26 16:19:56.575 +02:00 [FTL] Unhandled exception
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 31
+2022-08-26 16:19:56.614 +02:00 [INF] Shut down complete
+2022-08-26 16:25:37.857 +02:00 [ERR] Failed executing DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[AdminEmail], [t].[ConnectionString], [t].[Identifier], [t].[IsActive], [t].[Issuer], [t].[Name], [t].[OpenIdConnectAuthority], [t].[OpenIdConnectClientId], [t].[OpenIdConnectClientSecret], [t].[ValidUpto]
+FROM [multitenancy].[Tenants] AS [t]
+WHERE [t].[Identifier] = N'root'
+2022-08-26 16:25:37.929 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'fbognini.Infrastructure.Multitenancy.TenantDbContext`1[CleanUp.Infrastructure.Persistance.CleanUpTenant]'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:46fb027c-5405-43bf-b6f2-ed9e2a07fa10
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:46fb027c-5405-43bf-b6f2-ed9e2a07fa10
+Error Number:208,State:1,Class:16
+2022-08-26 16:25:37.980 +02:00 [FTL] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'multitenancy.Tenants'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__207_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__271_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.SeedRootTenantAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.InitializeTenantDbAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Persistence.Initialization.MultiTenantDatabaseInitializer`3.InitializeDatabasesAsync(CancellationToken cancellationToken)
+   at fbognini.Infrastructure.Multitenancy.Startup.UseMultiTenancy(IApplicationBuilder app)
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 50
+ClientConnectionId:46fb027c-5405-43bf-b6f2-ed9e2a07fa10
+Error Number:208,State:1,Class:16
+2022-08-26 16:25:38.007 +02:00 [INF] Shut down complete
+2022-08-26 16:35:46.274 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 16:35:46.309 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 16:35:47.136 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-26 16:35:47.138 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-26 16:35:47.140 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-26 16:35:47.141 +02:00 [INF] Hosting environment: Development
+2022-08-26 16:35:47.143 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-26 16:35:48.822 +02:00 [INF] HTTP GET /swagger responded 302 in 522.5281 ms
+2022-08-26 16:35:49.128 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 283.8189 ms
+2022-08-26 16:35:49.167 +02:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 39.1837 ms
+2022-08-26 16:35:49.194 +02:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 66.4502 ms
+2022-08-26 16:35:49.201 +02:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 73.5968 ms
+2022-08-26 16:35:50.032 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 662.1909 ms
+2022-08-26 16:36:04.844 +02:00 [ERR] Error while login user
+fbognini.Core.Exceptions.NotFoundException: Email o password errati
+   at CleanUp.Infrastructure.Services.AuthenticationService.LoginAsync(LoginRequest model) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\Services\AuthenticationService.cs:line 53
+   at CleanUp.Application.WebApi.Authentication.Commands.LoginCommand.LoginCommandHandler.Handle(LoginCommand command, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\Authentication\Commands\Login\LoginCommand.cs:line 42
+2022-08-26 16:36:05.014 +02:00 [INF] HTTP POST /v1/authentication/login responded 404 in 1005.6957 ms
+2022-08-26 16:36:35.161 +02:00 [ERR] Error while login user
+fbognini.Core.Exceptions.NotFoundException: Email o password errati
+   at CleanUp.Infrastructure.Services.AuthenticationService.LoginAsync(LoginRequest model) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\Services\AuthenticationService.cs:line 53
+   at CleanUp.Application.WebApi.Authentication.Commands.LoginCommand.LoginCommandHandler.Handle(LoginCommand command, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\Authentication\Commands\Login\LoginCommand.cs:line 42
+2022-08-26 16:36:35.265 +02:00 [INF] HTTP POST /v1/authentication/login responded 404 in 216.1287 ms
+2022-08-26 16:36:58.000 +02:00 [FTL] Unhandled exception
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 31
+2022-08-26 16:36:58.050 +02:00 [INF] Shut down complete
+2022-08-26 16:37:06.962 +02:00 [FTL] Unhandled exception
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 31
+2022-08-26 16:37:06.999 +02:00 [INF] Shut down complete
+2022-08-26 16:40:06.554 +02:00 [FTL] Unhandled exception
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 31
+2022-08-26 16:40:06.598 +02:00 [INF] Shut down complete
+2022-08-26 16:40:20.998 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 16:40:21.029 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 16:40:21.479 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-26 16:40:21.481 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-26 16:40:21.483 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-26 16:40:21.485 +02:00 [INF] Hosting environment: Development
+2022-08-26 16:40:21.487 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-26 16:40:22.833 +02:00 [INF] HTTP GET /swagger responded 302 in 301.3587 ms
+2022-08-26 16:40:23.144 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 287.6444 ms
+2022-08-26 16:40:24.058 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 662.1304 ms
+2022-08-26 16:41:40.535 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 16:41:40.572 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 16:41:41.033 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-26 16:41:41.036 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-26 16:41:41.038 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-26 16:41:41.040 +02:00 [INF] Hosting environment: Development
+2022-08-26 16:41:41.042 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-26 16:41:42.478 +02:00 [INF] HTTP GET /swagger responded 302 in 416.8234 ms
+2022-08-26 16:41:42.718 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 218.2292 ms
+2022-08-26 16:41:43.551 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 666.0155 ms
+2022-08-26 16:44:18.855 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 16:44:18.904 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 16:46:08.010 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 16:46:08.051 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 16:46:08.678 +02:00 [INF] Seeded Administrator Role.
+2022-08-26 16:46:08.996 +02:00 [FTL] Unhandled exception
+System.InvalidOperationException: Unable to track an entity of type 'CleanUpUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.CreateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at CleanUp.Infrastructure.InfrastructureDatabaseSeeder.<AddAdministrator>b__6_0() in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\InfrastructureDatabaseSeeder.cs:line 75
+   at CleanUp.Infrastructure.InfrastructureDatabaseSeeder.AddAdministrator() in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\InfrastructureDatabaseSeeder.cs:line 50
+   at CleanUp.Infrastructure.InfrastructureDatabaseSeeder.Initialize() in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\InfrastructureDatabaseSeeder.cs:line 42
+   at CleanUp.Infrastructure.Extensions.ApplicationCollectionExtensions.InitializeInfrastructureDatabase(IApplicationBuilder app, IConfiguration configuration) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\Extensions\ApplicationCollectionExtensions.cs:line 18
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 64
+2022-08-26 16:46:09.100 +02:00 [INF] Shut down complete
+2022-08-26 16:47:37.911 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 16:47:37.944 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 16:47:38.358 +02:00 [FTL] Unhandled exception
+System.InvalidOperationException: Unable to track an entity of type 'CleanUpUser' because its primary key property 'Id' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.CreateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at CleanUp.Infrastructure.InfrastructureDatabaseSeeder.<AddAdministrator>b__6_0() in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\InfrastructureDatabaseSeeder.cs:line 75
+   at CleanUp.Infrastructure.InfrastructureDatabaseSeeder.AddAdministrator() in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\InfrastructureDatabaseSeeder.cs:line 50
+   at CleanUp.Infrastructure.InfrastructureDatabaseSeeder.Initialize() in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\InfrastructureDatabaseSeeder.cs:line 42
+   at CleanUp.Infrastructure.Extensions.ApplicationCollectionExtensions.InitializeInfrastructureDatabase(IApplicationBuilder app, IConfiguration configuration) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Infrastructure\Extensions\ApplicationCollectionExtensions.cs:line 18
+   at Program.<Main>$(String[] args) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\Program.cs:line 64
+2022-08-26 16:47:38.398 +02:00 [INF] Shut down complete
+2022-08-26 16:48:12.055 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 16:48:12.114 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 16:48:12.698 +02:00 [INF] Seeded Default SuperAdmin User.
+2022-08-26 16:48:12.800 +02:00 [INF] Seeded Basic Role.
+2022-08-26 16:48:12.821 +02:00 [INF] Seeded User with Basic Role.
+2022-08-26 16:48:13.058 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-26 16:48:13.061 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-26 16:48:13.064 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-26 16:48:13.067 +02:00 [INF] Hosting environment: Development
+2022-08-26 16:48:13.069 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-26 16:48:14.658 +02:00 [INF] HTTP GET /swagger responded 302 in 141.2221 ms
+2022-08-26 16:48:14.910 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 227.9932 ms
+2022-08-26 16:48:15.702 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 627.1623 ms
+2022-08-26 16:48:31.069 +02:00 [INF] HTTP POST /v1/authentication/login responded 200 in 938.2383 ms
+2022-08-26 17:14:08.895 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 17:14:08.929 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 17:14:09.513 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-26 17:14:09.516 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-26 17:14:09.517 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-26 17:14:09.521 +02:00 [INF] Hosting environment: Development
+2022-08-26 17:14:09.522 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-26 17:14:10.867 +02:00 [INF] HTTP GET /swagger responded 302 in 136.0890 ms
+2022-08-26 17:14:11.103 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 208.0023 ms
+2022-08-26 17:14:11.903 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 634.4264 ms
+2022-08-26 17:14:29.673 +02:00 [INF] HTTP POST /v1/authentication/login responded 200 in 813.7596 ms
+2022-08-26 17:14:52.640 +02:00 [ERR] Error while getting user
+fbognini.Core.Exceptions.NotFoundException: Utente {id} non trovato
+   at CleanUp.Application.WebApi.Users.Queries.GetUserQuery.GetUserQueryHandler.Handle(GetUserQuery command, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\auth\Users\Queries\Get\GetUserQuery.cs:line 47
+2022-08-26 17:14:52.841 +02:00 [INF] HTTP GET /v1/user/{id} responded 404 in 382.3862 ms
+2022-08-26 17:18:09.767 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 17:18:09.800 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 17:18:10.373 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-26 17:18:10.378 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-26 17:18:10.382 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-26 17:18:10.384 +02:00 [INF] Hosting environment: Development
+2022-08-26 17:18:10.386 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-26 17:18:11.935 +02:00 [INF] HTTP GET /swagger responded 302 in 135.7631 ms
+2022-08-26 17:18:12.161 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 200.4210 ms
+2022-08-26 17:18:13.138 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 808.9426 ms
+2022-08-26 17:18:37.940 +02:00 [INF] HTTP GET /v1/user/10 responded 401 in 24.5920 ms
+2022-08-26 17:18:58.374 +02:00 [INF] HTTP POST /v1/authentication/login responded 200 in 815.2919 ms
+2022-08-26 17:19:08.029 +02:00 [INF] HTTP GET /v1/user/9954d85c-cc71-40fe-a6a8-634d9808862b responded 401 in 5.1007 ms
+2022-08-26 17:19:23.280 +02:00 [ERR] Error while getting user
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CleanUpUser -> UserDto
+CleanUp.Domain.Entities.CleanUpUser -> CleanUp.Application.Common.Models.UserDto
+   at lambda_method906(Closure , Object , UserDto , ResolutionContext )
+   at CleanUp.Application.WebApi.Users.Queries.GetUserQuery.GetUserQueryHandler.Handle(GetUserQuery command, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\auth\Users\Queries\Get\GetUserQuery.cs:line 57
+2022-08-26 17:19:23.457 +02:00 [ERR] HTTP GET /v1/user/9954d85c-cc71-40fe-a6a8-634d9808862b responded 500 in 4824.5091 ms
+2022-08-26 17:20:59.643 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 17:20:59.679 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 17:21:00.294 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-26 17:21:00.298 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-26 17:21:00.301 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-26 17:21:00.302 +02:00 [INF] Hosting environment: Development
+2022-08-26 17:21:00.304 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-26 17:21:01.655 +02:00 [INF] HTTP GET /swagger responded 302 in 163.4954 ms
+2022-08-26 17:21:01.922 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 242.0929 ms
+2022-08-26 17:21:02.776 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 676.7069 ms
+2022-08-26 17:21:33.355 +02:00 [INF] HTTP POST /v1/authentication/login responded 200 in 906.7825 ms
+2022-08-26 17:21:56.140 +02:00 [INF] HTTP GET /v1/user/9954d85c-cc71-40fe-a6a8-634d9808862b responded 200 in 4631.6165 ms
+2022-08-26 17:40:37.262 +02:00 [INF] Connection to b5c6617e-e0d8-4739-bcd0-1260cdfe75d0's Database Succeeded.
+2022-08-26 17:40:37.302 +02:00 [INF] Multitenancy initialization completed
+2022-08-26 17:40:37.893 +02:00 [INF] Now listening on: https://localhost:7162
+2022-08-26 17:40:37.895 +02:00 [INF] Now listening on: http://localhost:5162
+2022-08-26 17:40:37.897 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-26 17:40:37.899 +02:00 [INF] Hosting environment: Development
+2022-08-26 17:40:37.902 +02:00 [INF] Content root path: C:\Users\Simone\source\repos\CleanUp\CleanUp\src\Web\CleanUp.WebApi\
+2022-08-26 17:40:39.078 +02:00 [INF] HTTP GET /swagger responded 302 in 119.9589 ms
+2022-08-26 17:40:39.332 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 228.8288 ms
+2022-08-26 17:40:40.118 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 612.8470 ms
