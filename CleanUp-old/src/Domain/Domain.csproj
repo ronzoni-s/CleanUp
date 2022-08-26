@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>CleanUp.Domain</RootNamespace>
-    <AssemblyName>CleanUp.Domain</AssemblyName>
-  </PropertyGroup>
-
-</Project>
