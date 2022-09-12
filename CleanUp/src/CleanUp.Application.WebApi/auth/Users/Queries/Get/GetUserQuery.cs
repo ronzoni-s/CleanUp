@@ -17,7 +17,7 @@ namespace CleanUp.Application.WebApi.Users.Queries
 {
     public class GetUserQuery : IRequest<UserDto>
     {
-        private string Id { get; set; }
+        public string Id { get; set; }
 
         public GetUserQuery(string id)
         {
