@@ -19,23 +19,17 @@ namespace CleanUp.Infrastructure.Services
 
         private readonly UserManager<CleanUpUser> userManager;
         private readonly RoleManager<CleanUpRole> roleManager;
-        private readonly ICleanUpRepositoryAsync repository;
-        private readonly IEmailService emailService;
         private readonly ILogger<UserService> logger;
 
         public UserService(
             UserManager<CleanUpUser> userManager
             , RoleManager<CleanUpRole> roleManager
-            , IEmailService emailService
             , ILogger<UserService> logger
-            , ICleanUpRepositoryAsync repository
             )
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
-            this.emailService = emailService;
             this.logger = logger;
-            this.repository = repository;
         }
 
         public async Task<CleanUpUser> GetById(string userId)

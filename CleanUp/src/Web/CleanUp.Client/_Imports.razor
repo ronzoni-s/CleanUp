@@ -2,13 +2,9 @@
 @using System.Net.Http.Json
 @using CurrieTechnologies.Razor.SweetAlert2
 @using CleanUp.Client.Authentication
-@using CleanUp.Client.Managers.Catalogs
-@using CleanUp.Client.Managers.Catalogs.Products
-@using CleanUp.Client.Managers.Companys
 @using CleanUp.Client.Managers.Identity.Authentication
 @using CleanUp.Client.Managers.Identity.Users
 @using CleanUp.Client.Managers.Interceptors
-@using CleanUp.Client.Managers.Orders
 @using CleanUp.Client.Services.User
 @using Microsoft.AspNetCore.Components.Forms
 @using Microsoft.AspNetCore.Components.Routing
@@ -18,22 +14,23 @@
 @using Microsoft.JSInterop
 @using CleanUp.Client
 @using CleanUp.Client.Shared
+@using CleanUp.Client.Shared.Components
+@using BlazorHero.CleanArchitecture.Client.Infrastructure.Settings
 
 @using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using MudBlazor
 
+@attribute [Authorize]
+
+@inject UserManager userManager
 @inject NavigationManager navigationManager
-@inject IAuthenticationManager authenticationManager
+@inject AuthenticationManager authenticationManager
 @inject SweetAlertService swal
 @inject ClientStateProvider stateProvider
 @inject IHttpInterceptorManager interceptor
 
-@inject ICatalogManager catalogManager
-@inject IOrderManager orderManager
-@inject IProductManager productManager
-@inject ICartManager cartManager
-@inject ICompanyManager companyManager
-@inject IUserManager userManager
-@inject ICouponManager couponManager
-
-@inject ICartService cartService
+@inject IDialogService dialogService
 @inject IUserService userService
+
+@inject ISnackbar snackBar

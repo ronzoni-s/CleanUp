@@ -23,7 +23,7 @@ namespace CleanUp.Application.WebApi.Users
         public DateTime? RegistrationDate { get; set; }
         public DateTime? EmailConfirmationDate { get; set; }
 
-    public string RefreshToken { get; set; }
+        public string RefreshToken { get; set; }
         public DateTime RefreshTokenExpiryTime { get; set; }
     }
 }

@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanUp.Hangfire.Data", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanUp.Client", "src\Web\CleanUp.Client\CleanUp.Client.csproj", "{0E498F2B-8615-48EB-9D6C-2634FAA2BEC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanUp.Infrastructure.Tests.Unit", "test\CleanUp.Infrastructure.Tests.Unit\CleanUp.Infrastructure.Tests.Unit.csproj", "{7C2F1289-05C4-4CEF-B426-B9B6C53D94D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{0E498F2B-8615-48EB-9D6C-2634FAA2BEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E498F2B-8615-48EB-9D6C-2634FAA2BEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E498F2B-8615-48EB-9D6C-2634FAA2BEC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2F1289-05C4-4CEF-B426-B9B6C53D94D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2F1289-05C4-4CEF-B426-B9B6C53D94D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2F1289-05C4-4CEF-B426-B9B6C53D94D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2F1289-05C4-4CEF-B426-B9B6C53D94D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{67BF1B60-F4A5-4A58-B9C8-C3796B0B2E2B} = {1A8C1D04-008B-4189-9E6F-3AD264E9E81F}
 		{94268E8D-2C7B-4FB1-9939-6E51E5C86859} = {1A8C1D04-008B-4189-9E6F-3AD264E9E81F}
 		{0E498F2B-8615-48EB-9D6C-2634FAA2BEC7} = {64478EBA-AE94-4CC8-B301-BE3E09245EE0}
+		{7C2F1289-05C4-4CEF-B426-B9B6C53D94D7} = {2599E96C-3660-41C8-993A-DE70C37B0AF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77FA22C5-D6DE-4DC1-81F3-41257D52C618}

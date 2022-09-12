@@ -110,7 +110,17 @@
       "ProjectGuid": "062aae40-3e85-482e-975b-4ef7cd2facc1",
       "DisplayName": "CleanUp.Domain",
       "ColorIndex": 4
+    },
+    "d49ed82d-a14a-49be-8ab7-952d4684c1e8": {
+      "ProjectGuid": "d49ed82d-a14a-49be-8ab7-952d4684c1e8",
+      "DisplayName": "CleanUp.Application.WebApi.Test",
+      "ColorIndex": 5
+    },
+    "7c2f1289-05c4-4cef-b426-b9b6c53d94d7": {
+      "ProjectGuid": "7c2f1289-05c4-4cef-b426-b9b6c53d94d7",
+      "DisplayName": "CleanUp.Infrastructure.Tests.Unit",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 7
 }

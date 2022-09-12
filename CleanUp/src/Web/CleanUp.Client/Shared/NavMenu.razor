@@ -1,49 +1,57 @@
-﻿<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/"><img src="/img/logo_white.png" /></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      @*<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-      </ul>*@
-      <div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
-      <span class="navbar-text">
-        <img class="pointer" src="/icons/hamburger.svg" @onclick="ToggleNavMenu" style="width: 40px;"/>
-          @*<span class="navbar-hamburger pointer" @onclick="ToggleNavMenu"></span>*@
-        @*<a href="" @onclick="Logout" @onclick:preventDefault>Logout</a>*@
-      </span>
-    </div>
-  </div>
-</nav>
+@using System.Security.Claims
+@using CleanUp.Client.Constants.Permission
 
-@if (!collapseNavMenu)
-{
-    <div id="logout-btn" class="pointer" @onclick="Logout">LOGOUT</div>
-}
+<UserCard />
+<MudNavMenu>
+    <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Outlined.Home">Home</MudNavLink>
+    @*@if (_canViewHangfire)
+        {
+            <MudNavLink Href="/jobs" Target="_blank" Icon="@Icons.Material.Outlined.Work">
+                @_localizer["Hangfire"]
+            </MudNavLink>
+        }*@
+    @if (_canViewOrders || _canViewProducts || _vanViewReceiptEod)
+    {
+        <MudListSubheader Class="mt-2 mb-n2">Inventario</MudListSubheader>
+        @if (_canViewOrders)
+        {
+            <MudNavLink Href="/catalog/orders" Icon="@Icons.Material.Outlined.ShoppingBag">
+                Ordini
+            </MudNavLink>
+        }
+        @if (_canViewProducts)
+        {
+            <MudNavLink Href="/catalog/products" Icon="@Icons.Filled.Inventory">
+                Prodotti
+            </MudNavLink>
+        }
+        @if (_vanViewReceiptEod)
+        {
+            <MudNavLink Href="/catalog/receipt-eod" Icon="@Icons.Filled.ReceiptLong">
+                Chiusura fiscale
+            </MudNavLink>
+        }
+    }
+</MudNavMenu>
 
 @code {
-    bool collapseNavMenu = true;
+    private ClaimsPrincipal _authenticationStateProviderUser;
 
-    string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private bool _canViewHangfire;
+    private bool _canViewOrders;
+    private bool _canViewProducts;
+    private bool _vanViewReceiptEod;
 
-    void ToggleNavMenu()
+    protected override async Task OnParametersSetAsync()
     {
-        collapseNavMenu = !collapseNavMenu;
-    }
-
-    void CollapseNavMenu()
-    {
-        collapseNavMenu = true;
-    }
-
-    async Task Logout()
-    {
-        cartService.Clear();
-        await authenticationManager.Logout();
-        navigationManager.NavigateTo("/authenticate");
+        _authenticationStateProviderUser = await stateProvider.GetAuthenticationStateProviderUserAsync();
+        //_canViewHangfire = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Hangfire.View)).Succeeded;
+        //_canViewOrders = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Orders.View)).Succeeded;
+        //_canViewProducts = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Products.View)).Succeeded;
+        //_vanViewReceiptEod = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.ReceiptEod.View)).Succeeded;
+        _canViewHangfire = true;
+        _canViewOrders = true;
+        _canViewOrders = true;
+        _canViewProducts = true;
     }
 }

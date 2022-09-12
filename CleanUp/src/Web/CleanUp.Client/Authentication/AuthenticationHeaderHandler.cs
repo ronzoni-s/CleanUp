@@ -28,25 +28,7 @@ namespace CleanUp.Client.Authentication
                 }
             }
 
-            AppendOrderSourceQueryParameter(request);
-
             return await base.SendAsync(request, cancellationToken);
-        }
-
-        private void AppendOrderSourceQueryParameter(HttpRequestMessage request)
-        {
-            var uriBuilder = new UriBuilder(request.RequestUri);
-            string orderSource = "B2BPortale";
-            if (string.IsNullOrEmpty(uriBuilder.Query))
-            {
-                uriBuilder.Query = $"orderSource={orderSource}";
-            }
-            else
-            {
-                uriBuilder.Query = $"{uriBuilder.Query}&orderSource={orderSource}";
-            }
-
-            request.RequestUri = uriBuilder.Uri;
         }
     }
 }
