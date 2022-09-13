@@ -56,5 +56,18 @@ namespace CleanUp.Infrastructure.Services
 
             return userRoles;
         }
+
+        public async Task<CleanUpUser> DeleteById(string userId)
+        {
+            var user = await GetById(userId);
+            if (user == null)
+                throw new NotFoundException($"Utente {userId} non trovato");
+
+            var result = await userManager.DeleteAsync(user);
+            if (!result.Succeeded)
+                throw new Exception($"Impossibile eliminare l'utente {userId}");
+
+            return user;
+        }
     }
 }

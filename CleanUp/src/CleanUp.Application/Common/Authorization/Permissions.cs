@@ -7,6 +7,7 @@ namespace CleanUp.Application.Common.Authorization
         public static class User
         {
             public const string View = "permissions.user.view";
+            public const string Manage = "permissions.user.manage";
         }
 
         public static class Event

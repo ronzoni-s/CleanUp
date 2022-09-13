@@ -7,6 +7,7 @@ using CleanUp.Application.Common.Models;
 using CleanUp.Application.WebApi.Users;
 using CleanUp.Application.WebApi.Authentication.Commands;
 using CleanUp.Application.WebApi.Users.Queries;
+using CleanUp.Application.WebApi.Users.Commands;
 using fbognini.WebFramework.Api;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,11 @@ namespace CleanUp.WebApi.Controllers.v1
     [Authorize]
     public class UserController : ApiController
     {
+        /// <summary>
+        /// Get User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
         [Authorize(Policy = Permissions.User.View)]
         [HttpGet]
         [Route("{id}")]
@@ -39,6 +45,19 @@ namespace CleanUp.WebApi.Controllers.v1
         public async Task<ApiResult<List<RoleDto>>> GetRolesAsync(string id)
         {
             return await Mediator.Send(new GetRolesByUserIdQuery(id));
+        }
+
+        /// <summary>
+        /// Delete User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.Manage)]
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<ApiResult<UserDto>> DeleteByIdAsync([FromRoute] string id)
+        {
+            return await Mediator.Send(new DeleteUserCommand(id));
         }
     }
 }

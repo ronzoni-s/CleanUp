@@ -7,6 +7,7 @@ namespace CleanUp.Application.Common.Interfaces
 {
     public interface IUserService
     {
+        Task<CleanUpUser> DeleteById(string userId);
         Task<CleanUpUser> GetById(string userId);
         Task<List<CleanUpRole>> GetRolesAsync(string userId);
     }
