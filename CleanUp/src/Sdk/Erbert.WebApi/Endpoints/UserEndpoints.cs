@@ -3,5 +3,6 @@
     public static class UserEndpoints
     {
         public static string Get(string id) => $"v1/user/{id}";
+        public static string GetAll => $"v1/user";
     }
 }

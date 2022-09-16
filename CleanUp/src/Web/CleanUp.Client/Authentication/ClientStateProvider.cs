@@ -1,6 +1,6 @@
 ﻿using Blazored.LocalStorage;
-using CleanUp.Client.Constants.Permission;
 using CleanUp.Client.Constants.Storage;
+using CleanUp.WebApi.Sdk.Constants.Permission;
 using Microsoft.AspNetCore.Components.Authorization;
 using System;
 using System.Collections.Generic;

@@ -36,6 +36,19 @@ namespace CleanUp.WebApi.Controllers.v1
         }
 
         /// <summary>
+        /// Get User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.View)]
+        [HttpGet]
+        [Route("")]
+        public async Task<ApiResult<List<UserDto>>> All()
+        {
+            return await Mediator.Send(new GetUsersQuery());
+        }
+
+        /// <summary>
         /// Get User Roles By Id
         /// </summary>
         /// <param name="id"></param>

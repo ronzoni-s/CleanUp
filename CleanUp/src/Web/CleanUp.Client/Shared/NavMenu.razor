@@ -1,46 +1,29 @@
 @using System.Security.Claims
-@using CleanUp.Client.Constants.Permission
+@using CleanUp.WebApi.Sdk.Constants.Permission
 
 <UserCard />
 <MudNavMenu>
     <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Outlined.Home">Home</MudNavLink>
     @*@if (_canViewHangfire)
-        {
-            <MudNavLink Href="/jobs" Target="_blank" Icon="@Icons.Material.Outlined.Work">
-                @_localizer["Hangfire"]
-            </MudNavLink>
-        }*@
-    @if (_canViewOrders || _canViewProducts || _vanViewReceiptEod)
     {
-        <MudListSubheader Class="mt-2 mb-n2">Inventario</MudListSubheader>
-        @if (_canViewOrders)
-        {
-            <MudNavLink Href="/catalog/orders" Icon="@Icons.Material.Outlined.ShoppingBag">
-                Ordini
-            </MudNavLink>
-        }
-        @if (_canViewProducts)
-        {
-            <MudNavLink Href="/catalog/products" Icon="@Icons.Filled.Inventory">
-                Prodotti
-            </MudNavLink>
-        }
-        @if (_vanViewReceiptEod)
-        {
-            <MudNavLink Href="/catalog/receipt-eod" Icon="@Icons.Filled.ReceiptLong">
-                Chiusura fiscale
-            </MudNavLink>
-        }
+        <MudNavLink Href="/jobs" Target="_blank" Icon="@Icons.Material.Outlined.Work">
+            @_localizer["Hangfire"]
+        </MudNavLink>
+    }*@
+
+    @if (_canViewUsers)
+    {
+        <MudListSubheader Class="mt-2 mb-n2">Amministrazione</MudListSubheader>
+        <MudNavLink Href="/users" Icon="@Icons.Material.Outlined.VerifiedUser">
+            Utenti
+        </MudNavLink>
     }
 </MudNavMenu>
 
 @code {
     private ClaimsPrincipal _authenticationStateProviderUser;
 
-    private bool _canViewHangfire;
-    private bool _canViewOrders;
-    private bool _canViewProducts;
-    private bool _vanViewReceiptEod;
+    private bool _canViewUsers;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -49,9 +32,7 @@
         //_canViewOrders = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Orders.View)).Succeeded;
         //_canViewProducts = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Products.View)).Succeeded;
         //_vanViewReceiptEod = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.ReceiptEod.View)).Succeeded;
-        _canViewHangfire = true;
-        _canViewOrders = true;
-        _canViewOrders = true;
-        _canViewProducts = true;
+        _canViewUsers = true;
+        //_canViewUsers = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.User.View)).Succeeded;;
     }
 }

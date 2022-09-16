@@ -37,6 +37,11 @@ namespace CleanUp.Infrastructure.Services
             return await userManager.Users.Where(u => u.Id == userId).FirstOrDefaultAsync();
         }
 
+        public async Task<List<CleanUpUser>> GetAll()
+        {
+            return await userManager.Users.ToListAsync();
+        }
+
         public async Task<List<CleanUpRole>> GetRolesAsync(string userId)
         {
             var user = await userManager.FindByIdAsync(userId);

@@ -1,0 +1,55 @@
+﻿@page "/users/{Id}"
+
+<HeroTitle Title="@Title" Description="@Description" />
+@if (!_loaded)
+{
+    <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+}
+else
+{
+    <MudGrid>
+        <AuthorizeView Policy="Permissions.User.Manage">
+            <MudItem xs="12" sm="12" md="12">
+                <MudCard Elevation="25">
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.body1">Impostazioni amministratore</MudText>
+                            <MudText Typo="Typo.body2">Visualizzazione amministratore</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent Class="pa-46" Style="padding:26px!important">
+                        <MudGrid>
+                            @*<MudCheckBox @bind-Checked="@_active" Label="Attivo?" Color="Color.Primary"></MudCheckBox>*@
+                            <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="() => null" ButtonType="ButtonType.Submit">Salva modifiche</MudButton>
+                        </MudGrid>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        </AuthorizeView>
+        <MudItem xs="12" sm="12" md="12">
+            <MudCard Elevation="25">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText>Profilo pubblico</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudGrid>
+                        <MudItem xs="12" md="6">
+                            <MudField Label="Nome" Variant="Variant.Text">@_firstName</MudField>
+                        </MudItem>
+                        <MudItem xs="12" md="6">
+                            <MudField Label="Cognome" Variant="Variant.Text">@_lastName</MudField>
+                        </MudItem>
+                        <MudItem xs="12" md="6">
+                            <MudField Label="Numero di telefono" Variant="Variant.Text">@_phoneNumber</MudField>
+                        </MudItem>
+                        <MudItem xs="12" md="6">
+                            <MudField Label="Email" Variant="Variant.Text">@_email</MudField>
+                        </MudItem>
+                    </MudGrid>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+}

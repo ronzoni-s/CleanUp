@@ -11,10 +11,10 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using System.Globalization;
 using System.Net.Http;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
-using CleanUp.Client.Constants.Permission;
 using System.Reflection;
 using MudBlazor.Services;
 using MudBlazor;
+using CleanUp.WebApi.Sdk.Constants.Permission;
 
 namespace CleanUp.Client.Extensions
 {
