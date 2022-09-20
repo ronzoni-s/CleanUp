@@ -16,6 +16,14 @@ namespace CleanUp.WebApi.Controllers.v1
     {
         //[Authorize(Policy = Permissions.Event.View)]
         [HttpGet]
+        [Route("")]
+        public async Task<ApiResult<List<EventDto>>> GetAll([FromRoute] GetEventsQuery query)
+        {
+            return await Mediator.Send(query);
+        }
+
+        //[Authorize(Policy = Permissions.Event.View)]
+        [HttpGet]
         [Route("{id}")]
         public async Task<ApiResult<EventDto>> GetById([FromRoute] int id)
         {
@@ -28,6 +36,15 @@ namespace CleanUp.WebApi.Controllers.v1
         public async Task<ApiResult<EventDto>> Create([FromBody] CreateEventCommand command)
         {
             return await Mediator.Send(command);
+        }
+
+        //[Authorize(Policy = Permissions.Event.Manage)]
+        [HttpPost]
+        [Route("upload")]
+        public async Task<ApiResult> Upload([FromForm] UploadEventCommand command)
+        {
+            await Mediator.Send(command);
+            return Ok();
         }
 
         //[Authorize(Policy = Permissions.Event.Manage)]

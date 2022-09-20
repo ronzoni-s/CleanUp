@@ -16,4 +16,8 @@
     <Folder Include="Common\Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="6.0.7" />
+  </ItemGroup>
+
 </Project>
