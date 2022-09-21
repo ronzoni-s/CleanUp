@@ -10,37 +10,32 @@
     }
 </style>
 
-<HeroTitle Title="Utenti" Description="Gestione utenti" />
+<HeroTitle Title="Eventi" Description="Gestione eventi" />
 @if (!_loaded)
 {
     <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
 }
 else
 {
-    <p>
+    @*<p>
         <label>Carica eventi (max 600 KB):</label>
         <InputFile OnChange="@OnInputFileChange" />
-        @*<button @onclick="Upload"></button>*@
-    </p>
+        <button @onclick="Upload"></button>
+    </p>*@
 
     <MudTable Hover="true" Elevation="25" Items="eventList" Dense="true" Bordered="false" Striped="true" Filter="new Func<Event, bool>(Search)">
         <ToolBarContent>
             <div class="justify-center mud-text-align-center">
-                @if (_canCreateUsers)
+                @if (_canUploadEvents)
                 {
-                    <MudButton DisableElevation Variant="Variant.Filled" Color="Color.Primary" OnClick="(() => InvokeModal())" StartIcon="@Icons.Material.Filled.Add" IconColor="Color.Surface">Registra nuovo utente</MudButton>
-                    <MudButton DisableElevation Variant="Variant.Filled" OnClick="GetUsersAsync" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricarica</MudButton>
+                    <MudButton DisableElevation Variant="Variant.Filled" Color="Color.Primary" OnClick="(() => InvokeModal())" StartIcon="@Icons.Material.Filled.Add" IconColor="Color.Surface">Carica eventi</MudButton>
                 }
-                else
-                {
-                    <MudButton DisableElevation Variant="Variant.Filled" OnClick="GetUsersAsync" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricarica</MudButton>
-                }
+                <MudButton DisableElevation Variant="Variant.Filled" OnClick="GetEventsAsync" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricarica</MudButton>
             </div>
             <MudSpacer />
-            @if (_canSearchUsers)
-            {
-                <MudTextField @bind-Value="_searchString" Immediate="true" FullWidth=false Placeholder="Ricerca utenti" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0 mb-3"></MudTextField>
-            }
+            
+            <MudTextField @bind-Value="_searchString" Immediate="true" FullWidth=false Placeholder="Ricerca utenti" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0 mb-3"></MudTextField>
+            
         </ToolBarContent>
         <HeaderContent>
             <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.Name)">Nome</MudTableSortLabel></MudTh>
@@ -48,6 +43,7 @@ else
             <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.Teacher)">Docente</MudTableSortLabel></MudTh>
             <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.StartTime)">Inizio</MudTableSortLabel></MudTh>
             <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.EndTime)">Fine</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.Type)">Tipo</MudTableSortLabel></MudTh>
             <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.IsActive)">Attivo</MudTableSortLabel></MudTh>
             <MudTh Style="text-align:right">Azioni</MudTh>
         </HeaderContent>
@@ -66,6 +62,9 @@ else
             </MudTd>
             <MudTd DataLabel="EndTime">
                 <MudHighlighter Text="@context.EndTime.ToString()" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="Type">
+                <MudHighlighter Text="@context.Type" HighlightedText="@_searchString" />
             </MudTd>
             <MudTd DataLabel="IsActive"><MudCheckBox @bind-Checked="@context.IsActive" ReadOnly Color="Color.Secondary"></MudCheckBox></MudTd>
             

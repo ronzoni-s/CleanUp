@@ -48,11 +48,21 @@ namespace CleanUp.WebApi.Controllers.v1
         }
 
         //[Authorize(Policy = Permissions.Event.Manage)]
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<ApiResult<EventDto>> Update([FromRoute] int id, [FromBody] UpdateEventCommand command)
+        {
+            command.SetId(id);
+            return await Mediator.Send(command);
+        }
+
+        //[Authorize(Policy = Permissions.Event.Manage)]
         [HttpDelete]
         [Route("{id}")]
         public async Task<ApiResult<EventDto>> Delete([FromRoute] int id)
         {
             return await Mediator.Send(new DeleteEventCommand(id));
         }
+
     }
 }

@@ -30,6 +30,7 @@ namespace CleanUp.Application.WebApi.Events.Commands
                 public TimeSpan StartHour { get; set; }
                 public TimeSpan EndHour { get; set; }
                 public string Teacher { get; set; }
+                public string Type { get; set; }
                 public string State { get; set; }
 
                 public DateTime StartTime => Date.Date.Add(StartHour);
@@ -88,6 +89,7 @@ namespace CleanUp.Application.WebApi.Events.Commands
 
                         alreadyExistingEvent.ClassroomId = eventImported.Classroom;
                         alreadyExistingEvent.Teacher = eventImported.Teacher;
+                        alreadyExistingEvent.Type = eventImported.Type;
                         alreadyExistingEvent.IsActive = eventImported.State == "Confermato";
                     }
 
@@ -143,6 +145,7 @@ namespace CleanUp.Application.WebApi.Events.Commands
                     eventImported.StartHour = GetStartTime();
                     eventImported.EndHour = GetEndTime();
                     eventImported.Teacher = GetTeacher();
+                    eventImported.Type = GetType();
                     eventImported.State = GetState();
 
                     return eventImported;
@@ -179,9 +182,11 @@ namespace CleanUp.Application.WebApi.Events.Commands
 
                         return time;
                     }
-                    
-                    string GetTeacher() => worksheet.Cells[rowIndex, 6].Value?.ToString()?.Trim();
 
+                    string GetType() => worksheet.Cells[rowIndex, 5].Value.ToString().Trim();
+
+                    string GetTeacher() => worksheet.Cells[rowIndex, 6].Value?.ToString()?.Trim();
+                    
                     string GetState() => worksheet.Cells[rowIndex, 7].Value.ToString().Trim();
                 }
             }

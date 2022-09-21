@@ -40,7 +40,7 @@ namespace CleanUp.Infrastructure
         public void Initialize()
         {
             AddAdministrator();
-            AddBasicUser();
+            AddOperatorUser();
 
             context.SaveChanges();
         }
@@ -93,13 +93,13 @@ namespace CleanUp.Infrastructure
             }).GetAwaiter().GetResult();
         }
 
-        private void AddBasicUser()
+        private void AddOperatorUser()
         {
             Task.Run(async () =>
             {
                 //Check if Role Exists
-                var basicRole = new CleanUpRole(RoleConstants.BasicRole);
-                var basicRoleInDb = await roleManager.FindByNameAsync(RoleConstants.BasicRole);
+                var basicRole = new CleanUpRole(RoleConstants.OperatorRole);
+                var basicRoleInDb = await roleManager.FindByNameAsync(RoleConstants.OperatorRole);
                 if (basicRoleInDb == null)
                 {
                     await roleManager.CreateAsync(basicRole);
@@ -120,45 +120,11 @@ namespace CleanUp.Infrastructure
                 if (basicUserInDb == null)
                 {
                     await userManager.CreateAsync(basicUser, "Password1");
-                    await userManager.AddToRoleAsync(basicUser, RoleConstants.BasicRole);
+                    await userManager.AddToRoleAsync(basicUser, RoleConstants.OperatorRole);
                     logger.LogInformation("Seeded User with Basic Role.");
                 }
             }).GetAwaiter().GetResult();
         }
-
-        //private void AddOrderStatuss()
-        //{
-        //    var orderStatuss = Enum.GetValues(typeof(Domain.Enums.OrderStatus)).Cast<Domain.Enums.OrderStatus>();
-        //    foreach (var orderStatus in orderStatuss)
-        //    {
-        //        var orderStatusInDb = context.OrderStatuss.Find((int)orderStatus);
-        //        if (orderStatusInDb == null)
-        //        {
-        //            context.OrderStatuss.Add(new Domain.Entities.OrderStatus()
-        //            {
-        //                Id = (int)orderStatus,
-        //                Name = orderStatus.ToString()
-        //            });
-        //        }
-        //    }
-        //}
-
-        //private void AddOrderSources()
-        //{
-        //    var orderSources = Enum.GetValues(typeof(Domain.Enums.OrderSource)).Cast<Domain.Enums.OrderSource>();
-        //    foreach (var orderSource in orderSources)
-        //    {
-        //        var orderSourceInDb = context.OrderSources.Find((int)orderSource);
-        //        if (orderSourceInDb == null)
-        //        {
-        //            context.OrderSources.Add(new Domain.Entities.OrderSource()
-        //            {
-        //                Id = (int)orderSource,
-        //                Name = orderSource.ToString()
-        //            });
-        //        }
-        //    }
-        //}
     }
 
 }

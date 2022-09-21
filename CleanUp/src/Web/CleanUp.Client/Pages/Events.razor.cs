@@ -23,23 +23,20 @@ namespace CleanUp.Client.Pages
         private string fileName = null;
 
         private ClaimsPrincipal _currentUser;
-        private bool _canCreateUsers;
-        private bool _canSearchUsers;
-        private bool _canViewRoles;
+        private bool _canUploadEvents;
         private bool _loaded = false;
 
         protected override async Task OnInitializedAsync()
         {
             _currentUser = await authenticationManager.CurrentUser();
-            _canCreateUsers = (await authorizationService.AuthorizeAsync(_currentUser, Permissions.User.Manage)).Succeeded;
-            _canSearchUsers = (await authorizationService.AuthorizeAsync(_currentUser, Permissions.User.View)).Succeeded;
-            _canViewRoles = true;
+            //_canUploadEvents = (await authorizationService.AuthorizeAsync(_currentUser, Permissions.Event.Manage)).Succeeded;
+            _canUploadEvents = true;
 
-            await GetUsersAsync();
+            await GetEventsAsync();
             _loaded = true;
         }
 
-        private async Task GetUsersAsync()
+        private async Task GetEventsAsync()
         {
             var response = await eventManager.GetAllAsync();
             if (response.IsSuccess)
@@ -68,14 +65,14 @@ namespace CleanUp.Client.Pages
 
         private async Task InvokeModal()
         {
-            //var parameters = new DialogParameters();
-            //var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true, DisableBackdropClick = true };
-            //var dialog = dialogService.Show<RegisterUserModal>("Registra nuovo utente", parameters, options);
-            //var result = await dialog.Result;
-            //if (!result.Cancelled)
-            //{
-            //    await GetUsersAsync();
-            //}
+            var parameters = new DialogParameters();
+            var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true, DisableBackdropClick = true };
+            var dialog = dialogService.Show<UploadEventsModal>("Carica file", parameters, options);
+            var result = await dialog.Result;
+            if (!result.Cancelled)
+            {
+                await GetEventsAsync();
+            }
         }
 
         private void ViewProfile(int id)

@@ -14,6 +14,7 @@ namespace CleanUp.WebApi.Sdk.Models.Events
         public string Teacher { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public string Type { get; set; }
         public bool IsActive { get; set; }
 
         public Classroom Classroom { get; set; }

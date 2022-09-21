@@ -1,25 +1,18 @@
-﻿using CleanUp.Application.WebApi.Classrooms;
-using CleanUp.Domain.Entities;
-using fbognini.Core.Mappings;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanUp.Application.WebApi.Events
+namespace CleanUp.WebApi.Sdk.Requests
 {
-    public class EventDto : Mappable<EventDto, Event>
+    public class UpdateEventRequest
     {
-        public int Id { get; set; }
         public string ClassroomId { get; set; }
         public string Name { get; set; }
         public string Teacher { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public string Type { get; set; }
         public bool IsActive { get; set; }
-
-        public List<ClassroomDto> Classroom { get; set; }
     }
 }
