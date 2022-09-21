@@ -156,7 +156,7 @@ namespace CleanUp.Application.WebApi.Events.Commands
                         return code;
                     }
 
-                    string GetClassroom() => worksheet.Cells[rowIndex, 2].Value.ToString().Split(" ")[0].Trim();
+                    string GetClassroom() => worksheet.Cells[rowIndex, 2].Value.ToString().Trim();
 
                     DateTime GetDate()
                     {
@@ -180,7 +180,7 @@ namespace CleanUp.Application.WebApi.Events.Commands
                         return time;
                     }
                     
-                    string GetTeacher() => worksheet.Cells[rowIndex, 6].Value.ToString().Trim();
+                    string GetTeacher() => worksheet.Cells[rowIndex, 6].Value?.ToString()?.Trim();
 
                     string GetState() => worksheet.Cells[rowIndex, 7].Value.ToString().Trim();
                 }

@@ -6,6 +6,7 @@
 @using CleanUp.Client.Managers.Identity.Users
 @using CleanUp.Client.Managers.Interceptors
 @using CleanUp.Client.Services.User
+@using CleanUp.Client.Managers;
 @using Microsoft.AspNetCore.Components.Forms
 @using Microsoft.AspNetCore.Components.Routing
 @using Microsoft.AspNetCore.Components.Web
@@ -24,6 +25,7 @@
 @attribute [Authorize]
 
 @inject UserManager userManager
+@inject EventManager eventManager
 @inject NavigationManager navigationManager
 @inject AuthenticationManager authenticationManager
 @inject SweetAlertService swal

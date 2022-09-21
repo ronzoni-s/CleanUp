@@ -12,6 +12,8 @@ namespace CleanUp.Application.WebApi.Events.Commands
     {
         public UploadEventCommandValidator()
         {
+            //RuleFor(x => x.File)
+            //    .NotNull();
         }
     }
 }

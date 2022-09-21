@@ -11,11 +11,23 @@
         </MudNavLink>
     }*@
 
-    @if (_canViewUsers)
+    @if (_canViewUsers || _canViewEvents)
     {
         <MudListSubheader Class="mt-2 mb-n2">Amministrazione</MudListSubheader>
-        <MudNavLink Href="/users" Icon="@Icons.Material.Outlined.VerifiedUser">
+    }
+
+    @if (_canViewUsers)
+    {
+        
+        <MudNavLink Href="/users" Icon="@Icons.Filled.AccountCircle">
             Utenti
+        </MudNavLink>
+    }
+
+    @if (_canViewUsers)
+    {
+        <MudNavLink Href="/events" Icon="@Icons.Filled.Event">
+            Eventi
         </MudNavLink>
     }
 </MudNavMenu>
@@ -24,6 +36,7 @@
     private ClaimsPrincipal _authenticationStateProviderUser;
 
     private bool _canViewUsers;
+    private bool _canViewEvents;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -33,6 +46,7 @@
         //_canViewProducts = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Products.View)).Succeeded;
         //_vanViewReceiptEod = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.ReceiptEod.View)).Succeeded;
         _canViewUsers = true;
+        _canViewEvents = true;
         //_canViewUsers = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.User.View)).Succeeded;;
     }
 }

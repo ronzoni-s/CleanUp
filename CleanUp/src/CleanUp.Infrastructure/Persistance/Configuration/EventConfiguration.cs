@@ -15,6 +15,8 @@ namespace CleanUp.Infrastructure.Persistance.Configuration
         public void Configure(EntityTypeBuilder<Event> builder)
         {
             builder.ToTable(nameof(CleanUpDbContext.Events), "dbo");
+
+            builder.Property(x => x.Type).HasMaxLength(50);
         }
     }
 }

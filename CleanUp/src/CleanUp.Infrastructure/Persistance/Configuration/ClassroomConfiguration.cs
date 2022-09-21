@@ -18,7 +18,7 @@ namespace CleanUp.Infrastructure.Persistance.Configuration
 
             builder.Property(x => x.Id)
                 .IsRequired()
-                .HasMaxLength(4);
+                .HasMaxLength(100);
         }
     }
 }

@@ -41,9 +41,9 @@ namespace CleanUp.WebApi.Controllers.v1
         //[Authorize(Policy = Permissions.Event.Manage)]
         [HttpPost]
         [Route("upload")]
-        public async Task<ApiResult> Upload([FromForm] UploadEventCommand command)
+        public async Task<ApiResult> Upload([FromForm] IEnumerable<IFormFile> files /*UploadEventCommand command*/)
         {
-            await Mediator.Send(command);
+            await Mediator.Send(new UploadEventCommand { File = files.First() });
             return Ok();
         }
 
