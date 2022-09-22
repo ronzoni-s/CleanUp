@@ -28,13 +28,13 @@ else
             <div class="justify-center mud-text-align-center">
                 @if (_canUploadEvents)
                 {
-                    <MudButton DisableElevation Variant="Variant.Filled" Color="Color.Primary" OnClick="(() => InvokeModal())" StartIcon="@Icons.Material.Filled.Add" IconColor="Color.Surface">Carica eventi</MudButton>
+                    <MudButton DisableElevation Variant="Variant.Filled" Color="Color.Primary" OnClick="(() => InvokeUploadEventsModal())" StartIcon="@Icons.Material.Filled.Add" IconColor="Color.Surface">Carica eventi</MudButton>
                 }
                 <MudButton DisableElevation Variant="Variant.Filled" OnClick="GetEventsAsync" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricarica</MudButton>
             </div>
             <MudSpacer />
             
-            <MudTextField @bind-Value="_searchString" Immediate="true" FullWidth=false Placeholder="Ricerca utenti" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0 mb-3"></MudTextField>
+            <MudTextField @bind-Value="_searchString" Immediate="true" FullWidth=false Placeholder="Ricerca eventi" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0 mb-3"></MudTextField>
             
         </ToolBarContent>
         <HeaderContent>
@@ -70,7 +70,7 @@ else
             
             <MudTd DataLabel="Actions" Style="text-align:right">
                 <MudMenu Label="Azioni" Variant="Variant.Filled" DisableElevation="true" EndIcon="@Icons.Filled.KeyboardArrowDown" IconColor="Color.Secondary" Direction="Direction.Left" OffsetX="true">
-                    <MudMenuItem OnClick="(()=>ViewProfile(context.Id))">Visualizza dettagli</MudMenuItem>
+                    <MudMenuItem OnClick="(()=>InvokeUpdateEventModal(context.Id))">Modifica</MudMenuItem>
                     @*@if (_canViewRoles)
                         {
                         <MudMenuItem OnClick="(()=>ManageRoles(context.Id, context.Email))">Gestisci ruoli</MudMenuItem>

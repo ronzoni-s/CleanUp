@@ -63,7 +63,7 @@ namespace CleanUp.Client.Pages
             return false;
         }
 
-        private async Task InvokeModal()
+        private async Task InvokeUploadEventsModal()
         {
             var parameters = new DialogParameters();
             var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true, DisableBackdropClick = true };
@@ -75,47 +75,30 @@ namespace CleanUp.Client.Pages
             }
         }
 
-        private void ViewProfile(int id)
+        private async Task InvokeUpdateEventModal(int id)
         {
-            navigationManager.NavigateTo($"/events/{id}");
-        }
+            var _event = eventList.FirstOrDefault(e => e.Id == id);
+            if (_event == null)
+                return;
 
-        private async Task OnInputFileChange(InputFileChangeEventArgs e)
-        {
-            long maxFileSize = 600000;
-            var upload = false;
-
-            using var content = new MultipartFormDataContent();
-
-            var _file = e.File;
-            try
+            var parameters = new DialogParameters();
+            parameters.Add(nameof(UpdateEventModal.Model), new UpdateEventModal.UpdateEventModel 
             {
-                var fileContent =
-                    new StreamContent(_file.OpenReadStream(maxFileSize));
-
-                fileContent.Headers.ContentType =
-                    new MediaTypeHeaderValue(_file.ContentType);
-
-                fileName = _file.Name;
-
-                content.Add(
-                    content: fileContent,
-                    name: "\"files\"",
-                    fileName: _file.Name);
-
-                upload = true;
-            }
-            catch (Exception ex)
+                Id = id,
+                ClassroomId = _event.ClassroomId,
+                StartTime = _event.StartTime,
+                EndTime = _event.EndTime,
+                IsActive = _event.IsActive,
+                Name = _event.Name,
+                Teacher = _event.Teacher,
+            });
+            var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true, DisableBackdropClick = true };
+            var dialog = dialogService.Show<UpdateEventModal>("Modifica evento", parameters, options);
+            var result = await dialog.Result;
+            if (!result.Cancelled)
             {
-                snackBar.Add("Si è verificato un errore...", Severity.Error);
+                await GetEventsAsync();
             }
-            
-
-            if (upload)
-            {
-                var result = await eventManager.UploadAsync(content);
-            }
-            
         }
     }
 }
