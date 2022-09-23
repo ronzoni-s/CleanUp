@@ -100,5 +100,33 @@ namespace CleanUp.Client.Pages
                 await GetEventsAsync();
             }
         }
+
+        private async Task InvokeDeleteEventModal(int id)
+        {
+            var _event = eventList.FirstOrDefault(e => e.Id == id);
+            if (_event == null)
+                return;
+
+            var parameters = new DialogParameters
+            {
+                {nameof(Shared.Dialogs.DeleteConfirmation.ContentText), "Sei sicuro di voler eliminare l'evento selezionato?"}
+            };
+            var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true, DisableBackdropClick = true };
+            var dialog = dialogService.Show<Shared.Dialogs.DeleteConfirmation>("Elimina", parameters, options);
+            var result = await dialog.Result;
+            if (!result.Cancelled)
+            {
+                var response = await eventManager.DeleteAsync(id);
+                if (response.IsSuccess)
+                {
+                    eventList.Remove(_event);
+                    snackBar.Add($"Evento {response.Response.Name} eliminato correttamente", Severity.Success);
+                }
+                else
+                {
+                    snackBar.Add("Si è verificato un errore...", Severity.Error);
+                }
+            }
+        }
     }
 }

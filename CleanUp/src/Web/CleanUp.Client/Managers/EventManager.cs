@@ -43,5 +43,11 @@ namespace CleanUp.Client.Managers
             var response = await _httpClient.PutAsJsonAsync(EventEndpoints.Update(id), request);
             return await response.ToResult<Event>();
         }
+
+        public async Task<ApiResult<Event>> DeleteAsync(int id)
+        {
+            var response = await _httpClient.DeleteAsync(EventEndpoints.Delete(id));
+            return await response.ToResult<Event>();
+        }
     }
 }

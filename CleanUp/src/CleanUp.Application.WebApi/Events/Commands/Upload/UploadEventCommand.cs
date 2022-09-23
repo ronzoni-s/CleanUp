@@ -19,7 +19,6 @@ namespace CleanUp.Application.WebApi.Events.Commands
         public class UploadEventCommandHandler : IRequestHandler<UploadEventCommand, Unit>
         {
             private readonly ICleanUpRepositoryAsync repository;
-            private readonly IMapper mapper;
             private readonly ILogger<UploadEventCommand> logger;
 
             private class EventImported
@@ -39,12 +38,10 @@ namespace CleanUp.Application.WebApi.Events.Commands
 
             public UploadEventCommandHandler(
                 ICleanUpRepositoryAsync repository
-                , IMapper mapper
                 , ILogger<UploadEventCommand> logger
                 )
             {
                 this.repository = repository;
-                this.mapper = mapper;
                 this.logger = logger;
             }
 
