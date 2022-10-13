@@ -11,5 +11,6 @@ namespace CleanUp.Application.Common.Interfaces
         Task<List<CleanUpUser>> GetAll();
         Task<CleanUpUser> GetById(string userId);
         Task<List<CleanUpRole>> GetRolesAsync(string userId);
+        Task<bool> IsInRole(string userId, string role);
     }
 }

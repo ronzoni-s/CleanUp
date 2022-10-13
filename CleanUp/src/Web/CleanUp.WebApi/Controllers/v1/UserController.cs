@@ -13,6 +13,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using CleanUp.Application.WebApi.Roles;
 using CleanUp.Application.WebApi.Roles.Queries;
+using CleanUp.Application.WebApi.WorkDays.Commands;
+using CleanUp.Application.WebApi.WorkDays;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -49,18 +51,6 @@ namespace CleanUp.WebApi.Controllers.v1
         }
 
         /// <summary>
-        /// Get User Roles By Id
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>Status 200 OK</returns>
-        [Authorize(Policy = Permissions.User.View)]
-        [HttpGet("{id}/roles")]
-        public async Task<ApiResult<List<RoleDto>>> GetRolesAsync(string id)
-        {
-            return await Mediator.Send(new GetRolesByUserIdQuery(id));
-        }
-
-        /// <summary>
         /// Delete User By Id
         /// </summary>
         /// <param name="id"></param>
@@ -71,6 +61,33 @@ namespace CleanUp.WebApi.Controllers.v1
         public async Task<ApiResult<UserDto>> DeleteByIdAsync([FromRoute] string id)
         {
             return await Mediator.Send(new DeleteUserCommand(id));
+        }
+
+        /// <summary>
+        /// Create a work day
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.Manage)]
+        [HttpPost]
+        [Route("work-day")]
+        public async Task<ApiResult<WorkDayDto>> CreateWorkDays([FromBody] UpdateWorkDayCommand command)
+        {
+            return await Mediator.Send(command);
+        }
+
+        /// <summary>
+        /// Update a work day
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.Manage)]
+        [HttpPut]
+        [Route("work-day/{id}")]
+        public async Task<ApiResult<WorkDayDto>> UpdateWorkDays([FromRoute] int id, [FromBody] UpdateWorkDayCommand command)
+        {
+            command.SetId(id);
+            return await Mediator.Send(command);
         }
     }
 }

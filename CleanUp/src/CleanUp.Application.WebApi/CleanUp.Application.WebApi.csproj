@@ -25,4 +25,8 @@
     <PackageReference Include="EPPlus" Version="6.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CleaningOperation\Commands\" />
+  </ItemGroup>
+
 </Project>

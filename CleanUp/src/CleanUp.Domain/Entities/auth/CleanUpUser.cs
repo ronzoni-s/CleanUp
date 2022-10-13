@@ -26,5 +26,6 @@ namespace CleanUp.Domain.Entities
         public DateTime RefreshTokenExpiryTime { get; set; }
 
         public ICollection<WorkDay> WorkDays { get; set; }
+        public ICollection<CleaningOperation> CleaningOperations { get; set; }
     }
 }

@@ -20,6 +20,6 @@ namespace CleanUp.Application.WebApi.Events
         public string Type { get; set; }
         public bool IsActive { get; set; }
 
-        public List<ClassroomDto> Classroom { get; set; }
+        public ClassroomDto Classroom { get; set; }
     }
 }

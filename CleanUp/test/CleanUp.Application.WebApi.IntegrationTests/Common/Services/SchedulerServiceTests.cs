@@ -70,5 +70,36 @@ namespace CleanUp.Application.WebApi.IntegrationTests.Common.Services
             Assert.Equal(2, result.Operators);
             //Assert.True(true);
         }
+
+        [Fact]
+        public async Task Schedule_ShouldReturnSlots_WhenCorrect()
+        {
+            var cleaningSlots = new List<CleaningSlot>
+            {
+                new CleaningSlot()
+                {
+                    EventId = 1,
+                    AvailableFrom = new DateTime(2022, 10, 08, 10, 0, 0),
+                    AvailableTo = new DateTime(2022, 10, 08, 11, 00, 0),
+                    Capacity = 100,
+                    CleaningDuration = new TimeSpan(0, 15, 0)
+                },
+                new CleaningSlot()
+                {
+                    EventId = 1,
+                    AvailableFrom = new DateTime(2022, 10, 08, 10, 10, 0),
+                    AvailableTo = new DateTime(2022, 10, 08, 10, 20, 0),
+                    Capacity = 100,
+                    CleaningDuration = new TimeSpan(0, 10, 0)
+                },
+            };
+            //sut.Setup(x => x.CalculateCleaningDuration(It.IsAny<Event>()))
+            //    .Returns(new TimeSpan(0, 15, 0));
+
+            var result = await sut.Object.Schedule(cleaningSlots, null);
+
+            Assert.Equal(1, result.Operators);
+            //Assert.True(true);
+        }
     }
 }

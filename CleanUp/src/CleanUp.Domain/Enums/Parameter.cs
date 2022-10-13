@@ -8,6 +8,6 @@ namespace CleanUp.Domain.Enums
 {
     public enum Parameter : short
     {
-        SeatsPerMinute = 1,
+        SeatsPerMinute = 2,
     }
 }

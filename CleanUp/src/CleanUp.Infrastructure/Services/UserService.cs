@@ -1,4 +1,5 @@
-﻿using CleanUp.Application.Common.Interfaces;
+﻿using CleanUp.Application.Common.Authorization;
+using CleanUp.Application.Common.Interfaces;
 using CleanUp.Application.Common.Interfaces.Repositorys;
 using CleanUp.Application.Common.Models;
 using CleanUp.Application.Common.Requests;
@@ -60,6 +61,12 @@ namespace CleanUp.Infrastructure.Services
             }
 
             return userRoles;
+        }
+
+        public async Task<bool> IsInRole(string userId, string role)
+        {
+            var user = await userManager.FindByIdAsync(userId);
+            return await userManager.IsInRoleAsync(user, role);
         }
 
         public async Task<CleanUpUser> DeleteById(string userId)

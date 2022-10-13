@@ -88,8 +88,10 @@ namespace CleanUp.Application.WebApi.Common.Services
         {
             var orderedSlots = cleaningSlots.OrderBy(x => x.AvailableFrom).ThenBy(x => x.AvailableTo).ToList();
             int operatorUsed = 1;
-            var scheduledWithOp = new Dictionary<int, List<CleaningSlot>>();
-            scheduledWithOp.Add(operatorUsed, new List<CleaningSlot>());
+            var scheduledWithOp = new Dictionary<int, List<CleaningSlot>>
+            {
+                { operatorUsed, new List<CleaningSlot>() }
+            };
 
             var temp = orderedSlots.First().Clone();
             temp.OperationStart = temp.AvailableFrom;
@@ -203,6 +205,62 @@ namespace CleanUp.Application.WebApi.Common.Services
             //        }
             //    }
             //}
+        }
+
+        public async Task<(int Operators, Dictionary<int, List<CleaningSlot>> ScheduledWithOp)> Schedule2(List<CleaningSlot> cleaningSlots, List<CleanUpUser> operators)
+        {
+            var orderedSlots = cleaningSlots.OrderBy(x => x.AvailableTo - x.AvailableFrom - x.CleaningDuration).ThenBy(x => x.AvailableFrom).ToList();
+            int operatorUsed = 1;
+            var scheduledWithOp = new Dictionary<int, List<CleaningSlot>>
+            {
+                { operatorUsed, new List<CleaningSlot>() }
+            };
+
+            var temp = orderedSlots.First().Clone();
+            temp.OperationStart = temp.AvailableFrom;
+            temp.OperatorAssigned = operatorUsed;
+            scheduledWithOp[operatorUsed].Add(temp);
+
+            bool scheduled;
+            foreach (var slot in orderedSlots.Skip(1))
+            {
+                scheduled = false;
+                //CleaningSlot firstUsefulPosition = null;
+
+                foreach (var operatorOrderedSlots in scheduledWithOp)
+                {
+                    if ((operatorOrderedSlots.Value.Last().OperationStart + operatorOrderedSlots.Value.Last().CleaningDuration) <= slot.AvailableFrom)
+                    {
+                        temp = slot.Clone();
+                        temp.OperationStart = slot.AvailableFrom;
+                        temp.OperatorAssigned = operatorOrderedSlots.Key;
+                        operatorOrderedSlots.Value.Add(temp);
+
+                        scheduled = true;
+                        break;
+                    }
+
+                    if (operatorOrderedSlots.Value.Last().OperationStart + operatorOrderedSlots.Value.Last().CleaningDuration + slot.CleaningDuration <= slot.AvailableTo)
+                    {
+                        temp = slot.Clone();
+                        temp.OperationStart = operatorOrderedSlots.Value.Last().OperationStart + operatorOrderedSlots.Value.Last().CleaningDuration;
+                        temp.OperatorAssigned = operatorOrderedSlots.Key;
+                        operatorOrderedSlots.Value.Add(temp);
+
+                        scheduled = true;
+                        break;
+                    }
+                }
+                if (!scheduled)
+                {
+                    scheduledWithOp.Add(++operatorUsed, new List<CleaningSlot>());
+                    temp = slot.Clone();
+                    temp.OperatorAssigned = operatorUsed;
+                    scheduledWithOp[operatorUsed].Add(temp);
+                }
+            }
+
+            return (operatorUsed, scheduledWithOp);
         }
     }
 }

@@ -18,5 +18,6 @@ namespace CleanUp.Domain.Entities
         public bool IsActive { get; set; }
 
         public Classroom Classroom { get; set; }
+        public ICollection<CleaningOperation> CleaningOperations { get; set; }
     }
 }
