@@ -14,7 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace CleanUp.Application.WebApi.IntegrationTests.Events
+namespace CleanUp.Application.WebApi.UnitTests.Events
 {
     public class DeleteEventCommandHandlerTests
     {

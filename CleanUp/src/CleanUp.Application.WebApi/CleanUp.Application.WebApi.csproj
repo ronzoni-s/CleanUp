@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Folder Include="CleaningOperation\Commands\" />
+    <Folder Include="Common\Services\" />
   </ItemGroup>
 
 </Project>

@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Newtonsoft.Json;
 
-namespace CleanUp.Application.WebApi.IntegrationTests.Events
+namespace CleanUp.Application.WebApi.UnitTests.Events
 {
     public class UploadEventCommandHandlerTests
     {

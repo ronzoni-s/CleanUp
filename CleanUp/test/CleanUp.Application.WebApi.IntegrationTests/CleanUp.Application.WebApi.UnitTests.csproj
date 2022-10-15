@@ -39,4 +39,8 @@
     <ProjectReference Include="..\..\src\CleanUp.Application.WebApi\CleanUp.Application.WebApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
+
 </Project>

@@ -1,13 +1,14 @@
-﻿using CleanUp.Domain.Entities;
+﻿using CleanUp.Application.Common.Interfaces;
+using CleanUp.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanUp.Application.WebApi.Common.Services
+namespace CleanUp.Infrastructure.Services
 {
-    public class CleaningSlot
+    public class CleaningSlot : ISchedulerService
     {
         public int Capacity { get; set; }
         public DateTime AvailableFrom { get; set; }
@@ -33,7 +34,7 @@ namespace CleanUp.Application.WebApi.Common.Services
         }
     }
 
-    public class SchedulerService
+    public class SortBasedSchedulerService
     {
         public async Task<(int Operators, Dictionary<int, List<CleaningSlot>> ScheduledWithOp)> Schedule(List<Event> events, List<CleanUpUser> operators)
         {
@@ -51,9 +52,9 @@ namespace CleanUp.Application.WebApi.Common.Services
             {
                 var orderedEvents = classroomEvents.OrderBy(ce => ce.StartTime).ToList();
                 int i;
-                for (i = 0; i < orderedEvents.Count() -1; i++)
+                for (i = 0; i < orderedEvents.Count() - 1; i++)
                 {
-                    yield return new CleaningSlot 
+                    yield return new CleaningSlot
                     {
                         AvailableFrom = orderedEvents[i].EndTime,
                         AvailableTo = orderedEvents[i + 1].StartTime,
@@ -67,7 +68,7 @@ namespace CleanUp.Application.WebApi.Common.Services
                 yield return new CleaningSlot
                 {
                     AvailableFrom = orderedEvents[i].EndTime,
-                    AvailableTo = orderedEvents[i].EndTime.Date + new TimeSpan(19,0,0),
+                    AvailableTo = orderedEvents[i].EndTime.Date + new TimeSpan(19, 0, 0),
                     Capacity = orderedEvents[i].Classroom.Capacity,
                     CleaningDuration = CalculateCleaningDuration(orderedEvents[i]),
                     EventId = orderedEvents[i].Id,
@@ -89,9 +90,9 @@ namespace CleanUp.Application.WebApi.Common.Services
             var orderedSlots = cleaningSlots.OrderBy(x => x.AvailableFrom).ThenBy(x => x.AvailableTo).ToList();
             int operatorUsed = 1;
             var scheduledWithOp = new Dictionary<int, List<CleaningSlot>>
-            {
-                { operatorUsed, new List<CleaningSlot>() }
-            };
+        {
+            { operatorUsed, new List<CleaningSlot>() }
+        };
 
             var temp = orderedSlots.First().Clone();
             temp.OperationStart = temp.AvailableFrom;
@@ -137,74 +138,7 @@ namespace CleanUp.Application.WebApi.Common.Services
                 }
             }
 
-            return (operatorUsed, scheduledWithOp) ;
-
-
-            //var assignedCleaningSlots = new List<CleaningSlot>() 
-            //{
-            //    new CleaningSlot 
-            //    {
-            //        AvailableFrom = new DateTime(10,30,0),
-            //        AvailableTo = new DateTime(10,40,0),
-            //        CleaningDuration = new TimeSpan(0,10,0),
-            //        EventId = 1,
-            //        OperatorAssigned = "",
-            //        OperationStart = new DateTime(10,30,0)
-            //    },
-            //    new CleaningSlot
-            //    {
-            //        AvailableFrom = new DateTime(11,30,0),
-            //        AvailableTo = new DateTime(11,40,0),
-            //        CleaningDuration = new TimeSpan(0,10,0),
-            //        EventId = 1,
-            //        OperatorAssigned = "",
-            //        OperationStart = new DateTime(11,30,0)
-            //    }
-            //};
-            ////Dictionary<int, List<CleaningSlot>> operatorSlots = new();
-
-
-            //foreach (var slot in orderedSlots)
-            //{
-            //    //slot = new CleaningSlot
-            //    //{
-            //    //    AvailableFrom = new DateTime(10, 0, 0),
-            //    //    AvailableTo = new DateTime(10, 40, 0),
-            //    //    CleaningDuration = new TimeSpan(0, 10, 0),
-            //    //    EventId = 1,
-            //    //}
-
-            //    int i;
-            //    for (i = 0; i < assignedCleaningSlots.Count; i++)
-            //    {
-            //        if (! (slot.AvailableFrom < assignedCleaningSlots[i].OperationStart))
-            //        {
-            //            continue;
-            //        }
-
-
-            //        if (i == assignedCleaningSlots.Count - 1)
-            //        {
-            //            if (slot.AvailableFrom <= assignedCleaningSlots[i-1].OperationStart && slot.AvailableTo >= assignedCleaningSlots[i - 1].OperationStart + assignedCleaningSlots[i - 1].CleaningDuration)
-            //            {
-            //                // qui dobbiamo controllare se dopo operation start dell'evento precedente siamo ancora nel limite del nostro AvailableTo.
-            //                // TODO
-            //            }
-            //            else
-            //            {
-            //                // aggiungi in coda senza nessuna condizione
-            //            }
-
-            //            break;
-            //        }
-
-
-            //        if (assignedCleaningSlots[i].OperationStart - Math.Max(slot.AvailableFrom, assignedCleaningSlots[i - 1].OperationStart + assignedCleaningSlots[i - 1].CleaningDuration) >= slot.CleaningDuration)
-            //        {
-
-            //        }
-            //    }
-            //}
+            return (operatorUsed, scheduledWithOp);
         }
 
         public async Task<(int Operators, Dictionary<int, List<CleaningSlot>> ScheduledWithOp)> Schedule2(List<CleaningSlot> cleaningSlots, List<CleanUpUser> operators)
@@ -212,9 +146,9 @@ namespace CleanUp.Application.WebApi.Common.Services
             var orderedSlots = cleaningSlots.OrderBy(x => x.AvailableTo - x.AvailableFrom - x.CleaningDuration).ThenBy(x => x.AvailableFrom).ToList();
             int operatorUsed = 1;
             var scheduledWithOp = new Dictionary<int, List<CleaningSlot>>
-            {
-                { operatorUsed, new List<CleaningSlot>() }
-            };
+        {
+            { operatorUsed, new List<CleaningSlot>() }
+        };
 
             var temp = orderedSlots.First().Clone();
             temp.OperationStart = temp.AvailableFrom;

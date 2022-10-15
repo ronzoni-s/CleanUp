@@ -1,5 +1,5 @@
-﻿using CleanUp.Application.WebApi.Common.Services;
-using CleanUp.Domain.Entities;
+﻿using CleanUp.Domain.Entities;
+using CleanUp.Infrastructure.Services;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace CleanUp.Application.WebApi.IntegrationTests.Common.Services
+namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
 {
-    public class SchedulerServiceTests
+    public class SortBasedSchedulerServiceTests
     {
-        private readonly Mock<SchedulerService> sut = new();
+        private readonly Mock<SortBasedSchedulerService> sut = new();
 
-        public SchedulerServiceTests()
+        public SortBasedSchedulerServiceTests()
         {
 
         }

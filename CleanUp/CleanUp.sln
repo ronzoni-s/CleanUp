@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanUp.Hangfire.Data", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanUp.Client", "src\Web\CleanUp.Client\CleanUp.Client.csproj", "{0E498F2B-8615-48EB-9D6C-2634FAA2BEC7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanUp.Application.WebApi.IntegrationTests", "test\CleanUp.Application.WebApi.IntegrationTests\CleanUp.Application.WebApi.IntegrationTests.csproj", "{3A4E46EF-B068-466E-9B51-38D1582227A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanUp.Application.WebApi.UnitTests", "test\CleanUp.Application.WebApi.IntegrationTests\CleanUp.Application.WebApi.UnitTests.csproj", "{3A4E46EF-B068-466E-9B51-38D1582227A3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanUp.Infrastructure.UnitTests", "test\CleanUp.Infrastructure.Tests.Unit\CleanUp.Infrastructure.UnitTests.csproj", "{7C2F1289-05C4-4CEF-B426-B9B6C53D94D7}"
 EndProject
