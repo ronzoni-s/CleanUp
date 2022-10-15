@@ -1,4 +1,4 @@
-﻿//using CleanUp.Application.Common.Interfaces.Repositorys;
+﻿//using CleanUp.Application.Interfaces.Repositorys;
 //using CleanUp.Application.WebApi.Authentication.Commands;
 //using CleanUp.Domain.Entities;
 //using CleanUp.Infrastructure.Services;

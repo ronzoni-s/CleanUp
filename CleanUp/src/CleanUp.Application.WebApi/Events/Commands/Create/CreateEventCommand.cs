@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CleanUp.Application.Common.Interfaces.Repositorys;
+using CleanUp.Application.Interfaces.Repositorys;
 using CleanUp.Domain.Entities;
 using fbognini.Core.Data;
 using fbognini.Core.Exceptions;

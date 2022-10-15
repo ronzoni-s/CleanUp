@@ -2,7 +2,7 @@
 using fbognini.WebFramework.Api;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using CleanUp.Application.Common.Authorization;
+using CleanUp.Application.Authorization;
 using CleanUp.Application.WebApi.Classrooms.Queries;
 
 namespace CleanUp.WebApi.Controllers.v1

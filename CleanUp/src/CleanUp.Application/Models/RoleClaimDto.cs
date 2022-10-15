@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanUp.Application.Common.Models
+namespace CleanUp.Application.Models
 {
     public class RoleClaimDto
     {

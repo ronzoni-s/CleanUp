@@ -1,8 +1,8 @@
-﻿using CleanUp.Application.Common.Authorization;
-using CleanUp.Application.Common.Interfaces;
-using CleanUp.Application.Common.Interfaces.Repositorys;
-using CleanUp.Application.Common.Models;
-using CleanUp.Application.Common.Requests;
+﻿using CleanUp.Application.Authorization;
+using CleanUp.Application.Interfaces;
+using CleanUp.Application.Interfaces.Repositorys;
+using CleanUp.Application.Models;
+using CleanUp.Application.Requests;
 using CleanUp.Domain.Entities;
 using fbognini.Core.Exceptions;
 using fbognini.Notifications.Interfaces;
@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Text;
-using RegisterRequest = CleanUp.Application.Common.Requests.RegisterRequest;
+using RegisterRequest = CleanUp.Application.Requests.RegisterRequest;
 
 namespace CleanUp.Infrastructure.Services
 {

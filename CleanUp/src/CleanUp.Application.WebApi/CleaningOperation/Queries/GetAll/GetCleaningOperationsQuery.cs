@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
-using CleanUp.Application.CleaningOperations;
-using CleanUp.Application.Common.Authorization;
-using CleanUp.Application.Common.Interfaces;
-using CleanUp.Application.Common.Interfaces.Repositorys;
+using CleanUp.Application;
+using CleanUp.Application.Authorization;
+using CleanUp.Application.Interfaces;
+using CleanUp.Application.Interfaces.Repositorys;
+using CleanUp.Application.SearchCriterias;
 using fbognini.Core.Interfaces;
 using MediatR;
 using Microsoft.Extensions.Logging;

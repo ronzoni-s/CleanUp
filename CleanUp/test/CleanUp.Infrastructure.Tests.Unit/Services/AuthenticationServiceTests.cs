@@ -1,6 +1,6 @@
 ﻿using CleanUp.Application;
-using CleanUp.Application.Common.Interfaces.Repositorys;
-using CleanUp.Application.Common.Requests;
+using CleanUp.Application.Interfaces.Repositorys;
+using CleanUp.Application.Requests;
 using CleanUp.Domain.Entities;
 using CleanUp.Infrastructure.Services;
 using fbognini.Core.Exceptions;

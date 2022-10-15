@@ -1,6 +1,6 @@
 ﻿using fbognini.Application.Persistence;
 
-namespace CleanUp.Application.Common.Interfaces.Repositorys
+namespace CleanUp.Application.Interfaces.Repositorys
 {
     public interface ICleanUpRepositoryAsync : IRepositoryAsync
     {

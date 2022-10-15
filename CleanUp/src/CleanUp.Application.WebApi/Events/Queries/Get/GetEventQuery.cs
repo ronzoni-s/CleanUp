@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using CleanUp.Application.Common.Interfaces;
-using CleanUp.Application.Common.Interfaces.Repositorys;
-using CleanUp.Application.Common.Models;
-using CleanUp.Application.Common.Requests;
+using CleanUp.Application.Interfaces;
+using CleanUp.Application.Interfaces.Repositorys;
+using CleanUp.Application.Models;
+using CleanUp.Application.Requests;
 using CleanUp.Application.WebApi.Events;
 using CleanUp.Domain.Entities;
 using fbognini.Core.Data;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using CleanUp.Application.Common.Models;
+using CleanUp.Application.Models;
 using CleanUp.Application.WebApi.Authentication.Commands;
 using fbognini.WebFramework.Api;
 using Microsoft.AspNetCore.Authorization;

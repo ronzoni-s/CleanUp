@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanUp.Application.Common.Requests
+namespace CleanUp.Application.Requests
 {
     public class LoginRequest
     {

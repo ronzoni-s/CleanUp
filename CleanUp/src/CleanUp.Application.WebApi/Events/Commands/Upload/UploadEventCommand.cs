@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CleanUp.Application.Common.Interfaces.Repositorys;
+using CleanUp.Application.Interfaces.Repositorys;
 using CleanUp.Domain.Entities;
 using EFCore.BulkExtensions;
 using fbognini.Core.Data;

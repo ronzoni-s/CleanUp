@@ -1,6 +1,6 @@
 ﻿
 
-namespace CleanUp.Application.Common.Requests
+namespace CleanUp.Application.Requests
 {
     public class ResetPasswordRequest
     {

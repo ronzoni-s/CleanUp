@@ -4,7 +4,7 @@ using fbognini.WebFramework.Api;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using CleanUp.Application.WebApi.Events.Commands;
-using CleanUp.Application.Common.Authorization;
+using CleanUp.Application.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

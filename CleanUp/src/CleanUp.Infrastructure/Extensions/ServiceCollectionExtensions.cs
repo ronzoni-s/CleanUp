@@ -1,5 +1,5 @@
-﻿using CleanUp.Application.Common.Interfaces;
-using CleanUp.Application.Common.Interfaces.Repositorys;
+﻿using CleanUp.Application.Interfaces;
+using CleanUp.Application.Interfaces.Repositorys;
 using CleanUp.Infrastructure.Persistance;
 using CleanUp.Infrastructure.Repositorys;
 using CleanUp.Infrastructure.Services;

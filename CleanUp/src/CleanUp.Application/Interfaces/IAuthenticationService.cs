@@ -1,9 +1,9 @@
-﻿using CleanUp.Application.Common.Models;
-using CleanUp.Application.Common.Requests;
+﻿using CleanUp.Application.Models;
+using CleanUp.Application.Requests;
 using CleanUp.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
-namespace CleanUp.Application.Common.Interfaces
+namespace CleanUp.Application.Interfaces
 {
     public interface IAuthenticationService
     {

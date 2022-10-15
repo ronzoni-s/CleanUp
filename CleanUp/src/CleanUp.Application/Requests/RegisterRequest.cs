@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace CleanUp.Application.Common.Requests
+namespace CleanUp.Application.Requests
 {
     public partial class RegisterRequest 
     {

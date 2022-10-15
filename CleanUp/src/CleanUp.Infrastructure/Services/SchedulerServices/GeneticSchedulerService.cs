@@ -1,4 +1,4 @@
-﻿using CleanUp.Application.Common.Interfaces;
+﻿using CleanUp.Application.Interfaces;
 using CleanUp.Domain.Entities;
 using System;
 using System.Collections.Generic;

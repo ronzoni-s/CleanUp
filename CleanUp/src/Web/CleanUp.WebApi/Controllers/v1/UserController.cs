@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using CleanUp.Application.Common.Authorization;
-using CleanUp.Application.Common.Models;
+using CleanUp.Application.Authorization;
+using CleanUp.Application.Models;
 using CleanUp.Application.WebApi.Users;
 using CleanUp.Application.WebApi.Authentication.Commands;
 using CleanUp.Application.WebApi.Users.Queries;

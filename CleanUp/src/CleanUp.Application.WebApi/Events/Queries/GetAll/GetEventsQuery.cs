@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
-using CleanUp.Application.Common.Interfaces.Repositorys;
-using CleanUp.Application.Events;
+using CleanUp.Application.Interfaces.Repositorys;
+using CleanUp.Application;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using CleanUp.Application.SearchCriterias;
 
 namespace CleanUp.Application.WebApi.Events.Queries
 {

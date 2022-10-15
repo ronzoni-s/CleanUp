@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CleanUp.Application.Common.Interfaces.Repositorys;
+using CleanUp.Application.Interfaces.Repositorys;
 using CleanUp.Application.WebApi.Events;
 using CleanUp.Application.WebApi.Events.Commands;
 using CleanUp.Domain.Entities;

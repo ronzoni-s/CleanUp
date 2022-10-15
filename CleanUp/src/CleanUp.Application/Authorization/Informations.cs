@@ -1,4 +1,4 @@
-﻿namespace CleanUp.Application.Common.Authorization
+﻿namespace CleanUp.Application.Authorization
 {
     public static class Informations
     {
