@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CleanUp.Infrastructure.Services
 {
-    public class GeneticSchedulerService : ISchedulerService
+    public class GeneticSchedulerService
     {
         private class Chromosome
         {
