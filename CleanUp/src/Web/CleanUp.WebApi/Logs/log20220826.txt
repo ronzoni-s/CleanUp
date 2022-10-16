@@ -497,7 +497,7 @@ AutoMapper.AutoMapperMappingException: Missing type map configuration or unsuppo
 
 Mapping types:
 CleanUpUser -> UserDto
-CleanUp.Domain.Entities.CleanUpUser -> CleanUp.Application.Common.Models.UserDto
+CleanUp.Domain.Entities.CleanUpUser -> CleanUp.Application.Models.UserDto
    at lambda_method906(Closure , Object , UserDto , ResolutionContext )
    at CleanUp.Application.WebApi.Users.Queries.GetUserQuery.GetUserQueryHandler.Handle(GetUserQuery command, CancellationToken cancellationToken) in C:\Users\Simone\source\repos\CleanUp\CleanUp\src\CleanUp.Application.WebApi\auth\Users\Queries\Get\GetUserQuery.cs:line 57
 2022-08-26 17:19:23.457 +02:00 [ERR] HTTP GET /v1/user/9954d85c-cc71-40fe-a6a8-634d9808862b responded 500 in 4824.5091 ms

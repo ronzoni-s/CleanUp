@@ -74,5 +74,47 @@ namespace CleanUp.Infrastructure.Services
 
             return user;
         }
+
+        public async Task<CleanUpUser> Register(RegisterRequest request)
+        {
+            //var user = await GetById(newUser.Id);
+            //if (user == null)
+            //    throw new NotFoundException($"Utente {userId} non trovato");
+
+            var user = new CleanUpUser
+            {
+                Email = request.Email,
+                EmailConfirmed = true,
+                EmailConfirmationDate = DateTime.Now,
+                FirstName = request.Name,
+                LastName = request.Surname,
+                PhoneNumber = request.PhoneNumber,
+                UserName = request.Email,
+            };
+            var result = await userManager.CreateAsync(user);
+            if (!result.Succeeded)
+                throw new Exception($"Impossibile creare un nuovo utente");
+
+            await userManager.AddPasswordAsync(user, request.Password);
+
+            return user;
+        }
+
+        public async Task<CleanUpUser> Update(UpdateUserRequest request)
+        {
+            var user = await GetById(request.Id);
+            if (user == null)
+                throw new NotFoundException($"Utente {request.Id} non trovato");
+
+            user.FirstName = request.Name;
+            user.LastName = request.Surname;
+            user.PhoneNumber = request.PhoneNumber;
+
+            var result = await userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                throw new Exception($"Impossibile modificare l'utente {request.Id}");
+
+            return user;
+        }
     }
 }

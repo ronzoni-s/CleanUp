@@ -118,9 +118,19 @@
     },
     "7c2f1289-05c4-4cef-b426-b9b6c53d94d7": {
       "ProjectGuid": "7c2f1289-05c4-4cef-b426-b9b6c53d94d7",
-      "DisplayName": "CleanUp.Infrastructure.Tests.Unit",
+      "DisplayName": "CleanUp.Infrastructure.UnitTests",
       "ColorIndex": 6
+    },
+    "919fd655-f067-4ba2-b932-d926e85dd6b4": {
+      "ProjectGuid": "919fd655-f067-4ba2-b932-d926e85dd6b4",
+      "DisplayName": "Documenti script",
+      "ColorIndex": 7
+    },
+    "3a4e46ef-b068-466e-9b51-38d1582227a3": {
+      "ProjectGuid": "3a4e46ef-b068-466e-9b51-38d1582227a3",
+      "DisplayName": "CleanUp.Application.WebApi.UnitTests",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 9
 }
