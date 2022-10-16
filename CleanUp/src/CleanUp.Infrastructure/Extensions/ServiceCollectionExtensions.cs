@@ -41,7 +41,7 @@ namespace CleanUp.Infrastructure.Extensions
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ISerializerService, NewtonSoftService>();
-            services.AddTransient<ISchedulerService, GeneticSchedulerService>();
+            services.AddTransient<ISchedulerService, SortBasedSchedulerService>();
 
             services.AddNotifications(configuration);
 

@@ -26,7 +26,6 @@ namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
             {
                 new Event()
                 {
-                    Id = 15,
                     ClassroomId = "aula-1",
                     StartTime = new DateTime(2022, 09, 27, 9, 0, 0),
                     EndTime = new DateTime(2022, 09, 27, 10, 0, 0),
@@ -35,7 +34,6 @@ namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
                 },
                 new Event()
                 {
-                    Id = 15,
                     ClassroomId = "aula-1",
                     StartTime = new DateTime(2022, 09, 27, 11, 0, 0),
                     EndTime = new DateTime(2022, 09, 27, 12, 0, 0),
@@ -44,7 +42,6 @@ namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
                 },
                 new Event()
                 {
-                    Id = 10,
                     ClassroomId = "aula-2",
                     StartTime = new DateTime(2022, 09, 27, 9, 10, 0),
                     EndTime = new DateTime(2022, 09, 27, 10, 10, 0),
@@ -53,10 +50,18 @@ namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
                 },
                 new Event()
                 {
-                    Id = 10,
                     ClassroomId = "aula-2",
                     StartTime = new DateTime(2022, 09, 27, 10, 20, 0),
                     EndTime = new DateTime(2022, 09, 27, 11, 20, 0),
+                    IsActive = true,
+                    Classroom = new Classroom() {Capacity = 100}
+                },
+                new Event()
+                {
+                    Id = 15,
+                    ClassroomId = "aula-3",
+                    StartTime = new DateTime(2022, 09, 27, 9, 0, 0),
+                    EndTime = new DateTime(2022, 09, 27, 10, 0, 0),
                     IsActive = true,
                     Classroom = new Classroom() {Capacity = 100}
                 },
@@ -67,7 +72,7 @@ namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
 
             var result = await sut.Object.Schedule(events, null);
 
-            Assert.Equal(2, result.Operators);
+            Assert.Equal(1, result.Operators);
             //Assert.True(true);
         }
 
@@ -80,7 +85,7 @@ namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
                 {
                     EventId = 1,
                     AvailableFrom = new DateTime(2022, 10, 08, 10, 0, 0),
-                    AvailableTo = new DateTime(2022, 10, 08, 11, 00, 0),
+                    AvailableTo = new DateTime(2022, 10, 08, 11, 0, 0),
                     Capacity = 100,
                     CleaningDuration = new TimeSpan(0, 15, 0)
                 },
@@ -92,6 +97,30 @@ namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
                     Capacity = 100,
                     CleaningDuration = new TimeSpan(0, 10, 0)
                 },
+                new CleaningSlot()
+                {
+                    EventId = 1,
+                    AvailableFrom = new DateTime(2022, 10, 08, 10, 0, 0),
+                    AvailableTo = new DateTime(2022, 10, 08, 19, 0, 0),
+                    Capacity = 100,
+                    CleaningDuration = new TimeSpan(0, 10, 0)
+                },
+                new CleaningSlot()
+                {
+                    EventId = 1,
+                    AvailableFrom = new DateTime(2022, 10, 08, 12, 0, 0),
+                    AvailableTo = new DateTime(2022, 10, 08, 19, 0, 0),
+                    Capacity = 100,
+                    CleaningDuration = new TimeSpan(0, 10, 0)
+                },
+                new CleaningSlot()
+                {
+                    EventId = 1,
+                    AvailableFrom = new DateTime(2022, 10, 08, 12, 0, 0),
+                    AvailableTo = new DateTime(2022, 10, 08, 19, 0, 0),
+                    Capacity = 100,
+                    CleaningDuration = new TimeSpan(0, 15, 0)
+                },
             };
             //sut.Setup(x => x.CalculateCleaningDuration(It.IsAny<Event>()))
             //    .Returns(new TimeSpan(0, 15, 0));
@@ -100,6 +129,12 @@ namespace CleanUp.Infrastructure.UnitTests.Services.SchedulerService
 
             Assert.Equal(1, result.Operators);
             //Assert.True(true);
+        }
+
+        [Fact]
+        public async Task Reschedule()
+        {
+            await sut.Object.Reschedule();
         }
     }
 }

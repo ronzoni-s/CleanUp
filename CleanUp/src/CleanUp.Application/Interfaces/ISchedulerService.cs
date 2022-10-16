@@ -7,5 +7,6 @@ namespace CleanUp.Application.Interfaces
 {
     public interface ISchedulerService
     {
+        Task<string> Reschedule(DateTime date);
     }
 }
