@@ -5,11 +5,13 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CleanUp.Application.Common.Interfaces
 {
-    public interface IUserService
+    public interface  IUserService
     {
         Task<CleanUpUser> DeleteById(string userId);
         Task<List<CleanUpUser>> GetAll();
         Task<CleanUpUser> GetById(string userId);
         Task<List<CleanUpRole>> GetRolesAsync(string userId);
+        Task<CleanUpUser> Register(RegisterRequest request);
+        Task<CleanUpUser> Update(UpdateUserRequest request);
     }
 }
