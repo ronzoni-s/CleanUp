@@ -89,5 +89,32 @@ namespace CleanUp.WebApi.Controllers.v1
             command.SetId(id);
             return await Mediator.Send(command);
         }
+
+        /// <summary>
+        /// Update User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.Manage)]
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<ApiResult<UserDto>> UpdateAsync([FromRoute] string id, [FromBody] UpdateUserCommand command)
+        {
+            command.Id = id;
+            return await Mediator.Send(command);
+        }
+
+        /// <summary>
+        /// Update User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.Manage)]
+        [HttpPost]
+        [Route("")]
+        public async Task<ApiResult<UserDto>> Register([FromBody] CreateUserCommand command)
+        {
+            return await Mediator.Send(command);
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CleanUp.Application.Authorization;
+using CleanUp.Application.Common.Requests;
 using CleanUp.Application.Interfaces;
 using CleanUp.Application.Interfaces.Repositorys;
 using CleanUp.Application.Models;
@@ -78,6 +79,48 @@ namespace CleanUp.Infrastructure.Services
             var result = await userManager.DeleteAsync(user);
             if (!result.Succeeded)
                 throw new Exception($"Impossibile eliminare l'utente {userId}");
+
+            return user;
+        }
+
+        public async Task<CleanUpUser> Register(RegisterRequest request)
+        {
+            //var user = await GetById(newUser.Id);
+            //if (user == null)
+            //    throw new NotFoundException($"Utente {userId} non trovato");
+
+            var user = new CleanUpUser
+            {
+                Email = request.Email,
+                EmailConfirmed = true,
+                EmailConfirmationDate = DateTime.Now,
+                FirstName = request.Name,
+                LastName = request.Surname,
+                PhoneNumber = request.PhoneNumber,
+                UserName = request.Email,
+            };
+            var result = await userManager.CreateAsync(user);
+            if (!result.Succeeded)
+                throw new Exception($"Impossibile creare un nuovo utente");
+
+            await userManager.AddPasswordAsync(user, request.Password);
+
+            return user;
+        }
+
+        public async Task<CleanUpUser> Update(UpdateUserRequest request)
+        {
+            var user = await GetById(request.Id);
+            if (user == null)
+                throw new NotFoundException($"Utente {request.Id} non trovato");
+
+            user.FirstName = request.Name;
+            user.LastName = request.Surname;
+            user.PhoneNumber = request.PhoneNumber;
+
+            var result = await userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                throw new Exception($"Impossibile modificare l'utente {request.Id}");
 
             return user;
         }
