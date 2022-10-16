@@ -16,7 +16,6 @@ namespace CleanUp.Infrastructure.Persistance.Configuration
         {
             builder.ToTable(nameof(CleanUpDbContext.CleaningOperations), "dbo");
 
-            builder.HasKey(x => x.EventId);
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CleanUp.Domain.Entities
 {
-    public class CleaningOperation : AuditableEntity
+    public class CleaningOperation : AuditableEntityWithIdentity
     {
         public int EventId { get; set; }
         public string UserId { get; set; }
