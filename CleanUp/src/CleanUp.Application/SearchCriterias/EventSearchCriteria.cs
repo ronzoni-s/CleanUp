@@ -24,7 +24,7 @@ namespace CleanUp.Application.SearchCriterias
 
             if (ToDate.HasValue)
             {
-                list.Add(x => x.EndTime.Date >= ToDate.Value.Date);
+                list.Add(x => x.EndTime.Date <= ToDate.Value.Date);
             }
 
             if (!string.IsNullOrEmpty(ClassRoomId))
