@@ -10,12 +10,12 @@ namespace CleanUp.WebApi.Controllers.v1
 {
     [ApiVersion("1")]
     [AllowAnonymous]
-    public class CleaningOperationController : ApiController
+    public class SchedulerController : ApiController
     {
-        //[Authorize(Policy = Permissions.CleaningOperation.View)]
+        //[Authorize(Policy = Permissions.Scheduler.View)]
         [HttpGet]
         [Route("")]
-        public async Task<ApiResult<List<CleaningOperationDto>>> GetAll([FromRoute] GetCleaningOperationsQuery query)
+        public async Task<ApiResult<List<CleaningOperationDto>>> GetAll([FromQuery] GetCleaningOperationsQuery query)
         {
             return await Mediator.Send(query);
         }
