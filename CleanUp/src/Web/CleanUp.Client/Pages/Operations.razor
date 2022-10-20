@@ -1,0 +1,37 @@
+﻿@page "/operations"
+@using CleanUp.WebApi.Sdk.Constants.Permission
+@using CleanUp.WebApi.Sdk.Models
+@using CleanUp.WebApi.Sdk.Models.Events
+@*@attribute [Authorize(Policy = Permissions.Event.View)]*@
+
+<style>
+    .mud-table-container {
+        overflow: auto;
+    }
+
+    .md-custom-range-view-controls {
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .mbsc-material .mbsc-calendar-title {
+        font-size: 1.428572em;
+        font-weight: 400;
+        text-transform: none;
+        line-height: 1.4em;
+    }
+</style>
+
+<HeroTitle Title="Interventi pulizia" Description="Schedulazione interventi pulizia tra gli operatori" />
+@if (!_loaded)
+{
+    <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+}
+else
+{
+    <p>Ciccio</p>
+    <div class="timetable"></div>
+    @*<div id="demo-custom-range-view"></div>*@
+}

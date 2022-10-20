@@ -17,7 +17,7 @@ namespace CleanUp.WebApi.Controllers.v1
         //[Authorize(Policy = Permissions.Event.View)]
         [HttpGet]
         [Route("")]
-        public async Task<ApiResult<List<EventDto>>> GetAll([FromRoute] GetEventsQuery query)
+        public async Task<ApiResult<List<EventDto>>> GetAll([FromQuery] GetEventsQuery query)
         {
             return await Mediator.Send(query);
         }

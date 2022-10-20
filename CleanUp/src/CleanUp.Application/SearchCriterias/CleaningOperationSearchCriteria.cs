@@ -19,12 +19,12 @@ namespace CleanUp.Application.SearchCriterias
 
             if (FromDate.HasValue)
             {
-                list.Add(x => x.Start >= FromDate.Value);
+                list.Add(x => x.Start.Date >= FromDate.Value.Date);
             }
 
             if (ToDate.HasValue)
             {
-                list.Add(x => x.Start + x.Duration <= ToDate.Value);
+                list.Add(x => x.Start.Date <= ToDate.Value.Date);
             }
 
             if (!string.IsNullOrEmpty(UserId))
