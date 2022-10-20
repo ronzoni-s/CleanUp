@@ -27,6 +27,7 @@ namespace CleanUp.Client.Pages
         private ClaimsPrincipal _currentUser;
         private bool _canUploadEvents;
         private bool _loaded = false;
+        bool alreadyLoadedJs = false;
 
         protected override async Task OnInitializedAsync()
         {
@@ -34,16 +35,16 @@ namespace CleanUp.Client.Pages
             _canUploadEvents = true;
 
             await GetCleaningOperationsAsync();
-            _loaded = true;
+            StateHasChanged();
         }
 
-        protected override async Task OnAfterRenderAsync(bool firstRender)
-        {
-            if (firstRender)
-            {
-                await JS.InvokeVoidAsync("setupCalendarTimeline");
-            }
-        }
+        //protected override async Task OnAfterRenderAsync(bool firstRender)
+        //{
+        //    if (firstRender)
+        //    {
+        //        await JS.InvokeVoidAsync("setupCalendarTimeline");
+        //    }
+        //}
 
         private async Task GetCleaningOperationsAsync()
         {
@@ -51,6 +52,13 @@ namespace CleanUp.Client.Pages
             if (response.IsSuccess)
             {
                 cleaningOperationList = response.Response.ToList();
+                _loaded = true;
+                StateHasChanged();
+                if (!alreadyLoadedJs)
+                {
+                    await JS.InvokeVoidAsync("setupCalendarTimeline");
+                    alreadyLoadedJs = true;
+                }
             }
             else
             {
