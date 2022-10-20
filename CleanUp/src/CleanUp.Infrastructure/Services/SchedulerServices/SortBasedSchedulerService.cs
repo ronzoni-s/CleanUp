@@ -2,30 +2,27 @@
 using CleanUp.Application.Interfaces.Repositorys;
 using CleanUp.Application.SearchCriterias;
 using CleanUp.Domain.Entities;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Org.BouncyCastle.Math.EC.Rfc7748;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Sockets;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
+using System.CodeDom;
 
 namespace CleanUp.Infrastructure.Services
 {
     public class CleaningSlot
     {
+        [JsonIgnore]
         public int Capacity { get; set; }
+        [JsonIgnore]
         public DateTime AvailableFrom { get; set; }
+        [JsonIgnore]
         public DateTime AvailableTo { get; set; } // (TimeSpan.MaxValue)
+        [JsonIgnore]
         public TimeSpan CleaningDuration { get; set; }  // Calcolato in base a event duration, capacità, ...
+        [JsonIgnore]
         public int EventId { get; set; }
-
+        [JsonIgnore]
         public int? OperatorAssigned { get; set; }
         public DateTime? OperationStart { get; set; }
+        public DateTime? OperationEnd { get; set; }
 
         public CleaningSlot Clone()
         {
@@ -38,6 +35,7 @@ namespace CleanUp.Infrastructure.Services
                 EventId = this.EventId,
                 OperationStart = this.OperationStart,
                 OperatorAssigned = this.OperatorAssigned,
+                OperationEnd = this.OperationEnd,
             };
         }
     }
@@ -45,9 +43,11 @@ namespace CleanUp.Infrastructure.Services
     public class SortBasedSchedulerService : ISchedulerService
     {
         private readonly ICleanUpRepositoryAsync repository;
-        public SortBasedSchedulerService(ICleanUpRepositoryAsync repository)
+        private readonly IUserService userService;
+        public SortBasedSchedulerService(ICleanUpRepositoryAsync repository, IUserService userService)
         {
             this.repository = repository;
+            this.userService = userService;
         }
 
         public async Task<string> Reschedule(DateTime date)
@@ -55,11 +55,12 @@ namespace CleanUp.Infrastructure.Services
             var criteria = new EventSearchCriteria() { FromDate = date, ToDate = date };
             criteria.Includes.Add(x => x.Classroom);
             var events = await repository.GetAllAsync<Event>(criteria);
-            var res = await Schedule(events, null);
-            return JsonConvert.SerializeObject(res.ScheduledWithOp);
+            var operators = await userService.GetAll();
+            var res = await Schedule(events, operators);
+            return JsonConvert.SerializeObject(res.Scheduled);
         }
 
-        public async Task<(int Operators, Dictionary<int, List<CleaningSlot>> ScheduledWithOp)> Schedule(List<Event> events, List<CleanUpUser> operators)
+        public async Task<(List<CleaningSlot> Unscheduled, Dictionary<string, List<CleaningSlot>> Scheduled)> Schedule(List<Event> events, List<CleanUpUser> operators)
         {
             List<CleaningSlot> cleaningInterventions = new();
 
@@ -70,7 +71,6 @@ namespace CleanUp.Infrastructure.Services
 
             return await Schedule(cleaningInterventions, operators);
 
-            // GetRanges in pyhton
             IEnumerable<CleaningSlot> BuildCleaningSlots(List<Event> classroomEvents)
             {
                 var orderedEvents = classroomEvents.OrderBy(ce => ce.StartTime).ToList();
@@ -120,7 +120,86 @@ namespace CleanUp.Infrastructure.Services
             return new TimeSpan(0, 15, 0);
         }
 
-        public async Task<(int Operators, Dictionary<int, List<CleaningSlot>> ScheduledWithOp)> Schedule(List<CleaningSlot> cleaningSlots, List<CleanUpUser> operators)
+        public async Task<(List<CleaningSlot> Unscheduled, Dictionary<string, List<CleaningSlot>> Scheduled)> Schedule(List<CleaningSlot> cleaningSlots, List<CleanUpUser> operators)
+        {
+            var orderedSlots = cleaningSlots.OrderBy(x => x.AvailableTo).ThenBy(x => x.AvailableTo - x.AvailableFrom - x.CleaningDuration).ToList();
+
+            CleaningSlot temp;
+            Dictionary<string, List<CleaningSlot>> scheduledWithOp = new Dictionary<string, List<CleaningSlot>>();
+            for (int i = 0; i < operators.Count && i < cleaningSlots.Count; i++)
+            {
+                temp = orderedSlots[i].Clone();
+                temp.OperationStart = temp.AvailableFrom;
+                temp.OperationEnd = temp.OperationStart + temp.CleaningDuration;
+                scheduledWithOp.Add(operators[i].Id, new List<CleaningSlot>() { temp });
+            }
+
+            bool scheduled;
+            List<CleaningSlot> missed = new List<CleaningSlot>();
+            foreach (var slot in orderedSlots.Skip(operators.Count))
+            {
+                scheduled = false;
+                List<Tuple<string, int>> tempList = new List<Tuple<string, int>>();
+                foreach(var op in scheduledWithOp)
+                {
+                    tempList.Add(new Tuple<string, int>(op.Key, op.Value.Count));
+                }
+                tempList = tempList.OrderBy(x => x.Item2).ToList();
+
+                foreach (var op in tempList)
+                {
+                    //var operatorOrderedSlots = scheduledWithOp[op.Item1];
+                    if (scheduled)
+                    {
+                        break;
+                    }
+                    for (int i = 0; i < scheduledWithOp[op.Item1].Count; i++)
+                    {
+                        if (scheduledWithOp[op.Item1][i].OperationStart >= slot.AvailableTo)
+                        {
+                            break;
+                        }
+                        if (i == 0 && slot.AvailableFrom + slot.CleaningDuration <= scheduledWithOp[op.Item1][i].OperationStart)
+                        {
+                            temp = slot.Clone();
+                            temp.OperationStart = slot.AvailableFrom;
+                            temp.OperationEnd = temp.OperationStart + temp.CleaningDuration;
+                            scheduledWithOp[op.Item1].Insert(0, temp);
+                            scheduled = true;
+                            break;
+                        }
+                        var end = scheduledWithOp[op.Item1][i].OperationStart + scheduledWithOp[op.Item1][i].CleaningDuration;
+                        var maxStart = end > slot.AvailableFrom ? end : slot.AvailableFrom;
+                        if (i == scheduledWithOp[op.Item1].Count - 1 && scheduledWithOp[op.Item1][i].OperationStart + scheduledWithOp[op.Item1][i].CleaningDuration + slot.CleaningDuration <= slot.AvailableTo)
+                        {
+                            temp = slot.Clone();
+                            temp.OperationStart = maxStart;
+                            temp.OperationEnd = temp.OperationStart + temp.CleaningDuration;
+                            scheduledWithOp[op.Item1].Add(temp);
+                            scheduled = true;
+                            break;
+                        }
+                        if (i != scheduledWithOp[op.Item1].Count - 1 && (slot.AvailableFrom <= scheduledWithOp[op.Item1][i].OperationStart || (slot.AvailableFrom >= scheduledWithOp[op.Item1][i].OperationStart && slot.AvailableFrom <= scheduledWithOp[op.Item1][i+1].OperationStart)) && (scheduledWithOp[op.Item1][i + 1].OperationStart - maxStart) >= slot.CleaningDuration)
+                        {
+                            temp = slot.Clone();
+                            temp.OperationStart = maxStart;
+                            temp.OperationEnd = temp.OperationStart + temp.CleaningDuration;
+                            scheduledWithOp[op.Item1].Insert(i+1, temp);
+                            scheduled = true;
+                            break;
+                        }
+                    }
+                }
+                if (!scheduled)
+                {
+                    temp = slot.Clone();
+                    missed.Add(temp);
+                }
+            }
+
+            return (missed, scheduledWithOp);
+        }
+        public async Task<(int Operators, Dictionary<int, List<CleaningSlot>> ScheduledWithOp)> MinNumberOfOperatorsNeeded(List<CleaningSlot> cleaningSlots)
         {
             var orderedSlots = cleaningSlots.OrderBy(x => x.AvailableTo).ThenBy(x => x.AvailableTo - x.AvailableFrom - x.CleaningDuration).ToList();
             int operatorUsed = 1;
@@ -175,12 +254,12 @@ namespace CleanUp.Infrastructure.Services
                             scheduled = true;
                             break;
                         }
-                        if (i != operatorOrderedSlots.Value.Count - 1 && (slot.AvailableFrom <= operatorOrderedSlots.Value[i].OperationStart || (slot.AvailableFrom >= operatorOrderedSlots.Value[i].OperationStart && slot.AvailableFrom <= operatorOrderedSlots.Value[i+1].OperationStart)) && (operatorOrderedSlots.Value[i + 1].OperationStart - maxStart) >= slot.CleaningDuration)
+                        if (i != operatorOrderedSlots.Value.Count - 1 && (slot.AvailableFrom <= operatorOrderedSlots.Value[i].OperationStart || (slot.AvailableFrom >= operatorOrderedSlots.Value[i].OperationStart && slot.AvailableFrom <= operatorOrderedSlots.Value[i + 1].OperationStart)) && (operatorOrderedSlots.Value[i + 1].OperationStart - maxStart) >= slot.CleaningDuration)
                         {
                             temp = slot.Clone();
                             temp.OperationStart = maxStart;
                             temp.OperatorAssigned = operatorOrderedSlots.Key;
-                            operatorOrderedSlots.Value.Insert(i+1, temp);
+                            operatorOrderedSlots.Value.Insert(i + 1, temp);
                             scheduled = true;
                             break;
                         }
