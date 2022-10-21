@@ -49,7 +49,7 @@ namespace CleanUp.Client.Managers.Identity.Authentication
                 var refreshToken = result.Response.RefreshToken;
                 await _localStorage.SetItemAsync(StorageConstants.Local.AuthToken, token);
                 await _localStorage.SetItemAsync(StorageConstants.Local.RefreshToken, refreshToken);
-                ((ClientStateProvider)this._authenticationStateProvider).MarkUserAsAuthenticated(model.Email);
+                await ((ClientStateProvider)this._authenticationStateProvider).MarkUserAsAuthenticated(model.Email);
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             }
             return result;

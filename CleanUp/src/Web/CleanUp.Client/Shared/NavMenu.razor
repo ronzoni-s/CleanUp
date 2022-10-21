@@ -24,7 +24,7 @@
         </MudNavLink>
     }
 
-    @if (_canViewUsers)
+    @if (_canViewEvents)
     {
         <MudNavLink Href="/events" Icon="@Icons.Filled.Event">
             Eventi
@@ -50,7 +50,7 @@
         //_canViewProducts = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Products.View)).Succeeded;
         //_vanViewReceiptEod = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.ReceiptEod.View)).Succeeded;
         _canViewUsers = true;
-        _canViewEvents = true;
+        _canViewEvents = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Event.View)).Succeeded;
         //_canViewUsers = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.User.View)).Succeeded;;
     }
 }
