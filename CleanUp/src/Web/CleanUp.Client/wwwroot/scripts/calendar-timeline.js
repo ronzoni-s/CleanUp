@@ -1,15 +1,33 @@
-﻿function setupCalendarTimeline() {
-    console.log("Entrato");
+﻿function setupCalendarTimeline(events) {
+    console.log("Entrato", events);
     var timetable = new Timetable();
-    timetable.setScope(9, 17); // optional, only whole hours between 0 and 23
-    timetable.addLocations(['Silent Disco', 'Nile', 'Len Room', 'Maas Room']);
-    timetable.addEvent('Frankadelic', 'Nile', new Date(2015, 7, 17, 10, 45), new Date(2015, 7, 17, 12, 30));
+    //timetable.setScope(7, 21); // optional, only whole hours between 0 and 23
+
+    var operators = [...new Set(events.map(item => item.user.fullName))]; // [ 'A', 'B']
+    timetable.addLocations(operators);
+
+    events.forEach(item => {
+        timetable.addEvent(item.event.classroomId, item.user.fullName, new Date(item.start), sumTimeToDate(new Date(item.start), item.duration));
+    });
+    //timetable.addEvent('Frankadelic', 'Nile', new Date(2015, 7, 17, 10, 45), new Date(2015, 7, 17, 12, 30));
 
     var renderer = new Timetable.Renderer(timetable);
     renderer.draw('.timetable'); // any css selector
 
     console.log("Uscito");
 }
+
+function sumTimeToDate(date, time) {
+    var hours = parseInt(time.split(":")[0]);
+    var minutes = parseInt(time.split(":")[1]);
+    var seconds = parseInt(time.split(":")[2]);
+    date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+    date.setTime(date.getTime() + minutes * 60 * 1000);
+    date.setTime(date.getTime() + seconds * 1000);
+    return date;
+}
+
+
 
 //function setupCalendarTimeline() {
 //    console.log("Ciccio", mobiscroll);

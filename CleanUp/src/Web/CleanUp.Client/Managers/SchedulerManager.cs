@@ -1,7 +1,6 @@
 ﻿using CleanUp.Client.Extensions;
 using CleanUp.WebApi.Sdk.Endpoints;
 using CleanUp.WebApi.Sdk.Models;
-using CleanUp.WebApi.Sdk.Models.User;
 using CleanUp.WebApi.Sdk.Requests;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -23,6 +22,12 @@ namespace CleanUp.Client.Managers
         {
             var response = await _httpClient.GetAsync(SchedulerEndpoints.GetAll(fromDate, toDate));
             return await response.ToResult<List<CleaningOperation>>();
+        }
+
+        public async Task<ApiResult> Schedule(DateTime date)
+        {
+            var response = await _httpClient.PostAsync(SchedulerEndpoints.Schedule(date), null);
+            return await response.ToResult();
         }
     }
 }

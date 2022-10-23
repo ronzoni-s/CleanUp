@@ -1,4 +1,5 @@
-﻿using CleanUp.Application.Interfaces;
+﻿using CleanUp.Application.Authorization;
+using CleanUp.Application.Interfaces;
 using CleanUp.Application.Interfaces.Repositorys;
 using CleanUp.Application.SearchCriterias;
 using CleanUp.Domain.Entities;
@@ -50,17 +51,62 @@ namespace CleanUp.Infrastructure.Services
             this.userService = userService;
         }
 
-        public async Task<string> Reschedule(DateTime date)
+        public async Task Reschedule(DateTime date)
         {
-            var criteria = new EventSearchCriteria() { FromDate = date, ToDate = date };
-            criteria.Includes.Add(x => x.Classroom);
-            var events = await repository.GetAllAsync<Event>(criteria);
-            var operators = await userService.GetAll();
-            var res = await Schedule(events, operators);
-            return JsonConvert.SerializeObject(res.Scheduled);
+            var events = await GetEventsOfTheDay();
+            var operators = await GetAvailableOperators();
+            
+            var newCleaningOperations = await Schedule(events, operators);
+            await UpdateCleaningOperations(newCleaningOperations);
+
+            async Task<List<Event>> GetEventsOfTheDay()
+            {
+                var criteria = new EventSearchCriteria() { FromDate = date, ToDate = date };
+                criteria.Includes.Add(x => x.Classroom);
+                return await repository.GetAllAsync<Event>(criteria);
+            }
+
+            async Task<List<CleanUpUser>> GetAvailableOperators()
+            {
+                // TODO: filter based on working days
+                return await userService.GetAll(RoleConstants.OperatorRole);
+            }
+
+            async Task UpdateCleaningOperations(List<CleaningOperation> scheduledOperations)
+            {
+                var cleaningOperationToCreate = new List<CleaningOperation>();
+                var cleaningOperationToDelete = new List<CleaningOperation>();
+                
+                var criteria = new CleaningOperationSearchCriteria 
+                {
+                    FromDate = date,
+                    ToDate = date,
+                };
+                var alreadyScheduledOperations = await repository.GetAllAsync(criteria);
+                var toDelete = alreadyScheduledOperations.Where(x => !scheduledOperations.Any(y => y.EventId == x.EventId));
+                repository.DeleteRange(toDelete);
+                
+                foreach (var schedule in scheduledOperations)
+                {
+                    var found = alreadyScheduledOperations.FirstOrDefault(x => x.EventId == schedule.EventId);
+                    if (found == null)
+                    {
+                        cleaningOperationToCreate.Add(schedule);
+                    }
+                    else
+                    {
+                        found.Start = schedule.Start;
+                        found.UserId = schedule.UserId;
+                        repository.Update(found);
+                    }
+                }
+
+                repository.CreateRange(cleaningOperationToCreate);
+                repository.Save();
+            }
         }
 
-        public async Task<(List<CleaningSlot> Unscheduled, Dictionary<string, List<CleaningSlot>> Scheduled)> Schedule(List<Event> events, List<CleanUpUser> operators)
+        public async Task<List<CleaningOperation>> Schedule(List<Event> events, List<CleanUpUser> operators)
         {
             List<CleaningSlot> cleaningInterventions = new();
 
@@ -69,7 +115,9 @@ namespace CleanUp.Infrastructure.Services
                 cleaningInterventions.AddRange(BuildCleaningSlots(classromEvents.ToList()));
             }
 
-            return await Schedule(cleaningInterventions, operators);
+            var schedule =  await Schedule(cleaningInterventions, operators);
+
+            return BuildCleaningOperations(schedule.Scheduled, schedule.Unscheduled).ToList();
 
             IEnumerable<CleaningSlot> BuildCleaningSlots(List<Event> classroomEvents)
             {
@@ -103,6 +151,38 @@ namespace CleanUp.Infrastructure.Services
                     OperationStart = null,
                     OperatorAssigned = null
                 };
+            }
+
+            IEnumerable<CleaningOperation> BuildCleaningOperations(Dictionary<string, List<CleaningSlot>> scheduled, List<CleaningSlot> unscheduled)
+            {
+                foreach (var key in scheduled.Keys)
+                {
+                    foreach (var slot in scheduled[key])
+                    {
+                        yield return new CleaningOperation
+                        {
+                            AvailableFrom = slot.AvailableFrom,
+                            AvailableTo = slot.AvailableTo,
+                            Duration = slot.CleaningDuration,
+                            EventId = slot.EventId,
+                            Start = slot.OperationStart.Value,
+                            UserId = key
+                        };
+                    }
+                }
+
+                //foreach (var slot in unscheduled)
+                //{
+                //    yield return new CleaningOperation
+                //    {
+                //        AvailableFrom = slot.AvailableFrom,
+                //        AvailableTo = slot.AvailableTo,
+                //        Duration = slot.CleaningDuration,
+                //        EventId = slot.EventId,
+                //        Start = slot.OperationStart.Value,
+                //        UserId = null
+                //    };
+                //}
             }
         }
 

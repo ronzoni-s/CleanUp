@@ -22,13 +22,6 @@ namespace CleanUp.WebApi.Controllers.v1
             return await Mediator.Send(query);
         }
 
-        [HttpPost]
-        [Route("reschedule")]
-        public async Task<ApiResult<string>> Reschedule([FromBody] RescheduleCommand command)
-        {
-            return await Mediator.Send(command);
-        }
-
         //[Authorize(Policy = Permissions.Event.View)]
         [HttpGet]
         [Route("{id}")]

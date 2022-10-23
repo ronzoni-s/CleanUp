@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.JSInterop;
-using CleanUp.WebApi.Sdk.Models.User;
+using CleanUp.WebApi.Sdk.Models;
 using CleanUp.WebApi.Sdk.Constants.Permission;
 
 namespace CleanUp.Client.Pages.Identity

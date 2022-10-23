@@ -48,7 +48,8 @@ namespace CleanUp.Client.Pages
 
         private async Task GetCleaningOperationsAsync()
         {
-            var response = await schedulerManager.GetAllAsync(DateTime.Now.StartOfWeek(DayOfWeek.Monday), DateTime.Now.EndOfWeek(DayOfWeek.Monday));
+            //var response = await schedulerManager.GetAllAsync(DateTime.Now.StartOfWeek(DayOfWeek.Monday), DateTime.Now.EndOfWeek(DayOfWeek.Monday));
+            var response = await schedulerManager.GetAllAsync(DateTime.Now.AddDays(1).Date, DateTime.Now.AddDays(1).Date);
             if (response.IsSuccess)
             {
                 cleaningOperationList = response.Response.ToList();
@@ -56,9 +57,23 @@ namespace CleanUp.Client.Pages
                 StateHasChanged();
                 if (!alreadyLoadedJs)
                 {
-                    await JS.InvokeVoidAsync("setupCalendarTimeline");
+                    await JS.InvokeVoidAsync("setupCalendarTimeline", cleaningOperationList);
                     alreadyLoadedJs = true;
                 }
+            }
+            else
+            {
+                snackBar.Add("Si è verificato un errore...", Severity.Error);
+            }
+        }
+
+        private async Task Schedule()
+        {
+            // TODO: to change date
+            var response = await schedulerManager.Schedule(DateTime.Now.Date.AddDays(1));
+            if (response.IsSuccess)
+            {
+                snackBar.Add("Operazioni di pulizia schedulate con successo", Severity.Success);
             }
             else
             {

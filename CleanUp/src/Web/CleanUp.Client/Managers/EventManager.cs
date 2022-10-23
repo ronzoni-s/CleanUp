@@ -2,7 +2,6 @@
 using CleanUp.WebApi.Sdk.Endpoints;
 using CleanUp.WebApi.Sdk.Models;
 using CleanUp.WebApi.Sdk.Models.Events;
-using CleanUp.WebApi.Sdk.Models.User;
 using CleanUp.WebApi.Sdk.Requests;
 using System.Collections.Generic;
 using System.Net.Http;

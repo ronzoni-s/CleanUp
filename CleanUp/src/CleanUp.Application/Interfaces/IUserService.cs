@@ -9,7 +9,7 @@ namespace CleanUp.Application.Interfaces
     public interface  IUserService
     {
         Task<CleanUpUser> DeleteById(string userId);
-        Task<List<CleanUpUser>> GetAll();
+        Task<List<CleanUpUser>> GetAll(string role = null);
         Task<CleanUpUser> GetById(string userId);
         Task<List<CleanUpRole>> GetRolesAsync(string userId);
         Task<CleanUpUser> Register(RegisterRequest request);

@@ -49,7 +49,7 @@
         //_canViewOrders = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Orders.View)).Succeeded;
         //_canViewProducts = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Products.View)).Succeeded;
         //_vanViewReceiptEod = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.ReceiptEod.View)).Succeeded;
-        _canViewUsers = true;
+        _canViewUsers = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.User.View)).Succeeded;
         _canViewEvents = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.Event.View)).Succeeded;
         //_canViewUsers = (await authorizationService.AuthorizeAsync(_authenticationStateProviderUser, Permissions.User.View)).Succeeded;;
     }

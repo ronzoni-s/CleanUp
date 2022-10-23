@@ -5,23 +5,23 @@ using CleanUp.Domain.Entities;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace CleanUp.Application.WebApi.Events.Commands
+namespace CleanUp.Application.WebApi.CleaningOperations.Commands
 {
-    public class RescheduleCommand : IRequest<string>
+    public class ScheduleCommand : IRequest<Unit>
     {
         public DateTime Date { get; set; }
 
-        public class RescheduleCommandHandler : IRequestHandler<RescheduleCommand, string>
+        public class ScheduleCommandHandler : IRequestHandler<ScheduleCommand, Unit>
         {
             private readonly ICleanUpRepositoryAsync repository;
             private readonly IMapper mapper;
-            private readonly ILogger<RescheduleCommand> logger;
+            private readonly ILogger<ScheduleCommand> logger;
             private readonly ISchedulerService service;
 
-            public RescheduleCommandHandler(
+            public ScheduleCommandHandler(
                 ICleanUpRepositoryAsync repository
                 , IMapper mapper
-                , ILogger<RescheduleCommand> logger
+                , ILogger<ScheduleCommand> logger
                 , ISchedulerService service
                 )
             {
@@ -31,14 +31,16 @@ namespace CleanUp.Application.WebApi.Events.Commands
                 this.service = service;
             }
 
-            public async Task<string> Handle(RescheduleCommand request, CancellationToken cancellationToken)
+            public async Task<Unit> Handle(ScheduleCommand request, CancellationToken cancellationToken)
             {
                 try
                 {
-                    return await service.Reschedule(request.Date);
+                    await service.Reschedule(request.Date);
+                    return Unit.Value;
                 }
                 catch (Exception ex)
                 {
+                    logger.LogError(ex, "Error while scheduling cleaning operations");
                     throw;
                 }
             }

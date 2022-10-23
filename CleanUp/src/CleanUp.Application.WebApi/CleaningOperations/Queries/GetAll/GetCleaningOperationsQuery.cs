@@ -47,6 +47,8 @@ namespace CleanUp.Application.WebApi.CleaningOperations.Queries
                         FromDate = request.FromDate,
                         ToDate = request.ToDate,
                     };
+                    criteria.Includes.Add(x => x.User);
+                    criteria.Includes.Add(x => x.Event);
 
                     if (await userService.IsInRole(currentUserService.UserId, RoleConstants.OperatorRole))
                     {

@@ -19,6 +19,6 @@ namespace CleanUp.WebApi.Sdk.Models
         public DateTime AvailableTo { get; set; } // (TimeSpan.MaxValue)
 
         public Event Event { get; set; }
-        //public User User { get; set; }
+        public User User { get; set; }
     }
 }

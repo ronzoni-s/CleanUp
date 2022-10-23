@@ -39,9 +39,24 @@ namespace CleanUp.Infrastructure.Services
             return await userManager.Users.Where(u => u.Id == userId).FirstOrDefaultAsync();
         }
 
-        public async Task<List<CleanUpUser>> GetAll()
+        public async Task<List<CleanUpUser>> GetAll(string role = null)
         {
-            return await userManager.Users.ToListAsync();
+            var users = await userManager.Users.ToListAsync();
+            if (string.IsNullOrEmpty(role))
+            {
+                return users;
+            }
+
+            var usersInRole = new List<CleanUpUser>();
+            foreach (var user in users)
+            {
+                // TODO: to fix
+                //if (await userManager.IsInRoleAsync(user, role))
+                //{
+                    usersInRole.Add(user);
+                //}
+            }
+            return usersInRole;
         }
 
         public async Task<List<CleanUpRole>> GetRolesAsync(string userId)

@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanUp.Application.WebApi.Events.Commands
+namespace CleanUp.Application.WebApi.CleaningOperations.Commands
 {
-    public class RescheduleCommandValidator : AbstractValidator<RescheduleCommand>
+    public class ScheduleCommandValidator : AbstractValidator<ScheduleCommand>
     {
-        public RescheduleCommandValidator()
+        public ScheduleCommandValidator()
         {
         }
     }

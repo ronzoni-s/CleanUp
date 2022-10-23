@@ -1,4 +1,5 @@
 ﻿using CleanUp.Application.WebApi.CleaningOperations;
+using CleanUp.Application.WebApi.CleaningOperations.Commands;
 using CleanUp.Application.WebApi.CleaningOperations.Queries;
 using fbognini.WebFramework.Api;
 using Microsoft.AspNetCore.Authorization;
@@ -18,6 +19,14 @@ namespace CleanUp.WebApi.Controllers.v1
         public async Task<ApiResult<List<CleaningOperationDto>>> GetAll([FromQuery] GetCleaningOperationsQuery query)
         {
             return await Mediator.Send(query);
+        }
+
+        [HttpPost]
+        [Route("schedule")]
+        public async Task<ApiResult> Schedule([FromQuery] ScheduleCommand command)
+        {
+            await Mediator.Send(command);
+            return Ok();
         }
     }
 }

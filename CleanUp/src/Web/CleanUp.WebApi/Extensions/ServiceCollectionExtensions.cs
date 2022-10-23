@@ -189,6 +189,7 @@ namespace CleanUp.WebApi.Extensions
                     options.Password.RequireUppercase = false;
                     options.Password.RequireLowercase = false;
                 })
+                .AddRoles<CleanUpRole>()
                 .AddEntityFrameworkStores<CleanUpDbContext>()
                 .AddDefaultTokenProviders();
 

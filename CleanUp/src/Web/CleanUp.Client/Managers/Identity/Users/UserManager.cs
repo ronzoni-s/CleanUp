@@ -1,7 +1,6 @@
 ﻿using CleanUp.Client.Extensions;
 using CleanUp.WebApi.Sdk.Endpoints;
 using CleanUp.WebApi.Sdk.Models;
-using CleanUp.WebApi.Sdk.Models.User;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
