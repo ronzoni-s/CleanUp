@@ -25,13 +25,23 @@
 </style>
 
 <HeroTitle Title="Interventi pulizia" Description="Schedulazione interventi pulizia tra gli operatori" />
+
+<MudDatePicker Label="Data interventi" @bind-Date="date" @onchange="GetCleaningOperationsAsync"/>
+
+<hr />
+
+<MudButton DisableElevation Variant="Variant.Filled" OnClick="Schedule" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricalcola operazioni di pulizia di oggi</MudButton>
+
+<MudButton DisableElevation Variant="Variant.Filled" OnClick="DownloadReport" StartIcon="@Icons.Material.Filled.Download" IconColor="Color.Surface" Color="Color.Secondary">Scarica report</MudButton>
+
+
 @if (!_loaded)
 {
     <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
 }
 else
 {
-    <MudButton DisableElevation Variant="Variant.Filled" OnClick="Schedule" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricalcola operazioni di pulizia di oggi</MudButton>
+    
 
     <div class="timetable"></div>
     @*<div id="demo-custom-range-view"></div>*@

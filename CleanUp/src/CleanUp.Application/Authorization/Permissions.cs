@@ -16,6 +16,17 @@ namespace CleanUp.Application.Authorization
             public const string Manage = "permissions.event.manage";
         }
 
+        public static class Scheduler
+        {
+            public const string View = "permissions.scheduler.view";
+            public const string Manage = "permissions.scheduler.manage";
+        }
+
+        public static class Report
+        { 
+            public const string View = "permissions.report.view";
+        }
+
         /// <summary>
         /// Returns a list of Permissions.
         /// </summary>

@@ -14,12 +14,14 @@ using System.Net.Http.Headers;
 using CleanUp.Client.Extensions;
 using CleanUp.WebApi.Sdk.Models;
 using Microsoft.AspNetCore.Components;
+using BlazorDownloadFile;
 
 namespace CleanUp.Client.Pages
 {
     public partial class Operations
     {
         [Inject] IJSRuntime JS { get; set; }
+        [Inject] IBlazorDownloadFileService BlazorDownloadFileService { get; set; }
 
         private List<CleaningOperation> cleaningOperationList = new();
         private Event _user = new();
@@ -28,6 +30,8 @@ namespace CleanUp.Client.Pages
         private bool _canUploadEvents;
         private bool _loaded = false;
         bool alreadyLoadedJs = false;
+
+        private DateTime? date = DateTime.Now.Date;
 
         protected override async Task OnInitializedAsync()
         {
@@ -48,8 +52,9 @@ namespace CleanUp.Client.Pages
 
         private async Task GetCleaningOperationsAsync()
         {
-            //var response = await schedulerManager.GetAllAsync(DateTime.Now.StartOfWeek(DayOfWeek.Monday), DateTime.Now.EndOfWeek(DayOfWeek.Monday));
-            var response = await schedulerManager.GetAllAsync(DateTime.Now.AddDays(1).Date, DateTime.Now.AddDays(1).Date);
+            _loaded = false;
+            StateHasChanged();
+            var response = await schedulerManager.GetAllAsync(date.Value, date.Value);
             if (response.IsSuccess)
             {
                 cleaningOperationList = response.Response.ToList();
@@ -69,8 +74,7 @@ namespace CleanUp.Client.Pages
 
         private async Task Schedule()
         {
-            // TODO: to change date
-            var response = await schedulerManager.Schedule(DateTime.Now.Date.AddDays(1));
+            var response = await schedulerManager.Schedule(date.Value);
             if (response.IsSuccess)
             {
                 snackBar.Add("Operazioni di pulizia schedulate con successo", Severity.Success);
@@ -79,6 +83,12 @@ namespace CleanUp.Client.Pages
             {
                 snackBar.Add("Si è verificato un errore...", Severity.Error);
             }
+        }
+
+        private async Task DownloadReport()
+        {
+            var result = await reportManager.GetCleaningOperations(date.Value, date.Value);
+            await BlazorDownloadFileService.DownloadFile("report.xlsx", result, "application/vnd.ms-excel");
         }
     }
 }

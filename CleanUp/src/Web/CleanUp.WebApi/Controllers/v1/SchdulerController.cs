@@ -1,4 +1,5 @@
-﻿using CleanUp.Application.WebApi.CleaningOperations;
+﻿using CleanUp.Application.Authorization;
+using CleanUp.Application.WebApi.CleaningOperations;
 using CleanUp.Application.WebApi.CleaningOperations.Commands;
 using CleanUp.Application.WebApi.CleaningOperations.Queries;
 using fbognini.WebFramework.Api;
@@ -10,10 +11,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace CleanUp.WebApi.Controllers.v1
 {
     [ApiVersion("1")]
-    [AllowAnonymous]
     public class SchedulerController : ApiController
     {
-        //[Authorize(Policy = Permissions.Scheduler.View)]
+        [Authorize(Policy = Permissions.Scheduler.View)]
         [HttpGet]
         [Route("")]
         public async Task<ApiResult<List<CleaningOperationDto>>> GetAll([FromQuery] GetCleaningOperationsQuery query)
@@ -21,6 +21,7 @@ namespace CleanUp.WebApi.Controllers.v1
             return await Mediator.Send(query);
         }
 
+        [Authorize(Policy = Permissions.Scheduler.View)]
         [HttpPost]
         [Route("schedule")]
         public async Task<ApiResult> Schedule([FromQuery] ScheduleCommand command)

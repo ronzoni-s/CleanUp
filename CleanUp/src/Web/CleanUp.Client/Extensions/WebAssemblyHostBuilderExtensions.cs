@@ -15,6 +15,7 @@ using System.Reflection;
 using MudBlazor.Services;
 using MudBlazor;
 using CleanUp.WebApi.Sdk.Constants.Permission;
+using BlazorDownloadFile;
 
 namespace CleanUp.Client.Extensions
 {
@@ -42,6 +43,7 @@ namespace CleanUp.Client.Extensions
                     RegisterPermissionClaims(options);
                 })
                 .AddBlazoredLocalStorage()
+                .AddBlazorDownloadFile()
                 .AddMudServices(configuration =>
                 {
                     configuration.SnackbarConfiguration.PositionClass = Defaults.Classes.Position.BottomRight;
