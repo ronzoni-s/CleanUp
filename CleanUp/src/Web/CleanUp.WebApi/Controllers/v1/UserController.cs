@@ -71,7 +71,7 @@ namespace CleanUp.WebApi.Controllers.v1
         [Authorize(Policy = Permissions.User.Manage)]
         [HttpPost]
         [Route("work-day")]
-        public async Task<ApiResult<WorkDayDto>> CreateWorkDays([FromBody] UpdateWorkDayCommand command)
+        public async Task<ApiResult<WorkDayDto>> CreateWorkDays([FromBody] CreateWorkDayCommand command)
         {
             return await Mediator.Send(command);
         }
@@ -88,6 +88,20 @@ namespace CleanUp.WebApi.Controllers.v1
         {
             command.SetId(id);
             return await Mediator.Send(command);
+        }
+
+        /// <summary>
+        /// Update a work day
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.View)]
+        [HttpGet]
+        [Route("work-day/{id}")]
+        public async Task<ApiResult<List<WorkDayDto>>> GetWorkDays([FromRoute] string id, [FromQuery] GetWorkDaysQuery query)
+        {
+            query.SetId(id);
+            return await Mediator.Send(query);
         }
 
         /// <summary>

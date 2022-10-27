@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CleanUp.Application.Interfaces;
 using CleanUp.Application.Interfaces.Repositorys;
+using CleanUp.Application.SearchCriterias;
 using CleanUp.Application.WebApi.WorkDays;
 using CleanUp.Domain.Entities;
 using fbognini.Core.Data;
@@ -11,24 +12,26 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace CleanUp.Application.WebApi.WorkDays.Commands
 {
-    public class CreateWorkDayCommand : IRequest<WorkDayDto>
+    public class GetWorkDaysQuery : IRequest<List<WorkDayDto>>
     {
-        public string UserId { get; set; }
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
+        private string UserId { get; set; }
+        public DateTime From { get; set; }
+        public DateTime To { get; set; }
 
-        public class CreateWorkDayCommandHandler : IRequestHandler<CreateWorkDayCommand, WorkDayDto>
+        public void SetId(string id) => UserId = id;
+
+        public class GetWorkDaysQueryHandler : IRequestHandler<GetWorkDaysQuery, List<WorkDayDto>>
         {
             private readonly ICleanUpRepositoryAsync repository;
             private readonly IUserService userService;
             private readonly IMapper mapper;
-            private readonly ILogger<CreateWorkDayCommand> logger;
+            private readonly ILogger<GetWorkDaysQuery> logger;
 
-            public CreateWorkDayCommandHandler(
+            public GetWorkDaysQueryHandler(
                 ICleanUpRepositoryAsync repository
                 , IUserService userService
                 , IMapper mapper
-                , ILogger<CreateWorkDayCommand> logger
+                , ILogger<GetWorkDaysQuery> logger
                 )
             {
                 this.repository = repository;
@@ -37,29 +40,23 @@ namespace CleanUp.Application.WebApi.WorkDays.Commands
                 this.logger = logger;
             }
 
-            public async Task<WorkDayDto> Handle(CreateWorkDayCommand request, CancellationToken cancellationToken)
+            public async Task<List<WorkDayDto>> Handle(GetWorkDaysQuery request, CancellationToken cancellationToken)
             {
                 try
                 {
-                    var user = await userService.GetById(request.UserId);
-                    if (user == null)
-                        throw new NotFoundException("Utente non trovato");
-
-                    var workDay = new WorkDay() 
+                    var criteria = new WorkDaySearchCriteria
                     {
                         UserId = request.UserId,
-                        Start = request.Start,
-                        End = request.End
+                        FromDate = request.From,
+                        ToDate = request.To
                     };
+                    var entities = await repository.GetAllAsync(criteria);
 
-                    repository.Create(workDay);
-                    await repository.SaveAsync(cancellationToken);
-
-                    return mapper.Map<WorkDayDto>(workDay);
+                    return mapper.Map<List<WorkDayDto>>(entities);
                 }
                 catch (Exception ex)
                 {
-                    logger.LogError(ex, "Error while creating WorkDay");
+                    logger.LogError(ex, "Error while getting WorkDay");
                     throw;
                 }
             }
