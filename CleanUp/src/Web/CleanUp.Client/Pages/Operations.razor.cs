@@ -78,6 +78,7 @@ namespace CleanUp.Client.Pages
             if (response.IsSuccess)
             {
                 snackBar.Add("Operazioni di pulizia schedulate con successo", Severity.Success);
+                await GetCleaningOperationsAsync();
             }
             else
             {

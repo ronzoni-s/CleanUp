@@ -1,0 +1,28 @@
+
+<EditForm Model="Model" OnValidSubmit="SubmitAsync">
+    <MudDialog>
+        <TitleContent>
+            @{
+                <MudText Typo="Typo.h6">
+                    <MudIcon Icon="@Icons.Material.Filled.VerifiedUser" Class="mr-3 mb-n1" />
+                    Aggiungi orario di lavoro
+                </MudText>
+            }
+        </TitleContent>
+        <DialogContent>
+            <MudTextField @bind-Value="Model.UserId" Label="Id utente" Disabled />
+
+            <MudDatePicker PickerVariant="PickerVariant.Dialog" For="@(() => Model.Date)" @bind-Date="Model.Date" Label="Giorno" />
+            <MudTimePicker Label="Ora di inizio" @bind-Time="Model.StartTime" />
+            <MudTimePicker Label="Ora di fine" @bind-Time="Model.EndTime" />
+            
+
+        </DialogContent>
+        <DialogActions>
+            <MudButton Variant="Variant.Filled" OnClick="Cancel">Annulla</MudButton>
+            @{
+                <MudButton Variant="Variant.Filled" ButtonType="ButtonType.Submit" Disabled="@(!Validated)" Color="Color.Success">Salva</MudButton>
+            }
+        </DialogActions>
+    </MudDialog>
+</EditForm>

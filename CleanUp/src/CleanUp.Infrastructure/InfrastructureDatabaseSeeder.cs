@@ -106,7 +106,7 @@ namespace CleanUp.Infrastructure
                     logger.LogInformation("Seeded Basic Role.");
                 }
                 //Check if User Exists
-                var basicUser = new CleanUpUser
+                var basicUser1 = new CleanUpUser
                 {
                     FirstName = "Mario",
                     LastName = "Rossi",
@@ -116,11 +116,11 @@ namespace CleanUp.Infrastructure
                     PhoneNumberConfirmed = true,
                     Created = DateTime.Now,
                 };
-                var basicUserInDb = await userManager.FindByEmailAsync(basicUser.Email);
+                var basicUserInDb = await userManager.FindByEmailAsync(basicUser1.Email);
                 if (basicUserInDb == null)
                 {
-                    await userManager.CreateAsync(basicUser, "Password1");
-                    await userManager.AddToRoleAsync(basicUser, RoleConstants.OperatorRole);
+                    await userManager.CreateAsync(basicUser1, "Password1");
+                    await userManager.AddToRoleAsync(basicUser1, RoleConstants.OperatorRole);
                     logger.LogInformation("Seeded User with Basic Role.");
                 }
             }).GetAwaiter().GetResult();

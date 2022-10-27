@@ -1,4 +1,5 @@
 ﻿@page "/users/{Id}"
+@using CleanUp.WebApi.Sdk.Models
 
 <HeroTitle Title="@Title" Description="@Description" />
 @if (!_loaded)
@@ -52,4 +53,36 @@ else
             </MudCard>
         </MudItem>
     </MudGrid>
+
+    <MudTable Hover="true" Elevation="25" Items="workDays" Dense="true" Bordered="false" Striped="true">
+        <ToolBarContent>
+            <div class="justify-center mud-text-align-center">
+            </div>
+            <MudSpacer />
+                        
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh><MudTableSortLabel SortBy="new Func<WorkDay, object>(x => x.Start)">Inizio</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<WorkDay, object>(x => x.End)">Fine</MudTableSortLabel></MudTh>
+            <MudTh Style="text-align:right">Azioni</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Start">
+                <MudHighlighter Text="@context.Start.ToString()" />
+            </MudTd>
+            <MudTd DataLabel="End">
+                <MudHighlighter Text="@context.End.ToString()"/>
+            </MudTd>
+            
+            @*<MudTd DataLabel="Actions" Style="text-align:right">
+                <MudMenu Label="Azioni" Variant="Variant.Filled" DisableElevation="true" EndIcon="@Icons.Filled.KeyboardArrowDown" IconColor="Color.Secondary" Direction="Direction.Left" OffsetX="true">
+                    <MudMenuItem OnClick="(()=>InvokeUpdateEventModal(context.Id))">Modifica</MudMenuItem>
+                    <MudMenuItem OnClick="(()=>InvokeDeleteEventModal(context.Id))">Elimina</MudMenuItem>
+                </MudMenu>
+            </MudTd>*@
+        </RowTemplate>
+        <PagerContent>
+            <TablePager />
+        </PagerContent>
+    </MudTable>
 }

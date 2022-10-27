@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using CleanUp.Client.Extensions;
+using CleanUp.WebApi.Sdk.Models;
+using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -19,23 +21,7 @@ namespace CleanUp.Client.Pages.Identity
 
         private bool _loaded;
 
-        //private async Task ToggleUserStatus()
-        //{
-        //    var request = new ToggleUserStatusRequest { ActivateUser = _active, UserId = Id };
-        //    var result = await userManager.ToggleUserStatusAsync(request);
-        //    if (result.Succeeded)
-        //    {
-        //        snackBar.Add("Stato utente aggiornato", Severity.Success);
-        //        navigationManager.NavigateTo("/identity/users");
-        //    }
-        //    else
-        //    {
-        //        foreach (var error in result.Messages)
-        //        {
-        //            snackBar.Add(error, Severity.Error);
-        //        }
-        //    }
-        //}
+        private List<WorkDay> workDays = new();
 
         [Parameter] public string ImageDataUrl { get; set; }
 
@@ -61,7 +47,37 @@ namespace CleanUp.Client.Pages.Identity
                 }
             }
 
+            await GetWorkDays();
+
             _loaded = true;
         }
+
+        private async Task GetWorkDays()
+        {
+            var result = await userManager.GetWorkDays(Id, DateTime.Now.Date.StartOfWeek(DayOfWeek.Monday), DateTime.Now.Date.EndOfWeek(DayOfWeek.Monday));
+            if (!result.IsSuccess)
+            {
+                snackBar.Add("Errore nell'ottenere gli orari dell'utente", Severity.Error);
+                return;
+            }
+            workDays = result.Response;
+        }
+
+        //private async Task InvokeCreateWorkDay()
+        //{
+        //    var parameters = new DialogParameters();
+        //    parameters.Add(nameof(AddWorkDayModal.Model), new AddWorkDayModal.AddWorkDayModel
+        //    {
+        //        UserId = Id,
+        //        Date = DateTime.Now,
+        //    });
+        //    var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true, DisableBackdropClick = true };
+        //    var dialog = dialogService.Show<AddWorkDayModal>("Inserisci evento", parameters, options);
+        //    var result = await dialog.Result;
+        //    if (!result.Cancelled)
+        //    {
+        //        await GetWorkDays();
+        //    }
+        //}
     }
 }

@@ -1,6 +1,7 @@
 ﻿using CleanUp.Client.Extensions;
 using CleanUp.WebApi.Sdk.Endpoints;
 using CleanUp.WebApi.Sdk.Models;
+using CleanUp.WebApi.Sdk.Requests.User;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -27,6 +28,18 @@ namespace CleanUp.Client.Managers.Identity.Users
         {
             var response = await _httpClient.GetAsync(UserEndpoints.GetAll);
             return await response.ToResult<List<User>>();
+        }
+
+        public async Task<ApiResult<List<WorkDay>>> GetWorkDays(string userId, DateTime fromDate, DateTime toDate)
+        {
+            var response = await _httpClient.GetAsync(UserEndpoints.GetWorkDays(userId, fromDate, toDate));
+            return await response.ToResult<List<WorkDay>>();
+        }
+
+        public async Task<ApiResult<WorkDay>> CreateWorkDay(AddWorkDayRequest request)
+        {
+            var response = await _httpClient.PostAsJsonAsync(UserEndpoints.CreateWorkDay(), request);
+            return await response.ToResult<WorkDay>();
         }
 
         //public async Task<ApiResult> RegisterUserAsync(RegisterRequest request)
