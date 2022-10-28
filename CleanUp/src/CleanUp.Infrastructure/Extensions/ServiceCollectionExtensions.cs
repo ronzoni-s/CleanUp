@@ -42,6 +42,7 @@ namespace CleanUp.Infrastructure.Extensions
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ISerializerService, NewtonSoftService>();
             services.AddTransient<ISchedulerService, SortBasedSchedulerService>();
+            services.AddTransient<IPushNotificationService, FirebasePushNotificationService>();
 
             services.AddNotifications(configuration);
 

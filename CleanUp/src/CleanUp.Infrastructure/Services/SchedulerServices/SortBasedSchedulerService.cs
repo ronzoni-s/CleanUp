@@ -45,10 +45,15 @@ namespace CleanUp.Infrastructure.Services
     {
         private readonly ICleanUpRepositoryAsync repository;
         private readonly IUserService userService;
-        public SortBasedSchedulerService(ICleanUpRepositoryAsync repository, IUserService userService)
+        private readonly IPushNotificationService pushNotificationService;
+
+        public SortBasedSchedulerService(ICleanUpRepositoryAsync repository
+            , IUserService userService
+            , IPushNotificationService pushNotificationService)
         {
             this.repository = repository;
             this.userService = userService;
+            this.pushNotificationService = pushNotificationService;
         }
 
         public async Task Reschedule(DateTime date)
@@ -58,6 +63,7 @@ namespace CleanUp.Infrastructure.Services
             
             var newCleaningOperations = await Schedule(events, operators);
             await UpdateCleaningOperations(newCleaningOperations);
+
 
             async Task<List<Event>> GetEventsOfTheDay()
             {
@@ -69,7 +75,28 @@ namespace CleanUp.Infrastructure.Services
             async Task<List<CleanUpUser>> GetAvailableOperators()
             {
                 // TODO: filter based on working days
-                return await userService.GetAll(RoleConstants.OperatorRole);
+                var users = await userService.GetAll(RoleConstants.OperatorRole);
+                if (false)
+                {
+                    foreach (var user in users)
+                    {
+                        var criteria = new WorkDaySearchCriteria()
+                        {
+                            FromDate = date.Date,
+                            ToDate = date.Date
+                        };
+                        var workDays = await repository.GetAllAsync(criteria);
+                        if (workDays == null || workDays.Count == 0)
+                        {
+                            users.Remove(user);
+                        }
+                        else
+                        {
+                            user.WorkDays = workDays;
+                        }
+                    }
+                }
+                return users;
             }
 
             async Task UpdateCleaningOperations(List<CleaningOperation> scheduledOperations)

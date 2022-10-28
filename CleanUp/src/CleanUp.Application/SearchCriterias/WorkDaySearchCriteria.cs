@@ -24,12 +24,12 @@ namespace CleanUp.Application.SearchCriterias
 
             if (FromDate != null)
             {
-                list.Add(x => x.End >= FromDate);
+                list.Add(x => x.End.Date >= FromDate.Value.Date);
             }
 
             if (ToDate != null)
             {
-                list.Add(x => x.Start <= ToDate);
+                list.Add(x => x.Start.Date <= ToDate.Value.Date);
             }
 
             return list;

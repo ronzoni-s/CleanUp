@@ -53,7 +53,7 @@ namespace CleanUp.Infrastructure.Services
                 // TODO: to fix
                 //if (await userManager.IsInRoleAsync(user, role))
                 //{
-                    usersInRole.Add(user);
+                //    usersInRole.Add(user);
                 //}
             }
             return usersInRole;
