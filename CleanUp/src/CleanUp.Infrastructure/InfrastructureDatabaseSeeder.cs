@@ -105,23 +105,61 @@ namespace CleanUp.Infrastructure
                     await roleManager.CreateAsync(basicRole);
                     logger.LogInformation("Seeded Basic Role.");
                 }
+
                 //Check if User Exists
-                var basicUser1 = new CleanUpUser
+                var users = new List<CleanUpUser> 
                 {
-                    FirstName = "Mario",
-                    LastName = "Rossi",
-                    Email = "mariorossi@gmail.com",
-                    UserName = "mariorossi@gmail.com",
-                    EmailConfirmed = true,
-                    PhoneNumberConfirmed = true,
-                    Created = DateTime.Now,
+                    new CleanUpUser
+                    {
+                        FirstName = "Mario",
+                        LastName = "Rossi",
+                        Email = "mariorossi@gmail.com",
+                        UserName = "mariorossi@gmail.com",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        Created = DateTime.Now,
+                    },
+                    new CleanUpUser
+                    {
+                        FirstName = "Paolo",
+                        LastName = "Bianchi",
+                        Email = "paolobianchi@gmail.com",
+                        UserName = "paolobianchi@gmail.com",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        Created = DateTime.Now,
+                    },
+                    new CleanUpUser
+                    {
+                        FirstName = "Pinco",
+                        LastName = "Pallino",
+                        Email = "pincopallino@gmail.com",
+                        UserName = "pincopallino@gmail.com",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        Created = DateTime.Now,
+                    },
+                    new CleanUpUser
+                    {
+                        FirstName = "Pippo",
+                        LastName = "Verdi",
+                        Email = "pippoverdi@gmail.com",
+                        UserName = "pippoverdi@gmail.com",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        Created = DateTime.Now,
+                    }
                 };
-                var basicUserInDb = await userManager.FindByEmailAsync(basicUser1.Email);
-                if (basicUserInDb == null)
+                
+                foreach (var user in users)
                 {
-                    await userManager.CreateAsync(basicUser1, "Password1");
-                    await userManager.AddToRoleAsync(basicUser1, RoleConstants.OperatorRole);
-                    logger.LogInformation("Seeded User with Basic Role.");
+                    var basicUserInDb = await userManager.FindByEmailAsync(user.Email);
+                    if (basicUserInDb == null)
+                    {
+                        await userManager.CreateAsync(user, "Password1");
+                        await userManager.AddToRoleAsync(user, RoleConstants.OperatorRole);
+                        logger.LogInformation("Seeded User with Basic Role.");
+                    }
                 }
             }).GetAwaiter().GetResult();
         }

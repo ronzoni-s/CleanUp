@@ -26,13 +26,16 @@
 
 <HeroTitle Title="Interventi pulizia" Description="Schedulazione interventi pulizia tra gli operatori" />
 
-<MudDatePicker Label="Data interventi" @bind-Date="date" @onchange="GetCleaningOperationsAsync"/>
 
-<hr />
+<MudCard Elevation="25" Class="mb-12">
+    <MudCardContent Class="pa-46" Style="padding:26px!important">
+        <MudDatePicker Label="Data interventi" @bind-Date="date" @onchange="GetCleaningOperationsAsync" Class="mb-8" />
 
-<MudButton DisableElevation Variant="Variant.Filled" OnClick="Schedule" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricalcola operazioni di pulizia di oggi</MudButton>
+        <MudButton DisableElevation Variant="Variant.Filled" OnClick="Schedule" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricalcola operazioni di pulizia</MudButton>
+        <MudButton DisableElevation Variant="Variant.Filled" OnClick="DownloadReport" StartIcon="@Icons.Material.Filled.Download" IconColor="Color.Surface" Color="Color.Secondary">Scarica report</MudButton>
 
-<MudButton DisableElevation Variant="Variant.Filled" OnClick="DownloadReport" StartIcon="@Icons.Material.Filled.Download" IconColor="Color.Surface" Color="Color.Secondary">Scarica report</MudButton>
+    </MudCardContent>
+</MudCard>
 
 
 @if (!_loaded)

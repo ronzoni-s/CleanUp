@@ -30,6 +30,18 @@ namespace CleanUp.Client.Managers.Identity.Users
             return await response.ToResult<List<User>>();
         }
 
+        public async Task<ApiResult<User>> RegisterAsync(RegisterUserRequest request)
+        {
+            var response = await _httpClient.PostAsJsonAsync(UserEndpoints.Register, request);
+            return await response.ToResult<User>();
+        }
+
+        public async Task<ApiResult> DeleteAsync(string userId)
+        {
+            var response = await _httpClient.DeleteAsync(UserEndpoints.Delete(userId));
+            return await response.ToResult();
+        }
+
         public async Task<ApiResult<List<WorkDay>>> GetWorkDays(string userId, DateTime fromDate, DateTime toDate)
         {
             var response = await _httpClient.GetAsync(UserEndpoints.GetWorkDays(userId, fromDate, toDate));

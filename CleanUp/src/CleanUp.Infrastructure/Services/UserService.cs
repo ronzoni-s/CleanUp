@@ -120,6 +120,8 @@ namespace CleanUp.Infrastructure.Services
 
             await userManager.AddPasswordAsync(user, request.Password);
 
+            await userManager.AddToRoleAsync(user, request.IsAdmin ? RoleConstants.AdministratorRole : RoleConstants.OperatorRole);
+
             return user;
         }
 

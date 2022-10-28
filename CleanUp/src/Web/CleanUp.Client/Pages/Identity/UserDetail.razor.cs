@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static CleanUp.Client.Pages.AddWorkDayModal;
 
 namespace CleanUp.Client.Pages.Identity
 {
@@ -63,21 +64,35 @@ namespace CleanUp.Client.Pages.Identity
             workDays = result.Response;
         }
 
-        //private async Task InvokeCreateWorkDay()
-        //{
-        //    var parameters = new DialogParameters();
-        //    parameters.Add(nameof(AddWorkDayModal.Model), new AddWorkDayModal.AddWorkDayModel
-        //    {
-        //        UserId = Id,
-        //        Date = DateTime.Now,
-        //    });
-        //    var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true, DisableBackdropClick = true };
-        //    var dialog = dialogService.Show<AddWorkDayModal>("Inserisci evento", parameters, options);
-        //    var result = await dialog.Result;
-        //    if (!result.Cancelled)
-        //    {
-        //        await GetWorkDays();
-        //    }
-        //}
+        private async Task InvokeCreateWorkDay()
+        {
+            var parameters = new DialogParameters();
+            parameters.Add("Model", new AddWorkDayModel
+            {
+                UserId = Id,
+                Date = DateTime.Now,
+            });
+            var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small, FullWidth = true, DisableBackdropClick = true };
+            var dialog = dialogService.Show<AddWorkDayModal>("Inserisci evento", parameters, options);
+            var result = await dialog.Result;
+            if (!result.Cancelled)
+            {
+                await GetWorkDays();
+            }
+        }
+
+        private async Task DeleteUser()
+        {
+            var result = await userManager.DeleteAsync(Id);
+            if (result.IsSuccess)
+            {
+                snackBar.Add("Utente eliminato correttamente", Severity.Success);
+                navigationManager.NavigateTo("/users");
+            }
+            else
+            {
+                snackBar.Add("Errore nell'eliminazione dell'utente", Severity.Error);
+            }
+        }
     }
 }

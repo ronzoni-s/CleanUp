@@ -1,0 +1,29 @@
+
+<EditForm Model="Model" OnValidSubmit="SubmitAsync">
+    <MudDialog>
+        <TitleContent>
+            @{
+                <MudText Typo="Typo.h6">
+                    <MudIcon Icon="@Icons.Material.Filled.VerifiedUser" Class="mr-3 mb-n1" />
+                    Aggiungi orario di lavoro
+                </MudText>
+            }
+        </TitleContent>
+        <DialogContent>
+            <MudTextField @bind-Value="Model.Email" Label="Email" />
+            <MudTextField @bind-Value="Model.Name" Label="Nome" />
+            <MudTextField @bind-Value="Model.Surname" Label="Cognome" />
+            <MudTextField @bind-Value="Model.PhoneNumber" Label="Numero di telefono" />
+            <MudTextField @bind-Value="Model.Password" Label="Password" type="password" />
+
+            <MudCheckBox @bind-Checked="@Model.IsAdmin" Label="Amministratore" Color="Color.Primary"></MudCheckBox>
+
+        </DialogContent>
+        <DialogActions>
+            <MudButton Variant="Variant.Filled" OnClick="Cancel">Annulla</MudButton>
+            @{
+                <MudButton Variant="Variant.Filled" ButtonType="ButtonType.Submit" Disabled="@(!Validated)" Color="Color.Success">Salva</MudButton>
+            }
+        </DialogActions>
+    </MudDialog>
+</EditForm>

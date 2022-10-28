@@ -68,10 +68,6 @@ else
             <MudTd DataLabel="Actions" Style="text-align:right">
                 <MudMenu Label="Azioni" Variant="Variant.Filled" DisableElevation="true" EndIcon="@Icons.Filled.KeyboardArrowDown" IconColor="Color.Secondary" Direction="Direction.Left" OffsetX="true">
                     <MudMenuItem OnClick="(()=>ViewProfile(context.Id))">Visualizza profilo</MudMenuItem>
-                    @if (_canViewRoles)
-                        {
-                        <MudMenuItem OnClick="(()=>ManageRoles(context.Id, context.Email))">Gestisci ruoli</MudMenuItem>
-                        }
                 </MudMenu>
             </MudTd>
         </RowTemplate>

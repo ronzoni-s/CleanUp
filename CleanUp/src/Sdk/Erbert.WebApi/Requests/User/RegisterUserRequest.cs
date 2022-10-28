@@ -1,8 +1,12 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace CleanUp.Application.Requests
+namespace CleanUp.WebApi.Sdk.Requests.User
 {
-    public partial class RegisterRequest 
+    public class RegisterUserRequest
     {
         public string Name { get; set; }
         public string Surname { get; set; }

@@ -63,7 +63,7 @@ namespace CleanUp.Client.Pages
                 if (!alreadyLoadedJs)
                 {
                     await JS.InvokeVoidAsync("setupCalendarTimeline", cleaningOperationList);
-                    alreadyLoadedJs = true;
+                    alreadyLoadedJs = false;
                 }
             }
             else
