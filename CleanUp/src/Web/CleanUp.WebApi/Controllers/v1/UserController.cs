@@ -64,47 +64,6 @@ namespace CleanUp.WebApi.Controllers.v1
         }
 
         /// <summary>
-        /// Create a work day
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>Status 200 OK</returns>
-        [Authorize(Policy = Permissions.User.Manage)]
-        [HttpPost]
-        [Route("work-day")]
-        public async Task<ApiResult<WorkDayDto>> CreateWorkDays([FromBody] CreateWorkDayCommand command)
-        {
-            return await Mediator.Send(command);
-        }
-
-        /// <summary>
-        /// Update a work day
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>Status 200 OK</returns>
-        [Authorize(Policy = Permissions.User.Manage)]
-        [HttpPut]
-        [Route("work-day/{id}")]
-        public async Task<ApiResult<WorkDayDto>> UpdateWorkDays([FromRoute] int id, [FromBody] UpdateWorkDayCommand command)
-        {
-            command.SetId(id);
-            return await Mediator.Send(command);
-        }
-
-        /// <summary>
-        /// Update a work day
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>Status 200 OK</returns>
-        [Authorize(Policy = Permissions.User.View)]
-        [HttpGet]
-        [Route("work-day/{id}")]
-        public async Task<ApiResult<List<WorkDayDto>>> GetWorkDays([FromRoute] string id, [FromQuery] GetWorkDaysQuery query)
-        {
-            query.SetId(id);
-            return await Mediator.Send(query);
-        }
-
-        /// <summary>
         /// Update User By Id
         /// </summary>
         /// <param name="id"></param>
