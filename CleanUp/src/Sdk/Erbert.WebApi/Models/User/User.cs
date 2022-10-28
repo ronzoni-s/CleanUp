@@ -23,5 +23,7 @@ namespace CleanUp.WebApi.Sdk.Models
 
         public string RefreshToken { get; set; }
         public DateTime RefreshTokenExpiryTime { get; set; }
+
+        public List<string> Roles { get; set; }
     }
 }

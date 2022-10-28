@@ -50,12 +50,12 @@ namespace CleanUp.Infrastructure.Services
             var usersInRole = new List<CleanUpUser>();
             foreach (var user in users)
             {
-                // TODO: to fix
-                //if (await userManager.IsInRoleAsync(user, role))
-                //{
-                //    usersInRole.Add(user);
-                //}
+                if (await userManager.IsInRoleAsync(user, role))
+                {
+                    usersInRole.Add(user);
+                }
             }
+
             return usersInRole;
         }
 

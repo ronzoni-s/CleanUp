@@ -74,28 +74,27 @@ namespace CleanUp.Infrastructure.Services
 
             async Task<List<CleanUpUser>> GetAvailableOperators()
             {
-                // TODO: filter based on working days
                 var users = await userService.GetAll(RoleConstants.OperatorRole);
-                if (false)
-                {
-                    foreach (var user in users)
-                    {
-                        var criteria = new WorkDaySearchCriteria()
-                        {
-                            FromDate = date.Date,
-                            ToDate = date.Date
-                        };
-                        var workDays = await repository.GetAllAsync(criteria);
-                        if (workDays == null || workDays.Count == 0)
-                        {
-                            users.Remove(user);
-                        }
-                        else
-                        {
-                            user.WorkDays = workDays;
-                        }
-                    }
-                }
+                //if (false)
+                //{
+                //    foreach (var user in users)
+                //    {
+                //        var criteria = new WorkDaySearchCriteria()
+                //        {
+                //            FromDate = date.Date,
+                //            ToDate = date.Date
+                //        };
+                //        var workDays = await repository.GetAllAsync(criteria);
+                //        if (workDays == null || workDays.Count == 0)
+                //        {
+                //            users.Remove(user);
+                //        }
+                //        else
+                //        {
+                //            user.WorkDays = workDays;
+                //        }
+                //    }
+                //}
                 return users;
             }
 

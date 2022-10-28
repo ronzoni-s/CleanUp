@@ -25,5 +25,7 @@ namespace CleanUp.Application.WebApi.Users
 
         public string RefreshToken { get; set; }
         public DateTime RefreshTokenExpiryTime { get; set; }
+
+        public List<string> Roles { get; set; }
     }
 }

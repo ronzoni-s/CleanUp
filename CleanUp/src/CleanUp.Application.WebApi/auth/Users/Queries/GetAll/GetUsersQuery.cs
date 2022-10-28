@@ -40,7 +40,13 @@ namespace CleanUp.Application.WebApi.Users.Queries
             {
                 try
                 {
-                    return mapper.Map<List<UserDto>>(await userService.GetAll());
+                    var users = mapper.Map<List<UserDto>>(await userService.GetAll());
+                    foreach (var user in users)
+                    {
+                        var roles = await userService.GetRolesAsync(user.Id);
+                        user.Roles = roles.Select(x => x.Name).ToList();
+                    }
+                    return users;
                 }
                 catch (Exception ex)
                 {

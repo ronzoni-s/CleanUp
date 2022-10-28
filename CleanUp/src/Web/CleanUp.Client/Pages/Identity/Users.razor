@@ -41,6 +41,7 @@ else
             <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.UserName)">Nome utente</MudTableSortLabel></MudTh>
             <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.Email)">Email</MudTableSortLabel></MudTh>
             <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.PhoneNumber)">Numero di telefono</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.Roles)">Ruoli</MudTableSortLabel></MudTh>
             <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.EmailConfirmed)">Email confermata</MudTableSortLabel></MudTh>
             <MudTh Style="text-align:right">Azioni</MudTh>
         </HeaderContent>
@@ -59,6 +60,9 @@ else
             </MudTd>
             <MudTd DataLabel="PhoneNumber">
                 <MudHighlighter Text="@context.PhoneNumber" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="Roles">
+                <MudHighlighter Text="@(string.Join(", ", context.Roles))" HighlightedText="@_searchString" />
             </MudTd>
             <MudTd DataLabel="EmailConfirmed"><MudCheckBox @bind-Checked="@context.EmailConfirmed" ReadOnly Color="Color.Secondary"></MudCheckBox></MudTd>
             <MudTd DataLabel="Actions" Style="text-align:right">
