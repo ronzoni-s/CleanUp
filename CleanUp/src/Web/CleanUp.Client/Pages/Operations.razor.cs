@@ -60,7 +60,7 @@ namespace CleanUp.Client.Pages
                 cleaningOperationList = response.Response.ToList();
                 _loaded = true;
                 StateHasChanged();
-                if (!alreadyLoadedJs)
+                if (!alreadyLoadedJs && cleaningOperationList.Any())
                 {
                     await JS.InvokeVoidAsync("setupCalendarTimeline", cleaningOperationList);
                     alreadyLoadedJs = false;
@@ -70,6 +70,13 @@ namespace CleanUp.Client.Pages
             {
                 snackBar.Add("Si è verificato un errore...", Severity.Error);
             }
+        }
+
+        private async Task OnDateChange(DateTime? newDate)
+        {
+            date = newDate;
+
+            await GetCleaningOperationsAsync();
         }
 
         private async Task Schedule()

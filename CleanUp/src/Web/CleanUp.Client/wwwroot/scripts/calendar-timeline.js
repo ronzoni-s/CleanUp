@@ -1,13 +1,19 @@
 ﻿function setupCalendarTimeline(events) {
     console.log("Entrato", events);
     var timetable = new Timetable();
-    //timetable.setScope(7, 21); // optional, only whole hours between 0 and 23
+    timetable.setScope(0, 23); // optional, only whole hours between 0 and 23
 
     var operators = [...new Set(events.map(item => item.user.fullName))]; // [ 'A', 'B']
     timetable.addLocations(operators);
 
     events.forEach(item => {
-        timetable.addEvent(item.event.classroomId, item.user.fullName, new Date(item.start), sumTimeToDate(new Date(item.start), item.duration));
+        let options = {
+            onClick: function (event, timetable, clickEvent) {
+                console.log(event, timetable, clickEvent);
+                alert(`${event.name} (Inizio: ${moment(event.startDate).format('HH:mm:ss')} - Fine: ${moment(event.endDate).format('HH:mm:ss')})`);
+            }
+        }
+        timetable.addEvent(item.event.classroomId, item.user.fullName, new Date(item.start), sumTimeToDate(new Date(item.start), item.duration), options);
     });
     //timetable.addEvent('Frankadelic', 'Nile', new Date(2015, 7, 17, 10, 45), new Date(2015, 7, 17, 12, 30));
 

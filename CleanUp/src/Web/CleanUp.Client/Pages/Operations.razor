@@ -29,7 +29,7 @@
 
 <MudCard Elevation="25" Class="mb-12">
     <MudCardContent Class="pa-46" Style="padding:26px!important">
-        <MudDatePicker Label="Data interventi" @bind-Date="date" @onchange="GetCleaningOperationsAsync" Class="mb-8" />
+        <MudDatePicker Label="Data interventi" Date="date" DateChanged="OnDateChange" Class="mb-8" />
 
         <MudButton DisableElevation Variant="Variant.Filled" OnClick="Schedule" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricalcola operazioni di pulizia</MudButton>
         <MudButton DisableElevation Variant="Variant.Filled" OnClick="DownloadReport" StartIcon="@Icons.Material.Filled.Download" IconColor="Color.Surface" Color="Color.Secondary">Scarica report</MudButton>
@@ -44,8 +44,12 @@
 }
 else
 {
-    
-
-    <div class="timetable"></div>
-    @*<div id="demo-custom-range-view"></div>*@
+    if (!cleaningOperationList.Any())
+    {
+        <p>Nessuna operazione di pulizia presente. Prova a ricalcolare le operazioni</p>
+    }
+    else
+    {
+        <div class="timetable"></div>   
+    }
 }
