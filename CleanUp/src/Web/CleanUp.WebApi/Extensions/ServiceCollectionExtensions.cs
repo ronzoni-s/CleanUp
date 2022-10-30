@@ -1,4 +1,4 @@
-﻿using CleanUp.Application.Common.Models;
+﻿using CleanUp.Application.Models;
 using CleanUp.Application.WebApi;
 using CleanUp.Infrastructure.Extensions;
 using CleanUp.Domain.Entities;
@@ -25,7 +25,7 @@ using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 using CleanUp.Application;
-using CleanUp.Application.Common.Authorization;
+using CleanUp.Application.Authorization;
 
 namespace CleanUp.WebApi.Extensions
 {
@@ -189,6 +189,7 @@ namespace CleanUp.WebApi.Extensions
                     options.Password.RequireUppercase = false;
                     options.Password.RequireLowercase = false;
                 })
+                .AddRoles<CleanUpRole>()
                 .AddEntityFrameworkStores<CleanUpDbContext>()
                 .AddDefaultTokenProviders();
 

@@ -1,0 +1,78 @@
+﻿@page "/users"
+@using CleanUp.WebApi.Sdk.Constants.Permission
+@using CleanUp.WebApi.Sdk.Models
+@attribute [Authorize(Policy = Permissions.User.View)]
+
+<style>
+    .mud-table-container {
+        overflow: auto;
+    }
+</style>
+
+<HeroTitle Title="Utenti" Description="Gestione utenti" />
+@if (!_loaded)
+{
+    <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+}
+else
+{
+    <MudTable Hover="true" Elevation="25" Items="_userList" Dense="true" Bordered="false" Striped="true" Filter="new Func<User, bool>(Search)" @bind-user="_user">
+        <ToolBarContent>
+            <div class="justify-center mud-text-align-center">
+                @if (_canCreateUsers)
+                {
+                    <MudButton DisableElevation Variant="Variant.Filled" Color="Color.Primary" OnClick="(() => InvokeModal())" StartIcon="@Icons.Material.Filled.Add" IconColor="Color.Surface">Registra nuovo utente</MudButton>
+                    <MudButton DisableElevation Variant="Variant.Filled" OnClick="GetUsersAsync" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricarica</MudButton>
+                }
+                else
+                {
+                    <MudButton DisableElevation Variant="Variant.Filled" OnClick="GetUsersAsync" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricarica</MudButton>
+                }
+            </div>
+            <MudSpacer />
+            @if (_canSearchUsers)
+            {
+                <MudTextField @bind-Value="_searchString" Immediate="true" FullWidth=false Placeholder="Ricerca utenti" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0 mb-3"></MudTextField>
+            }
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.FirstName)">Nome</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.LastName)">Cognome</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.UserName)">Nome utente</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.Email)">Email</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.PhoneNumber)">Numero di telefono</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.Roles)">Ruoli</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<User, object>(x => x.EmailConfirmed)">Email confermata</MudTableSortLabel></MudTh>
+            <MudTh Style="text-align:right">Azioni</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="FirstName">
+                <MudHighlighter Text="@context.FirstName" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="LastName">
+                <MudHighlighter Text="@context.LastName" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="UserName">
+                <MudHighlighter Text="@context.UserName" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="Email">
+                <MudHighlighter Text="@context.Email" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="PhoneNumber">
+                <MudHighlighter Text="@context.PhoneNumber" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="Roles">
+                <MudHighlighter Text="@(string.Join(", ", context.Roles))" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="EmailConfirmed"><MudCheckBox @bind-Checked="@context.EmailConfirmed" ReadOnly Color="Color.Secondary"></MudCheckBox></MudTd>
+            <MudTd DataLabel="Actions" Style="text-align:right">
+                <MudMenu Label="Azioni" Variant="Variant.Filled" DisableElevation="true" EndIcon="@Icons.Filled.KeyboardArrowDown" IconColor="Color.Secondary" Direction="Direction.Left" OffsetX="true">
+                    <MudMenuItem OnClick="(()=>ViewProfile(context.Id))">Visualizza profilo</MudMenuItem>
+                </MudMenu>
+            </MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <TablePager />
+        </PagerContent>
+    </MudTable>
+}

@@ -1,4 +1,4 @@
-﻿using CleanUp.Application.Common.Authorization;
+﻿using CleanUp.Application.Authorization;
 using fbognini.Core.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;

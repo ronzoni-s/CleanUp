@@ -1,6 +1,6 @@
 ﻿using Blazored.LocalStorage;
-using CleanUp.Client.Constants.Permission;
 using CleanUp.Client.Constants.Storage;
+using CleanUp.WebApi.Sdk.Constants.Permission;
 using Microsoft.AspNetCore.Components.Authorization;
 using System;
 using System.Collections.Generic;
@@ -26,15 +26,17 @@ namespace CleanUp.Client.Authentication
             _localStorage = localStorage;
         }
 
-        public void MarkUserAsAuthenticated(string userName)
+        public async Task MarkUserAsAuthenticated(string userName)
         {
-            var authenticatedUser = new ClaimsPrincipal(
-                new ClaimsIdentity(new[]
-                {
-                    new Claim(ClaimTypes.Name, userName)
-                }, "apiauth"));
+            //var authenticatedUser = new ClaimsPrincipal(
+            //    new ClaimsIdentity(new[]
+            //    {
+            //        new Claim(ClaimTypes.Name, userName)
+            //    }, "apiauth"));
+            //var authState = Task.FromResult(new AuthenticationState(authenticatedUser));
+            //NotifyAuthenticationStateChanged(authState);
 
-            var authState = Task.FromResult(new AuthenticationState(authenticatedUser));
+            var authState = Task.FromResult(await GetAuthenticationStateAsync());
 
             NotifyAuthenticationStateChanged(authState);
         }

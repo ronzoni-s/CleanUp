@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using CleanUp.Application.Common.Interfaces;
-using CleanUp.Application.Common.Models;
-using CleanUp.Application.Common.Requests;
+using CleanUp.Application.Interfaces;
+using CleanUp.Application.Models;
+using CleanUp.Application.Requests;
 using fbognini.Core.Interfaces;
 using MediatR;
 using Microsoft.Extensions.Logging;

@@ -1,5 +1,5 @@
-﻿using CleanUp.Application.Common.Interfaces;
-using CleanUp.Application.Common.Interfaces.Repositorys;
+﻿using CleanUp.Application.Interfaces;
+using CleanUp.Application.Interfaces.Repositorys;
 using CleanUp.Infrastructure.Persistance;
 using CleanUp.Infrastructure.Repositorys;
 using CleanUp.Infrastructure.Services;
@@ -41,6 +41,8 @@ namespace CleanUp.Infrastructure.Extensions
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ISerializerService, NewtonSoftService>();
+            services.AddTransient<ISchedulerService, SortBasedSchedulerService>();
+            services.AddTransient<IPushNotificationService, FirebasePushNotificationService>();
 
             services.AddNotifications(configuration);
 

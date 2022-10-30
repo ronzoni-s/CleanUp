@@ -1,4 +1,4 @@
-﻿using CleanUp.Application.Common.Authorization;
+﻿using CleanUp.Application.Authorization;
 using CleanUp.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

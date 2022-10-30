@@ -2,7 +2,6 @@
 using CurrieTechnologies.Razor.SweetAlert2;
 using CleanUp.Client.Authentication;
 using CleanUp.Client.Managers;
-using CleanUp.Client.Managers.Orders;
 using CleanUp.Client.Managers.Preferences;
 using CleanUp.Client.Services.User;
 using Microsoft.AspNetCore.Authorization;
@@ -12,6 +11,11 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using System.Globalization;
 using System.Net.Http;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
+using System.Reflection;
+using MudBlazor.Services;
+using MudBlazor;
+using CleanUp.WebApi.Sdk.Constants.Permission;
+using BlazorDownloadFile;
 
 namespace CleanUp.Client.Extensions
 {
@@ -36,14 +40,23 @@ namespace CleanUp.Client.Extensions
                 //})
                 .AddAuthorizationCore(options =>
                 {
-                    options.AddPolicy("PortaleUser", policy => policy.RequireRole("B2B.Portale"));
+                    RegisterPermissionClaims(options);
                 })
                 .AddBlazoredLocalStorage()
+                .AddBlazorDownloadFile()
+                .AddMudServices(configuration =>
+                {
+                    configuration.SnackbarConfiguration.PositionClass = Defaults.Classes.Position.BottomRight;
+                    configuration.SnackbarConfiguration.HideTransitionDuration = 100;
+                    configuration.SnackbarConfiguration.ShowTransitionDuration = 100;
+                    configuration.SnackbarConfiguration.VisibleStateDuration = 3000;
+                    configuration.SnackbarConfiguration.ShowCloseIcon = false;
+                })
+
                 .AddScoped<ClientPreferenceManager>()
                 .AddScoped<ClientStateProvider>()
                 .AddScoped<AuthenticationStateProvider, ClientStateProvider>()
                 .AddSweetAlert2()
-                //.AddSingleton<B2CConfiguration>(builder.Configuration.GetSection("B2CConfiguration").Get<B2CConfiguration>())
                 .AddManagers()
                 .AddServices()
                 //.AddExtendedAttributeManagers()
@@ -68,6 +81,25 @@ namespace CleanUp.Client.Extensions
         {
             var managers = typeof(IManager);
 
+            //var types = managers
+            //    .Assembly
+            //    .GetExportedTypes()
+            //    .Where(t => t.IsClass && !t.IsAbstract)
+            //    .Select(t => new
+            //    {
+            //        Service = t.GetInterface($"I{t.Name}"),
+            //        Implementation = t
+            //    })
+            //    .Where(t => t.Service != null);
+
+            //foreach (var type in types)
+            //{
+            //    if (managers.IsAssignableFrom(type.Service))
+            //    {
+            //        services.AddTransient(type.Service, type.Implementation);
+            //    }
+            //}
+
             var types = managers
                 .Assembly
                 .GetExportedTypes()
@@ -77,17 +109,23 @@ namespace CleanUp.Client.Extensions
                     Service = t.GetInterface($"I{t.Name}"),
                     Implementation = t
                 })
-                .Where(t => t.Service != null);
+                .Where(t => t.Implementation != null);
 
             foreach (var type in types)
             {
-                if (managers.IsAssignableFrom(type.Service))
+                //if (managers.IsAssignableFrom(type.Service))
+                //{
+                //    services.AddTransient(type.Service, type.Implementation);
+                //}
+                if (type.Service != null)
                 {
                     services.AddTransient(type.Service, type.Implementation);
                 }
+                else
+                {
+                    services.AddTransient(type.Implementation);
+                }
             }
-
-            services.AddScoped<ICartManager, CartManager>();
 
             return services;
         }
@@ -95,20 +133,19 @@ namespace CleanUp.Client.Extensions
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<ICartService, CartService>();
             return services;
         }
 
-        //private static void RegisterPermissionClaims(AuthorizationOptions options)
-        //{
-        //    foreach (var prop in typeof(Permissions).GetNestedTypes().SelectMany(c => c.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)))
-        //    {
-        //        var propertyValue = prop.GetValue(null);
-        //        if (propertyValue is not null)
-        //        {
-        //            options.AddPolicy(propertyValue.ToString(), policy => policy.RequireClaim(ApplicationClaimTypes.Permission, propertyValue.ToString()));
-        //        }
-        //    }
-        //}
+        private static void RegisterPermissionClaims(AuthorizationOptions options)
+        {
+            foreach (var prop in typeof(Permissions).GetNestedTypes().SelectMany(c => c.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)))
+            {
+                var propertyValue = prop.GetValue(null);
+                if (propertyValue is not null)
+                {
+                    options.AddPolicy(propertyValue.ToString(), policy => policy.RequireClaim(ApplicationClaimTypes.Permission, propertyValue.ToString()));
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,76 @@
+﻿@page "/events"
+@using CleanUp.WebApi.Sdk.Constants.Permission
+@using CleanUp.WebApi.Sdk.Models
+@using CleanUp.WebApi.Sdk.Models.Events
+@attribute [Authorize(Policy = Permissions.Event.View)]
+
+<style>
+    .mud-table-container {
+        overflow: auto;
+    }
+</style>
+
+<HeroTitle Title="Eventi" Description="Gestione eventi" />
+@if (!_loaded)
+{
+    <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+}
+else
+{
+    <MudTable Hover="true" Elevation="25" Items="eventList" Dense="true" Bordered="false" Striped="true" Filter="new Func<Event, bool>(Search)">
+        <ToolBarContent>
+            <div class="justify-center mud-text-align-center">
+                @if (_canUploadEvents)
+                {
+                    <MudButton DisableElevation Variant="Variant.Filled" Color="Color.Primary" OnClick="(() => InvokeUploadEventsModal())" StartIcon="@Icons.Material.Filled.Add" IconColor="Color.Surface">Carica eventi</MudButton>
+                }
+                <MudButton DisableElevation Variant="Variant.Filled" OnClick="GetEventsAsync" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricarica</MudButton>
+            </div>
+            <MudSpacer />
+            
+            <MudTextField @bind-Value="_searchString" Immediate="true" FullWidth=false Placeholder="Ricerca eventi" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0 mb-3"></MudTextField>
+            
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.Name)">Nome</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.ClassroomId)">Aula</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.Teacher)">Docente</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.StartTime)">Inizio</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.EndTime)">Fine</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.Type)">Tipo</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Event, object>(x => x.IsActive)">Attivo</MudTableSortLabel></MudTh>
+            <MudTh Style="text-align:right">Azioni</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Name">
+                <MudHighlighter Text="@context.Name" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="ClassroomId">
+                <MudHighlighter Text="@context.ClassroomId" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="Teacher">
+                <MudHighlighter Text="@context.Teacher" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="StartTime">
+                <MudHighlighter Text="@context.StartTime.ToString()" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="EndTime">
+                <MudHighlighter Text="@context.EndTime.ToString()" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="Type">
+                <MudHighlighter Text="@context.Type" HighlightedText="@_searchString" />
+            </MudTd>
+            <MudTd DataLabel="IsActive"><MudCheckBox @bind-Checked="@context.IsActive" ReadOnly Color="Color.Secondary"></MudCheckBox></MudTd>
+            
+            <MudTd DataLabel="Actions" Style="text-align:right">
+                <MudMenu Label="Azioni" Variant="Variant.Filled" DisableElevation="true" EndIcon="@Icons.Filled.KeyboardArrowDown" IconColor="Color.Secondary" Direction="Direction.Left" OffsetX="true">
+                    <MudMenuItem OnClick="(()=>InvokeUpdateEventModal(context.Id))">Modifica</MudMenuItem>
+                    <MudMenuItem OnClick="(()=>InvokeDeleteEventModal(context.Id))">Elimina</MudMenuItem>
+                </MudMenu>
+            </MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <TablePager />
+        </PagerContent>
+    </MudTable>
+}

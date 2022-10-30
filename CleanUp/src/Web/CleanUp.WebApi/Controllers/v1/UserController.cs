@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using CleanUp.Application.Common.Authorization;
-using CleanUp.Application.Common.Models;
+using CleanUp.Application.Authorization;
+using CleanUp.Application.Models;
 using CleanUp.Application.WebApi.Users;
 using CleanUp.Application.WebApi.Authentication.Commands;
 using CleanUp.Application.WebApi.Users.Queries;
+using CleanUp.Application.WebApi.Users.Commands;
 using fbognini.WebFramework.Api;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using CleanUp.Application.WebApi.Roles;
 using CleanUp.Application.WebApi.Roles.Queries;
+using CleanUp.Application.WebApi.WorkDays.Commands;
+using CleanUp.Application.WebApi.WorkDays;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -21,6 +24,11 @@ namespace CleanUp.WebApi.Controllers.v1
     [Authorize]
     public class UserController : ApiController
     {
+        /// <summary>
+        /// Get User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
         [Authorize(Policy = Permissions.User.View)]
         [HttpGet]
         [Route("{id}")]
@@ -30,15 +38,56 @@ namespace CleanUp.WebApi.Controllers.v1
         }
 
         /// <summary>
-        /// Get User Roles By Id
+        /// Get User By Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Status 200 OK</returns>
         [Authorize(Policy = Permissions.User.View)]
-        [HttpGet("{id}/roles")]
-        public async Task<ApiResult<List<RoleDto>>> GetRolesAsync(string id)
+        [HttpGet]
+        [Route("")]
+        public async Task<ApiResult<List<UserDto>>> All()
         {
-            return await Mediator.Send(new GetRolesByUserIdQuery(id));
+            return await Mediator.Send(new GetUsersQuery());
+        }
+
+        /// <summary>
+        /// Delete User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.Manage)]
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<ApiResult<UserDto>> DeleteByIdAsync([FromRoute] string id)
+        {
+            return await Mediator.Send(new DeleteUserCommand(id));
+        }
+
+        /// <summary>
+        /// Update User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.Manage)]
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<ApiResult<UserDto>> UpdateAsync([FromRoute] string id, [FromBody] UpdateUserCommand command)
+        {
+            command.Id = id;
+            return await Mediator.Send(command);
+        }
+
+        /// <summary>
+        /// Update User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Status 200 OK</returns>
+        [Authorize(Policy = Permissions.User.Manage)]
+        [HttpPost]
+        [Route("")]
+        public async Task<ApiResult<UserDto>> Register([FromBody] CreateUserCommand command)
+        {
+            return await Mediator.Send(command);
         }
     }
 }

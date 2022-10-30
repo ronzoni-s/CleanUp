@@ -1,0 +1,55 @@
+﻿@page "/operations"
+@using CleanUp.WebApi.Sdk.Constants.Permission
+@using CleanUp.WebApi.Sdk.Models
+@using CleanUp.WebApi.Sdk.Models.Events
+@*@attribute [Authorize(Policy = Permissions.Event.View)]*@
+
+<style>
+    .mud-table-container {
+        overflow: auto;
+    }
+
+    .md-custom-range-view-controls {
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .mbsc-material .mbsc-calendar-title {
+        font-size: 1.428572em;
+        font-weight: 400;
+        text-transform: none;
+        line-height: 1.4em;
+    }
+</style>
+
+<HeroTitle Title="Interventi pulizia" Description="Schedulazione interventi pulizia tra gli operatori" />
+
+
+<MudCard Elevation="25" Class="mb-12">
+    <MudCardContent Class="pa-46" Style="padding:26px!important">
+        <MudDatePicker Label="Data interventi" Date="date" DateChanged="OnDateChange" Class="mb-8" />
+
+        <MudButton DisableElevation Variant="Variant.Filled" OnClick="Schedule" StartIcon="@Icons.Material.Filled.Refresh" IconColor="Color.Surface" Color="Color.Secondary">Ricalcola operazioni di pulizia</MudButton>
+        <MudButton DisableElevation Variant="Variant.Filled" OnClick="DownloadReport" StartIcon="@Icons.Material.Filled.Download" IconColor="Color.Surface" Color="Color.Secondary">Scarica report</MudButton>
+
+    </MudCardContent>
+</MudCard>
+
+
+@if (!_loaded)
+{
+    <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+}
+else
+{
+    if (!cleaningOperationList.Any())
+    {
+        <p>Nessuna operazione di pulizia presente. Prova a ricalcolare le operazioni</p>
+    }
+    else
+    {
+        <div class="timetable"></div>   
+    }
+}

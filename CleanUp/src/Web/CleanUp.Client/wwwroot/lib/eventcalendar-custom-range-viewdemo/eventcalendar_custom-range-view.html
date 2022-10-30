@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <script>
+        // Ignore this in your implementation
+        window.isMbscDemo = true;
+    </script>
+
+    <title>Custom range view</title>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+    .md-custom-range-view-controls {
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: end;
+        align-items: center;
+    }
+    
+    .mbsc-material .mbsc-calendar-title {
+        font-size: 1.428572em;
+        font-weight: 400;
+        text-transform: none;
+        line-height: 1.4em;
+    }
+    </style>
+
+</head>
+<body>
+
+<div mbsc-page class="demo-custom-range-view">
+  <div style="height:100%">
+      <div id="demo-custom-range-view"></div>
+  </div>
+</div>
+
+<script>
+
+    mobiscroll.setOptions({
+        locale: mobiscroll.localeIt,      // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+        theme: 'ios',                     // Specify theme like: theme: 'ios' or omit setting to use default
+        themeVariant: 'light'             // More info about themeVariant: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#opt-themeVariant
+    });
+    
+    var formatDate = mobiscroll.util.datetime.formatDate;
+    var startDate, endDate;
+    
+    var myCalendar = mobiscroll.eventcalendar('#demo-custom-range-view', {
+        resources: [{                     // More info about resources: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#opt-resources
+            id: 1,
+            name: 'Resource A',
+            color: '#e20000'
+        }, {
+            id: 2,
+            name: 'Resource B',
+            color: '#76e083'
+        }, {
+            id: 3,
+            name: 'Resource C',
+            color: '#4981d6'
+        }, {
+            id: 4,
+            name: 'Resource D',
+            color: '#e25dd2'
+        }, {
+            id: 5,
+            name: 'Resource E',
+            color: '#1dab2f'
+        }, {
+            id: 6,
+            name: 'Resource F',
+            color: '#d6d145'
+        }],
+        view: {                           // More info about view: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#opt-view
+            timeline: {
+                type: 'day',
+                size: 14,
+                eventList: true
+            }
+        },
+        renderHeader: function () {       // More info about renderHeader: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#opt-renderHeader
+            return '<div id="custom-date-range"><button mbsc-button data-variant="flat" class="mbsc-calendar-button">' +
+                '<span id="custom-date-range-text" class="mbsc-calendar-title">Button' +
+                '</span></button></div>' +
+                '<div class="md-custom-range-view-controls">' +
+                '<div mbsc-calendar-prev></div>' +
+                '<div mbsc-calendar-today></div>' +
+                '<div mbsc-calendar-next></div>' +
+                '</div>';
+        },
+        onPageLoaded: function (args) {   // More info about onPageLoaded: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#event-onPageLoaded
+            startDate = args.firstDay;
+            end = args.lastDay;
+            endDate = new Date(end.getFullYear(), end.getMonth(), end.getDate() - 1, 0);
+            // set button text
+            rangeButton.innerText = getFormattedRange(startDate, endDate);
+            // set range value
+            myRange.setVal([startDate, endDate]);
+        }
+    });
+    
+    var myRange = mobiscroll.datepicker('#custom-date-range', {
+        select: 'range',
+        display: 'anchored',              // Specify display mode like: display: 'bottom' or omit setting to use default
+        showOverlay: false,
+        touchUi: true,
+        buttons: [],                      // More info about buttons: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#opt-buttons
+        onClose: function (args, inst) {  // More info about onClose: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#event-onClose
+            var date = inst.getVal();
+            if (date[0] && date[1]) {
+                if (date[0].getTime() !== startDate.getTime()) {
+                    // navigate the calendar
+                    myCalendar.navigate(date[0]);
+                }
+                startDate = date[0];
+                endDate = date[1];
+                // set calendar view
+                myCalendar.setOptions({
+                    refDate: startDate,   // More info about refDate: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#opt-refDate
+                    view: {                           // More info about view: https://docs.mobiscroll.com/5-19-0/javascript/eventcalendar#opt-view
+                        timeline: {
+                            type: 'day',
+                            size: getNrDays(startDate, endDate),
+                            eventList: true
+                        }
+                    }
+                });
+            } else {
+                myRange.setVal([startDate, endDate])
+            }
+        }
+    });
+    
+    var rangeButton = document.getElementById('custom-date-range-text');
+    
+    // returns the formatted date
+    function getFormattedRange(start, end) {
+        return formatDate('MMM D, YYYY', new Date(start)) + (end && getNrDays(start, end) > 1 ? (' - ' + formatDate('MMM D, YYYY', new Date(end))) : '');
+    }
+    
+    // returns the number of days between two dates
+    function getNrDays(start, end) {
+        return Math.round(Math.abs((end.setHours(0) - start.setHours(0)) / (24 * 60 * 60 * 1000))) + 1;
+    }
+    
+    mobiscroll.util.http.getJson('https://trial.mobiscroll.com/timeline-events/?vers=5', function (events) {
+        myCalendar.setEvents(events);
+    }, 'jsonp');
+</script>
+
+</body>
+</html>

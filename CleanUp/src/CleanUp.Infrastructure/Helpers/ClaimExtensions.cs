@@ -1,5 +1,5 @@
-﻿using CleanUp.Application.Common.Authorization;
-using CleanUp.Application.Common.Models;
+﻿using CleanUp.Application.Authorization;
+using CleanUp.Application.Models;
 using CleanUp.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;

@@ -22,6 +22,91 @@ namespace CleanUp.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("CleanUp.Domain.Entities.Classroom", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Capacity")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Classrooms", "dbo");
+                });
+
+            modelBuilder.Entity("CleanUp.Domain.Entities.CleaningOperation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("AvailableFrom")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("AvailableTo")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<TimeSpan>("Duration")
+                        .HasColumnType("time");
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Start")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CleaningOperations", "dbo");
+                });
+
             modelBuilder.Entity("CleanUp.Domain.Entities.CleanUpRole", b =>
                 {
                     b.Property<string>("Id")
@@ -161,6 +246,103 @@ namespace CleanUp.Infrastructure.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Users", "auth");
+                });
+
+            modelBuilder.Entity("CleanUp.Domain.Entities.Event", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClassroomId")
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Teacher")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassroomId");
+
+                    b.ToTable("Events", "dbo");
+                });
+
+            modelBuilder.Entity("CleanUp.Domain.Entities.WorkDay", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("End")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Start")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("WorkDay");
                 });
 
             modelBuilder.Entity("fbognini.Application.Entities.Audit", b =>
@@ -325,6 +507,41 @@ namespace CleanUp.Infrastructure.Migrations
                     b.ToTable("UserTokens", "auth");
                 });
 
+            modelBuilder.Entity("CleanUp.Domain.Entities.CleaningOperation", b =>
+                {
+                    b.HasOne("CleanUp.Domain.Entities.Event", "Event")
+                        .WithMany("CleaningOperations")
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CleanUp.Domain.Entities.CleanUpUser", "User")
+                        .WithMany("CleaningOperations")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Event");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CleanUp.Domain.Entities.Event", b =>
+                {
+                    b.HasOne("CleanUp.Domain.Entities.Classroom", "Classroom")
+                        .WithMany("Events")
+                        .HasForeignKey("ClassroomId");
+
+                    b.Navigation("Classroom");
+                });
+
+            modelBuilder.Entity("CleanUp.Domain.Entities.WorkDay", b =>
+                {
+                    b.HasOne("CleanUp.Domain.Entities.CleanUpUser", "User")
+                        .WithMany("WorkDays")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("CleanUp.Domain.Entities.CleanUpRole", null)
@@ -374,6 +591,23 @@ namespace CleanUp.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CleanUp.Domain.Entities.Classroom", b =>
+                {
+                    b.Navigation("Events");
+                });
+
+            modelBuilder.Entity("CleanUp.Domain.Entities.CleanUpUser", b =>
+                {
+                    b.Navigation("CleaningOperations");
+
+                    b.Navigation("WorkDays");
+                });
+
+            modelBuilder.Entity("CleanUp.Domain.Entities.Event", b =>
+                {
+                    b.Navigation("CleaningOperations");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,4 @@
-﻿using CleanUp.Application.Common.Authorization;
+﻿using CleanUp.Application.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using System;

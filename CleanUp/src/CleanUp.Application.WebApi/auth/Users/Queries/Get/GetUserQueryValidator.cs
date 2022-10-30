@@ -12,6 +12,7 @@ namespace CleanUp.Application.WebApi.Users.Queries
     {
         public GetUserQueryValidator()
         {
+            RuleFor(x => x.Id).NotEmpty();
         }
     }
 }

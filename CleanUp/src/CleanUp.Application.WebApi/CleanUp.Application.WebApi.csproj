@@ -7,12 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Common\Exceptions\**" />
+    <Compile Remove="Common\Models\**" />
+    <EmbeddedResource Remove="Common\Exceptions\**" />
+    <EmbeddedResource Remove="Common\Models\**" />
+    <EntityDeploy Remove="Common\Exceptions\**" />
+    <EntityDeploy Remove="Common\Models\**" />
+    <None Remove="Common\Exceptions\**" />
+    <None Remove="Common\Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CleanUp.Application\CleanUp.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Exceptions\" />
-    <Folder Include="Common\Models\" />
+    <PackageReference Include="EPPlus" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Common\Services\" />
   </ItemGroup>
 

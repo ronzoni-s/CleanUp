@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using CleanUp.Application.Common.Interfaces;
-using CleanUp.Application.Common.Models;
-using CleanUp.Application.Common.Requests;
+using CleanUp.Application.Interfaces;
+using CleanUp.Application.Models;
+using CleanUp.Application.Requests;
 using CleanUp.Application.WebApi.Users;
 using fbognini.Core.Exceptions;
 using fbognini.Core.Interfaces;
@@ -17,7 +17,7 @@ namespace CleanUp.Application.WebApi.Users.Queries
 {
     public class GetUserQuery : IRequest<UserDto>
     {
-        private string Id { get; set; }
+        public string Id { get; set; }
 
         public GetUserQuery(string id)
         {

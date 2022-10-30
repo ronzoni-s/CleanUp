@@ -22,7 +22,9 @@ namespace CleanUp.Infrastructure.Persistance
 
         public DbSet<DataProtectionKey> DataProtectionKeys { get; set; }
 
-        
+        public DbSet<Classroom> Classrooms { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<CleaningOperation> CleaningOperations { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

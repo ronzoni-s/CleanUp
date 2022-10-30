@@ -1,4 +1,4 @@
-﻿using CleanUp.Application.Common.Authorization;
+﻿using CleanUp.Application.Authorization;
 using CleanUp.Domain.Entities;
 using CleanUp.Infrastructure.Helpers;
 using CleanUp.Infrastructure.Persistance;
@@ -40,7 +40,7 @@ namespace CleanUp.Infrastructure
         public void Initialize()
         {
             AddAdministrator();
-            AddBasicUser();
+            AddOperatorUser();
 
             context.SaveChanges();
         }
@@ -93,72 +93,76 @@ namespace CleanUp.Infrastructure
             }).GetAwaiter().GetResult();
         }
 
-        private void AddBasicUser()
+        private void AddOperatorUser()
         {
             Task.Run(async () =>
             {
                 //Check if Role Exists
-                var basicRole = new CleanUpRole(RoleConstants.BasicRole);
-                var basicRoleInDb = await roleManager.FindByNameAsync(RoleConstants.BasicRole);
+                var basicRole = new CleanUpRole(RoleConstants.OperatorRole);
+                var basicRoleInDb = await roleManager.FindByNameAsync(RoleConstants.OperatorRole);
                 if (basicRoleInDb == null)
                 {
                     await roleManager.CreateAsync(basicRole);
                     logger.LogInformation("Seeded Basic Role.");
                 }
+
                 //Check if User Exists
-                var basicUser = new CleanUpUser
+                var users = new List<CleanUpUser> 
                 {
-                    FirstName = "Mario",
-                    LastName = "Rossi",
-                    Email = "mariorossi@gmail.com",
-                    UserName = "mariorossi@gmail.com",
-                    EmailConfirmed = true,
-                    PhoneNumberConfirmed = true,
-                    Created = DateTime.Now,
+                    new CleanUpUser
+                    {
+                        FirstName = "Mario",
+                        LastName = "Rossi",
+                        Email = "mariorossi@gmail.com",
+                        UserName = "mariorossi@gmail.com",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        Created = DateTime.Now,
+                    },
+                    new CleanUpUser
+                    {
+                        FirstName = "Paolo",
+                        LastName = "Bianchi",
+                        Email = "paolobianchi@gmail.com",
+                        UserName = "paolobianchi@gmail.com",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        Created = DateTime.Now,
+                    },
+                    new CleanUpUser
+                    {
+                        FirstName = "Pinco",
+                        LastName = "Pallino",
+                        Email = "pincopallino@gmail.com",
+                        UserName = "pincopallino@gmail.com",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        Created = DateTime.Now,
+                    },
+                    new CleanUpUser
+                    {
+                        FirstName = "Pippo",
+                        LastName = "Verdi",
+                        Email = "pippoverdi@gmail.com",
+                        UserName = "pippoverdi@gmail.com",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        Created = DateTime.Now,
+                    }
                 };
-                var basicUserInDb = await userManager.FindByEmailAsync(basicUser.Email);
-                if (basicUserInDb == null)
+                
+                foreach (var user in users)
                 {
-                    await userManager.CreateAsync(basicUser, "Password1");
-                    await userManager.AddToRoleAsync(basicUser, RoleConstants.BasicRole);
-                    logger.LogInformation("Seeded User with Basic Role.");
+                    var basicUserInDb = await userManager.FindByEmailAsync(user.Email);
+                    if (basicUserInDb == null)
+                    {
+                        await userManager.CreateAsync(user, "Password1");
+                        await userManager.AddToRoleAsync(user, RoleConstants.OperatorRole);
+                        logger.LogInformation("Seeded User with Basic Role.");
+                    }
                 }
             }).GetAwaiter().GetResult();
         }
-
-        //private void AddOrderStatuss()
-        //{
-        //    var orderStatuss = Enum.GetValues(typeof(Domain.Enums.OrderStatus)).Cast<Domain.Enums.OrderStatus>();
-        //    foreach (var orderStatus in orderStatuss)
-        //    {
-        //        var orderStatusInDb = context.OrderStatuss.Find((int)orderStatus);
-        //        if (orderStatusInDb == null)
-        //        {
-        //            context.OrderStatuss.Add(new Domain.Entities.OrderStatus()
-        //            {
-        //                Id = (int)orderStatus,
-        //                Name = orderStatus.ToString()
-        //            });
-        //        }
-        //    }
-        //}
-
-        //private void AddOrderSources()
-        //{
-        //    var orderSources = Enum.GetValues(typeof(Domain.Enums.OrderSource)).Cast<Domain.Enums.OrderSource>();
-        //    foreach (var orderSource in orderSources)
-        //    {
-        //        var orderSourceInDb = context.OrderSources.Find((int)orderSource);
-        //        if (orderSourceInDb == null)
-        //        {
-        //            context.OrderSources.Add(new Domain.Entities.OrderSource()
-        //            {
-        //                Id = (int)orderSource,
-        //                Name = orderSource.ToString()
-        //            });
-        //        }
-        //    }
-        //}
     }
 
 }

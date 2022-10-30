@@ -1,17 +1,15 @@
 ﻿using CleanUp.Client.Extensions;
+using CleanUp.WebApi.Sdk.Endpoints;
+using CleanUp.WebApi.Sdk.Models;
+using CleanUp.WebApi.Sdk.Requests.User;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using CleanUp.Client.Models.Api;
-using CleanUp.WebApi.Sdk.Models;
-using CleanUp.WebApi.Sdk.Requests;
-using CleanUp.WebApi.Sdk.Requests.User;
-using CleanUp.WebApi.Sdk.Endpoints;
 
 namespace CleanUp.Client.Managers.Identity.Users
 {
-    public class UserManager : IUserManager
+    public class UserManager : IManager
     {
         private readonly HttpClient _httpClient;
 
@@ -20,47 +18,85 @@ namespace CleanUp.Client.Managers.Identity.Users
             _httpClient = httpClient;
         }
 
-        public async Task<ApiResult<User>> GetAsync()
+        public async Task<ApiResult<User>> GetAsync(string userId)
         {
-            var response = await _httpClient.GetAsync(UserEndpoints.Get);
+            var response = await _httpClient.GetAsync(UserEndpoints.Get(userId));
             return await response.ToResult<User>();
         }
 
-        public async Task<ApiResult<User>> RegisterUserAsync(RegisterUserRequest request)
+        public async Task<ApiResult<List<User>>> GetAllAsync()
+        {
+            var response = await _httpClient.GetAsync(UserEndpoints.GetAll);
+            return await response.ToResult<List<User>>();
+        }
+
+        public async Task<ApiResult<User>> RegisterAsync(RegisterUserRequest request)
         {
             var response = await _httpClient.PostAsJsonAsync(UserEndpoints.Register, request);
             return await response.ToResult<User>();
         }
 
-        public async Task<ApiResult> ConfirmEmail(string userId, string code)
+        public async Task<ApiResult> DeleteAsync(string userId)
         {
-            var response = await _httpClient.GetAsync(UserEndpoints.ConfirmEmail(userId, code));
+            var response = await _httpClient.DeleteAsync(UserEndpoints.Delete(userId));
             return await response.ToResult();
         }
 
-
-        public async Task<ApiResult> ForgotPasswordAsync(ForgotPasswordRequest request)
+        public async Task<ApiResult<List<WorkDay>>> GetWorkDays(string userId, DateTime fromDate, DateTime toDate)
         {
-            var response = await _httpClient.PostAsJsonAsync(UserEndpoints.ForgotPassword, request);
-            return await response.ToResult();
+            var response = await _httpClient.GetAsync(UserEndpoints.GetWorkDays(userId, fromDate, toDate));
+            return await response.ToResult<List<WorkDay>>();
         }
 
-        public async Task<ApiResult> ResetPasswordAsync(ResetPasswordRequest request)
+        public async Task<ApiResult<WorkDay>> CreateWorkDay(AddWorkDayRequest request)
         {
-            var response = await _httpClient.PostAsJsonAsync(UserEndpoints.ResetPassword, request);
-            return await response.ToResult();
+            var response = await _httpClient.PostAsJsonAsync(UserEndpoints.CreateWorkDay(), request);
+            return await response.ToResult<WorkDay>();
         }
 
-        public async Task<ApiResult> ConfirmPrivacy()
-        {
-            var response = await _httpClient.PostAsJsonAsync(UserEndpoints.ConfirmPrivacy, new { });
-            return await response.ToResult();
-        }
+        //public async Task<ApiResult> RegisterUserAsync(RegisterRequest request)
+        //{
+        //    var response = await _httpClient.PostAsJsonAsync(Routes.UserEndpoints.Register, request);
+        //    return await response.ToResult();
+        //}
 
-        public async Task<ApiResult> UpdateDefaultAddress(UpdateDefaultAddressRequest request)
-        {
-            var response = await _httpClient.PostAsJsonAsync(UserEndpoints.UpdateDefaultAddress, request);
-            return await response.ToResult();
-        }
+        //public async Task<ApiResult> ToggleUserStatusAsync(ToggleUserStatusRequest request)
+        //{
+        //    var response = await _httpClient.PostAsJsonAsync(Routes.UserEndpoints.ToggleUserStatus, request);
+        //    return await response.ToResult();
+        //}
+
+        //public async Task<ApiResult<UserRolesResponse>> GetRolesAsync(string userId)
+        //{
+        //    var response = await _httpClient.GetAsync(Routes.UserEndpoints.GetUserRoles(userId));
+        //    return await response.ToResult<UserRolesResponse>();
+        //}
+
+        //public async Task<ApiResult> UpdateRolesAsync(UpdateUserRolesRequest request)
+        //{
+        //    var response = await _httpClient.PutAsJsonAsync(Routes.UserEndpoints.GetUserRoles(request.UserId), request);
+        //    return await response.ToResult<UserRolesResponse>();
+        //}
+
+        //public async Task<ApiResult> ForgotPasswordAsync(ForgotPasswordRequest model)
+        //{
+        //    var response = await _httpClient.PostAsJsonAsync(Routes.UserEndpoints.ForgotPassword, model);
+        //    return await response.ToResult();
+        //}
+
+        //public async Task<ApiResult> ResetPasswordAsync(ResetPasswordRequest request)
+        //{
+        //    var response = await _httpClient.PostAsJsonAsync(Routes.UserEndpoints.ResetPassword, request);
+        //    return await response.ToResult();
+        //}
+
+        //public async Task<string> ExportToExcelAsync(string searchString = "")
+        //{
+        //    var response = await _httpClient.GetAsync(string.IsNullOrWhiteSpace(searchString)
+        //        ? Routes.UserEndpoints.Export
+        //        : Routes.UserEndpoints.ExportFiltered(searchString));
+        //    var data = await response.Content.ReadAsStringAsync();
+        //    return data;
+        //}
     }
 }
