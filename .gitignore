@@ -3,3 +3,23 @@
 ################################################################################
 
 /CleanUp/src/Application/bin/Debug/net6.0
+/CleanUp/src/CleanUp.Application/obj/Debug/net6.0
+/CleanUp/src/Web/CleanUp.Client/bin/Debug/net6.0/wwwroot/_framework
+/CleanUp/src/Web/CleanUp.Client/bin/Debug/net6.0
+/CleanUp/src/Web/CleanUp.Client/obj/Debug/net6.0/build-gz
+/CleanUp/src/Web/CleanUp.Client/obj/Debug/net6.0
+/CleanUp/src/Web/CleanUp.WebApi/bin/Debug/net6.0
+/CleanUp/src/Web/CleanUp.WebApi/Logs
+/CleanUp/test/CleanUp.Application.WebApi.IntegrationTests/bin/Debug/net6.0/cs
+/CleanUp/test/CleanUp.Application.WebApi.IntegrationTests/bin/Debug/net6.0
+/CleanUp/test/CleanUp.Application.WebApi.IntegrationTests/obj/Debug/net6.0
+/CleanUp/test/CleanUp.Application.WebApi.IntegrationTests/obj
+/CleanUp/test/CleanUp.Infrastructure.Tests.Unit/bin/Debug/net6.0
+/CleanUp/test/CleanUp.Infrastructure.Tests.Unit/obj/Debug/net6.0
+/CleanUp/test/CleanUp.Infrastructure.Tests.Unit/obj
+/CleanUp/src/CleanUp.Application.WebApi/obj/Debug/net6.0
+/CleanUp/src/CleanUp.Domain/obj/Debug/net6.0
+/CleanUp/src/CleanUp.Infrastructure/obj/Debug/net6.0
+/CleanUp/src/Hangfire/CleanUp.Hangfire/obj/Debug/net6.0
+/CleanUp/src/Hangfire/CleanUp.Hangfire.Data/obj/Debug/net6.0
+/CleanUp/src/Web/CleanUp.WebApi/obj/Debug/net6.0
